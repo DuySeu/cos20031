@@ -20,30 +20,25 @@
     <h3>Our business offers you 5 main courses to improve the level of students and help them access the working environment more easily</h3>
   </div>
   <div class="container">
-    <div class="sub-container">
-      <img src="./image/Mr-jan.jpg" alt="" width="225" height="225" />
-      <h3 style="text-align: center">Mr. Sam Demelis</h3>
-      <p style="color: black; text-align: center">co van chuyen mon</p>
-    </div>
-    <div class="sub-container">
-      <img src="./image/Mr-jan.jpg" alt="" width="225" height="225" />
-      <h3 style="text-align: center">Mr. Sam Demelis</h3>
-      <p style="color: black; text-align: center">co van chuyen mon</p>
-    </div>
-    <div class="sub-container">
-      <img src="./image/Mr-jan.jpg" alt="" width="225" height="225" />
-      <h3 style="text-align: center">Mr. Sam Demelis</h3>
-      <p style="color: black; text-align: center">co van chuyen mon</p>
-    </div>
-    <div class="sub-container">
-      <img src="./image/Mr-jan.jpg" alt="" width="225" height="225" />
-      <h3 style="text-align: center">Mr. Sam Demelis</h3>
-      <p style="color: black; text-align: center">co van chuyen mon</p>
-    </div>
-    <div class="sub-container">
-      <img src="./image/Mr-jan.jpg" alt="" width="225" height="225" />
-      <h3 style="text-align: center">Mr. Sam Demelis</h3>
-      <p style="color: black; text-align: center">co van chuyen mon</p>
+    <?php
+    include_once('dbConnect.php');
+    $sql = "SELECT * FROM courses";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+          $courseName = $row['Course_Name'];
+          $description = $row['Description'];
+            echo "
+            <div class='sub-container'>
+              <img src='./image/Mr-jan.jpg' alt='' width='225' height='225' />
+              <h3 style='text-align: center'>$courseName</h3>
+              <p style='color: black; text-align: center'>$description</p>
+            </div>";
+        }
+    }
+    ?>
     </div>
   </div>
   <div class="bcv">
