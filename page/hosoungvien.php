@@ -8,11 +8,11 @@
   <body>
     <div class="taskbar">
       <ul>
-        <li><a href="index.php">Home page</a></li>
-        <li><a href="page/cackhoahoc.php">Couse</a></li>
-        <li><a href="page/hosoungvien.php">Candicate profile</a></li>
-        <li><a href="page/cohoivieclam.php"> Job opportunity</a></li>
-        <li><a href="page/lienhe.php">Contact</a></li>
+        <li><a href="../index.php">Home page</a></li>
+        <li><a href="cackhoahoc.php">Couse</a></li>
+        <li><a href="hosoungvien.php">Candicate profile</a></li>
+        <li><a href="cohoivieclam.php"> Job opportunity</a></li>
+        <li><a href="lienhe.php">Contact</a></li>
       </ul>
     </div>
     <div class="bcv">
