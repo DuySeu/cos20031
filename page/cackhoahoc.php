@@ -21,15 +21,15 @@
   </div>
   <div class="container">
     <?php
-    include_once('dbConnect.php');
+    include_once('../includes/dbConnect.php');
     $sql = "SELECT * FROM courses";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
 
     if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-          $courseName = $row['Course_Name'];
-          $description = $row['Description'];
+          $courseName = $row['course_name'];
+          $description = $row['description'];
             echo "
             <div class='sub-container'>
               <img src='./image/Mr-jan.jpg' alt='' width='225' height='225' />
