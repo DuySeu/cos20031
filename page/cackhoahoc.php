@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <title>Trang Web Ví Dụ</title>
     <link rel="stylesheet" href="../css/web.css" />
+    <link rel="stylesheet" href="../css/course.css" />
   </head>
   <body>
     <div class="taskbar">
       <ul>
         <li><a href="../index.php">Home page</a></li>
-        <li><a href="cackhoahoc.php">Couse</a></li>
+        <li><a href="cackhoahoc.php">Course</a></li>
         <li><a href="hosoungvien.php">Candicate profile</a></li>
         <li><a href="cohoivieclam.php"> Job opportunity</a></li>
         <li><a href="lienhe.php">Contact</a></li>
@@ -20,6 +21,12 @@
     <h3>Our business offers you 5 main courses to improve the level of students and help them access the working environment more easily</h3>
   </div>
   <div class="container">
+    <h2 class="product-title">Course</h2>
+  </div>
+  <hr>
+
+  <hr>
+  <ul class="course_display">
     <?php
     include_once('../includes/dbConnect.php');
     $sql = "SELECT * FROM courses";
@@ -31,17 +38,25 @@
           $courseName = $row['course_name'];
           $description = $row['description'];
             echo "
-            <div class='sub-container'>
-              <img src='./image/Mr-jan.jpg' alt='' width='225' height='225' />
-              <h3 style='text-align: center'>$courseName</h3>
-              <p style='color: black; text-align: center'>$description</p>
-            </div>";
+              <li class='course_detail'>
+                <h3>$courseName</h3>
+                <p style='color: black;'>$description</p>
+              </li>
+            ";
         }
     }
-    ?>
-    </div>
-  </div>
-  <div class="bcv">
+    ?>            
+  </ul>
+  <!-- <div class="container">
+    <h2 class="product-title">Course</h2>
+      <ul>
+        <li class="img_wrapper">
+            <h3>$courseName</h3>
+            <h3>$description</h3>
+        </li>
+      </ul>
+  </div> -->
+  <!-- <div class="bcv">
     <h1>Why Greeliving Hub is the best platform ?</h1>
     <div class="container">
       <div class="sub-container">
@@ -70,3 +85,4 @@
         <p style="color: black; text-align: center">The exchange community is closely linked between <br> businesses - training organizations - students</p>
       </div>
     </div>
+  </div> -->
