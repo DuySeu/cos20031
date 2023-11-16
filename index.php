@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <title>Trang Web Ví Dụ</title>
-    <link rel="stylesheet" href="css/homepage.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <div class="taskbar">
       <ul>
         <li class="mucluc"><a href="index.php">Home page</a></li>
-        <li class="mucluc"><a href="page/course.php">Couse</a></li>
+        <li class="mucluc"><a href="page/course.php">Course</a></li>
         <li class="mucluc"><a href="page/candicateprofile.php">Candicate profile</a></li>
         <li class="mucluc"><a href="page/jobopportunity.php"> Job opportunity</a></li>
         <li class="mucluc"><a href="page/contact.php">Contact</a></li>
