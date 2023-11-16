@@ -5,7 +5,7 @@ body {
 }
 
 .taskbar {
-    background-color: rgb(96, 115, 179);
+    background-color:pink;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -36,19 +36,24 @@ body {
 .mucluc {
     font-size: 30px;
 }
+
 h1 {
     font-size: 28px;
     color: #ffffff;
 }
 
 p {
-    font-size: 18px;
-    color: #ffffff;
+    font-size: 20px;
+    color: white;
+    font-weight:bolder; 
+}
+.title {
+    font-family:fantasy
 }
 .main-content {
     position: relative;
     height: 100vh;
-    background-image: url('./image/ucl-1.png'); 
+    background-image: url('../image/ucl-1.png'); 
     background-size: cover;
     background-position: center;
     color: white; 

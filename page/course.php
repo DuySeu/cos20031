@@ -15,8 +15,16 @@
         <li class="mucluc"><a href="contact.php">Contact</a></li>
       </ul>
     </div>
+    <div class="taskbar-2">
+    <ul>
+      <li><a href="web.html">Englsih</a></li>
+      <li><a href="cackhoahoc.html">Math</a></li>
+      <li><a href="hosoungvien.html">Course name</a></li>
+      <li><a href="cohoivieclam.html">Course name</a></li>
+      <li><a href="lienhe.html">course name</a></li>
+    </ul>
+  </div>
   <div class="bcv">
-    <h1>Course</h1>
     <h3>Our business offers you 5 main courses to improve the level of students and help them access the working environment more easily</h3>
   </div>
   <div class="container">
@@ -32,7 +40,7 @@
           $description = $row['description'];
             echo "
             <div class='sub-container'>
-              <img src='./image/Mr-jan.jpg' alt='' width='225' height='225' />
+              <img src='../image/Mr-jan.jpg' alt='' width='225' height='225' />
               <h3 style='text-align: center'>$courseName</h3>
               <p style='color: black; text-align: center'>$description</p>
             </div>";

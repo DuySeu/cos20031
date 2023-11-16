@@ -34,59 +34,11 @@ body {
     color: black;
 }
 .mucluc {
-
     font-size: 30px;
-}
-/* Thêm kiểu cho logo Facebook */
-.facebook-logo {
-    margin-left: 10px; /* Khoảng cách giữa logo và các mục khác */
-  }
-  
-  .facebook-logo img {
-    width: 30px; /* Chiều rộng của logo */
-    height: auto; /* Tự động tính chiều cao để duy trì tỷ lệ khung hình */
-  }
-  
-.taskbar-2{
-    margin-right: 580px;
-    margin-top: 60px;
-    background-color: white;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-.taskbar-2 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.taskbar-2 li {
-    float: left;
-}
-
-.taskbar-2 li a {
-    display: block;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.taskbar-2 li a:hover {
-    background-color: #ddd;
-    color: black;
 }
 h1 {
     text-align: center;
     font-size: 50px;
-    color: #000000;
-}
-.h3{
-    margin-top: 100px;
-}
-h3 {
-    text-align: center;
     color: #000000;
 }
 
@@ -99,7 +51,6 @@ h1, p {
     position: relative;
     z-index: 1; /* Để văn bản hiển thị phía trên ảnh */
 }
-
 .main-content::before {
     content: "";
     position: absolute;
@@ -110,9 +61,13 @@ h1, p {
     z-index: 0; /* Hiển thị phía dưới văn bản */
 }
 
+.bcv-header{
+    color:black;
+    text-align: center; 
+    font-size: 50px;
+}
+
 .container {
-    margin-top: 100px;
-    margin-bottom: 100px; 
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -120,17 +75,10 @@ h1, p {
 
 .sub-container {
     text-align: center;
-    margin: 20px;
+    margin: 10px;
 }
 
 .sub-container img {
     max-width: 100%;
     height: auto;
-}
-.button{
-    color: white;
-    padding: 15px 30px;
-    background-color: green;
-    font-size: 20px;
-    font-weight: bold;
 }
