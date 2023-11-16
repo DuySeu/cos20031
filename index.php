@@ -2,51 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Demo</title>
-    <link rel="stylesheet" href="css/web.css" />
+    <title>Trang Web Ví Dụ</title>
+    <link rel="stylesheet" href="css/homepage.css" />
   </head>
   <body>
     <div class="taskbar">
       <ul>
-        <li><a href="index.php">Home page</a></li>
-        <li><a href="page/cackhoahoc.php">Couse</a></li>
-        <li><a href="page/hosoungvien.php">Candicate profile</a></li>
-        <li><a href="page/cohoivieclam.php"> Job opportunity</a></li>
-        <li><a href="page/lienhe.php">Contact</a></li>
+        <li class="mucluc"><a href="index.php">Home page</a></li>
+        <li class="mucluc"><a href="page/course.php">Couse</a></li>
+        <li class="mucluc"><a href="candicateprofile.html">Candicate profile</a></li>
+        <li class="mucluc"><a href="jobopportunity.html"> Job opportunity</a></li>
+        <li class="mucluc"><a href="lienhe.html">Contact</a></li>
       </ul>
     </div>
 
     <div class="main-content">
-      <h1>Chào mừng đến với trang web của chúng tôi!</h1>
-      <p>Thông tin giới thiệu về nhóm của chúng tôi sẽ được cung cấp ở .</p>
+      <p style="color: white; font-size: 70px;">Welcome to our platform !</p>
+      <p>Our platform is created for community purposes. Especially for those </br>
+      who need to acquire knowledge and those who want to transmit this knowledge. Simply put,</br>
+      we provide a place of teaching and learning for everyone who needs knowledge in social life.</p>
     </div>
     <div class="bcv">
-      <p class="bcv-header">Ban Cố vấn – Giảng viên</p>
+      <p class="bcv-header">Advisory Board – Lecturers</p>
       <div class="container">
         <div class="sub-container">
           <img src="./image/Mr-jan.jpg" alt="" width="225" height="225" />
-          <h3 style="text-align: center">Mr. Sam Demelis</h3>
-          <p style="color: black; text-align: center">co van chuyen mon</p>
+          <h3 style="text-align: center">Mr. Nguyen Quang Dao</h3>
+          <p style="color: black; text-align: center">Role</p>
         </div>
         <div class="sub-container">
             <img src="./image/Mr-jan.jpg" alt="" width="225" height="225" />
-            <h3 style="text-align: center">Mr. Sam Demelis</h3>
-            <p style="color: black; text-align: center">co van chuyen mon</p>
+            <h3 style="text-align: center">Mr. Nguyen Quoc Duy</h3>
+            <p style="color: black; text-align: center">Role</p>
           </div>
           <div class="sub-container">
             <img src="./image/Mr-jan.jpg" alt="" width="225" height="225" />
-            <h3 style="text-align: center">Mr. Sam Demelis</h3>
-            <p style="color: black; text-align: center">co van chuyen mon</p>
+            <h3 style="text-align: center">Mr. Do Tuan Dat</h3>
+            <p style="color: black; text-align: center">Role</p>
           </div>
           <div class="sub-container">
             <img src="./image/Mr-jan.jpg" alt="" width="225" height="225" />
-            <h3 style="text-align: center">Mr. Sam Demelis</h3>
-            <p style="color: black; text-align: center">co van chuyen mon</p>
+            <h3 style="text-align: center">Mr. Nguyen Duc Hieu</h3>
+            <p style="color: black; text-align: center">Role</p>
           </div>
           <div class="sub-container">
             <img src="./image/Mr-jan.jpg" alt="" width="225" height="225" />
-            <h3 style="text-align: center">Mr. Sam Demelis</h3>
-            <p style="color: black; text-align: center">co van chuyen mon</p>
+            <h3 style="text-align: center">Mr. Duc Nguyen</h3>
+            <p style="color: black; text-align: center">Roles</p>
           </div>
       </div>
     </div>

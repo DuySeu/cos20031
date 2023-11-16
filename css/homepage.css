@@ -5,7 +5,7 @@ body {
 }
 
 .taskbar {
-    background-color: #ffffff;
+    background-color: rgb(96, 115, 179);
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -33,24 +33,30 @@ body {
     background-color: #ddd;
     color: black;
 }
-
-.main-content {
-    padding: 20px;
+.mucluc {
+    font-size: 30px;
 }
-
 h1 {
-    text-align: center;
-    font-size: 50px;
-    color: #000000;
-}
-h3 {
-    text-align: center;
-    color: #000000;
+    font-size: 28px;
+    color: #ffffff;
 }
 
 p {
     font-size: 18px;
     color: #ffffff;
+}
+.main-content {
+    position: relative;
+    height: 100vh;
+    background-image: url('./image/ucl-1.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    text-align: center; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 h1, p {
@@ -68,9 +74,13 @@ h1, p {
     z-index: 0; /* Hiển thị phía dưới văn bản */
 }
 
+.bcv-header{
+    color:black;
+    text-align: center;
+    font-size: 50px;
+}
+
 .container {
-    margin-top: 100px;
-    margin-bottom: 100px; 
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -78,7 +88,7 @@ h1, p {
 
 .sub-container {
     text-align: center;
-    margin: 20px;
+    margin: 10px;
 }
 
 .sub-container img {
