@@ -10,12 +10,11 @@
       <ul>
         <li class="mucluc"><a href="index.php">Home page</a></li>
         <li class="mucluc"><a href="page/course.php">Couse</a></li>
-        <li class="mucluc"><a href="candicateprofile.html">Candicate profile</a></li>
-        <li class="mucluc"><a href="jobopportunity.html"> Job opportunity</a></li>
-        <li class="mucluc"><a href="lienhe.html">Contact</a></li>
+        <li class="mucluc"><a href="page/candicateprofile.php">Candicate profile</a></li>
+        <li class="mucluc"><a href="page/jobopportunity.php"> Job opportunity</a></li>
+        <li class="mucluc"><a href="page/contact.php">Contact</a></li>
       </ul>
     </div>
-
     <div class="main-content">
       <p style="color: white; font-size: 70px;">Welcome to our platform !</p>
       <p>Our platform is created for community purposes. Especially for those </br>
