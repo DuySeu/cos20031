@@ -134,6 +134,6 @@ h1, p {
     gap: 2em;
 }
 
-.course_tag {
-    width: 100%;
+.course-tag{
+    border: solid;
 }

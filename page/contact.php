@@ -7,12 +7,12 @@
   </head>
   <body>
     <div class="taskbar">
-      <ul>
-        <li><a href="../index.php">Home page</a></li>
-        <li><a href="cackhoahoc.php">Couse</a></li>
-        <li><a href="hosoungvien.php">Candicate profile</a></li>
-        <li><a href="cohoivieclam.php"> Job opportunity</a></li>
-        <li><a href="lienhe.php">Contact</a></li>
+    <ul>
+        <li class="mucluc"><a href="../index.php">Home page</a></li>
+        <li class="mucluc"><a href="course.php">Course</a></li>
+        <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
+        <li class="mucluc"><a href="jobopportunity.php"> Job opportunity</a></li>
+        <li class="mucluc"><a href="contact.php">Contact</a></li>
       </ul>
     </div>
 

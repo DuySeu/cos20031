@@ -39,11 +39,12 @@
           $courseName = $row['course_name'];
           $description = $row['description'];
             echo "
-            <li class='course_tag'>
-              <img src='../image/course.jpg' alt='' width='100%' height='auto' />
-              <h3 style='text-align: center'>$courseName</h3>
-              <p style='color: black; text-align: center'>$description</p>
-            </li>";
+            <li style='border: solid 1px; border-radius: 1em'>
+              <img style='border-radius: 1em 1em 0 0' src='../image/course.jpg' alt='' width='100%' height='auto'/>
+              <h3>$courseName</h3>
+              <p style='color: black'>$description</p>
+            </li>
+            ";
         }
     }
     ?>
