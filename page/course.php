@@ -1,3 +1,9 @@
+<?php
+    include_once('../includes/dbConnect.php');
+    $sql = "SELECT * FROM courses";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,24 +35,19 @@
   </div>
   <ul class="course">
     <?php
-    include_once('../includes/dbConnect.php');
-    $sql = "SELECT * FROM courses";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-
-    if ($resultCheck > 0) {
+      if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-          $courseName = $row['course_name'];
-          $description = $row['description'];
-            echo "
-            <li style='border: solid 1px; border-radius: 1em'>
-              <img style='border-radius: 1em 1em 0 0' src='../image/course.jpg' alt='' width='100%' height='auto'/>
-              <h3>$courseName</h3>
-              <p style='color: black'>$description</p>
-            </li>
-            ";
+    ?>
+
+    <li style='border: solid 1px; border-radius: 1em;'>
+      <img style='border-radius: 1em 1em 0 0' src='../image/course.jpg' alt='' width='100%' height='auto'/>
+        <h3> <?php echo $row['course_name']; ?></h3>
+        <p style='color: black'> <?php echo $row['description']; ?></p>
+    </li>
+        
+    <?php
         }
-    }
+      }
     ?>
   </ul>
   </div>
