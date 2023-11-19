@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="taskbar">
-    <ul>
+      <ul>
         <li class="mucluc"><a href="../index.php">Home page</a></li>
         <li class="mucluc"><a href="course.php">Course</a></li>
         <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
@@ -27,7 +27,7 @@
   <div class="bcv">
     <h3>Our business offers you 5 main courses to improve the level of students and help them access the working environment more easily</h3>
   </div>
-  <div class="container">
+  <ul class="course">
     <?php
     include_once('../includes/dbConnect.php');
     $sql = "SELECT * FROM courses";
@@ -39,15 +39,15 @@
           $courseName = $row['course_name'];
           $description = $row['description'];
             echo "
-            <div class='sub-container'>
-              <img src='../image/Mr-jan.jpg' alt='' width='225' height='225' />
+            <li class='course_tag'>
+              <img src='../image/course.jpg' alt='' width='100%' height='auto' />
               <h3 style='text-align: center'>$courseName</h3>
               <p style='color: black; text-align: center'>$description</p>
-            </div>";
+            </li>";
         }
     }
     ?>
-    </div>
+  </ul>
   </div>
   <div class="bcv">
     <h1>Why Greeliving Hub is the best platform ?</h1>
