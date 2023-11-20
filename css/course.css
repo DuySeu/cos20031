@@ -63,6 +63,7 @@ body {
 
 .taskbar-2 li {
     float: left;
+    margin-right: 50px;
 }
 
 .taskbar-2 li a {

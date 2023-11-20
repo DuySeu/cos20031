@@ -1,53 +1,63 @@
 <?php
-    include_once('../includes/dbConnect.php');
-    $sql = "SELECT * FROM courses";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
+include_once('../includes/dbConnect.php');
+if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["courseName"])) {
+  $courseName = $_GET["courseName"];
+  $sql = "SELECT * FROM courses WHERE course_name = '$courseName'";
+} else {
+  $sql = "SELECT * FROM courses";
+}
+$result = mysqli_query($conn, $sql);
+$resultCheck = mysqli_num_rows($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Trang Web Ví Dụ</title>
-    <link rel="stylesheet" href="../css/course.css" />
-  </head>
-  <body>
-    <div class="taskbar">
-      <ul>
-        <li class="mucluc"><a href="../index.php">Home page</a></li>
-        <li class="mucluc"><a href="course.php">Course</a></li>
-        <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
-        <li class="mucluc"><a href="jobopportunity.php"> Job opportunity</a></li>
-        <li class="mucluc"><a href="contact.php">Contact</a></li>
-      </ul>
-    </div>
-    <div class="taskbar-2">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Trang Web Ví Dụ</title>
+  <link rel="stylesheet" href="../css/course.css" />
+</head>
+
+<body>
+  <div class="taskbar">
     <ul>
-      <li><a href="web.html">Englsih</a></li>
-      <li><a href="cackhoahoc.html">Math</a></li>
-      <li><a href="hosoungvien.html">Course name</a></li>
-      <li><a href="cohoivieclam.html">Course name</a></li>
-      <li><a href="lienhe.html">course name</a></li>
+      <li class="mucluc"><a href="../index.php">Home page</a></li>
+      <li class="mucluc"><a href="course.php">Course</a></li>
+      <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
+      <li class="mucluc"><a href="jobopportunity.php"> Job opportunity</a></li>
+      <li class="mucluc"><a href="contact.php">Contact</a></li>
     </ul>
+  </div>
+  <div class="taskbar-2">
+    <form action="course.php" method="get">
+      <ul>
+        <li><button type="submit">All</a></li>
+        <li><button type="submit" name="courseName" value="Computer Science">Computer Science</a></li>
+        <li><button type="submit" name="courseName" value="Mathematics">Math</a></li>
+        <li><button type="submit" name="courseName" value="Biology">Biology</a></li>
+        <li><button type="submit" name="courseName" value="Art">Art</a></li>
+        <li><button type="submit" name="courseName" value="Geography">Geography</a></li>
+      </ul>
+    </form>
   </div>
   <div class="bcv">
     <h3>Our business offers you 5 main courses to improve the level of students and help them access the working environment more easily</h3>
   </div>
   <ul class="course">
     <?php
-      if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
+    if ($resultCheck > 0) {
+      while ($row = mysqli_fetch_assoc($result)) {
     ?>
 
-    <li style='border: solid 1px; border-radius: 1em;'>
-      <img style='border-radius: 1em 1em 0 0' src='../image/course.jpg' alt='' width='100%' height='auto'/>
-        <h3> <?php echo $row['course_name']; ?></h3>
-        <p style='color: black'> <?php echo $row['description']; ?></p>
-    </li>
-        
+        <li style='border: solid 1px; border-radius: 1em;'>
+          <img style='border-radius: 1em 1em 0 0' src='../image/course.jpg' alt='' width='100%' height='auto' />
+          <h3> <?php echo $row['course_name']; ?></h3>
+          <p style='color: black'> <?php echo $row['description']; ?></p>
+        </li>
+
     <?php
-        }
       }
+    }
     ?>
   </ul>
   </div>
