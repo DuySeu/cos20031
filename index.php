@@ -1,3 +1,14 @@
+<?php
+  include_once('includes/dbConnect.php');
+  if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["level"])) {
+    $level = $_GET["expertise"];
+    $sql = "SELECT * FROM instructors WHERE expertise = '$level'";
+  } else {
+    $sql = "SELECT * FROM instructors LIMIT 15";
+  }
+  $result = mysqli_query($conn, $sql);
+  $resultCheck = mysqli_num_rows($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,6 +26,7 @@
         <li class="mucluc"><a href="page/contact.php">Contact</a></li>
       </ul>
     </div>
+
     <div class="main-content">
       <p class ="title"; style="color: white; font-size: 70px;">Welcome to our platform !</p>
       <p>Our platform is created for community purposes. Especially for those </br>
@@ -23,33 +35,30 @@
     </div>
     <div class="bcv">
       <p class="bcv-header">Advisory Board – Lecturers</p>
-      <div class="container">
-        <div class="sub-container">
-          <img src="image/Mr-jan.jpg" alt="" width="225" height="225" />
-          <h3 style="text-align: center">Mr. Nguyen Quang Dao</h3>
-          <p style="color: black; text-align: center">Role</p>
-        </div>
-        <div class="sub-container">
-            <img src="image/Mr-jan.jpg" alt="" width="225" height="225" />
-            <h3 style="text-align: center">Mr. Nguyen Quoc Duy</h3>
-            <p style="color: black; text-align: center">Role</p>
-          </div>
-          <div class="sub-container">
-            <img src="image/Mr-jan.jpg" alt="" width="225" height="225" />
-            <h3 style="text-align: center">Mr. Do Tuan Dat</h3>
-            <p style="color: black; text-align: center">Role</p>
-          </div>
-          <div class="sub-container">
-            <img src="image/Mr-jan.jpg" alt="" width="225" height="225" />
-            <h3 style="text-align: center">Mr. Nguyen Duc Hieu</h3>
-            <p style="color: black; text-align: center">Role</p>
-          </div>
-          <div class="sub-container">
-            <img src="image/Mr-jan.jpg" alt="" width="225" height="225" />
-            <h3 style="text-align: center">Mr. Duc Nguyen</h3>
-            <p style="color: black; text-align: center">Roles</p>
-          </div>
-      </div>
     </div>
+    <div class="taskbar-2">
+      <form action="candicateprofile.php" method="get">
+        <ul>
+          <li><button type="submit">All</a></li>
+          <li><button type="submit" name="level" value="Advanced">Advanced</a></li>
+          <li><button type="submit" name="level" value="Expert">Expert</a></li>
+        </ul>
+      </form>
+    </div>
+    <ul class="instructors">
+      <?php
+        if ($resultCheck > 0) {
+         while ($row = mysqli_fetch_assoc($result)) {
+      ?>
+          <li style='border: solid 1px; border-radius: 1em;'>
+            <img style='border-radius: 1em 1em 0 0' src='image/Mr-jan.jpg' alt='' width='100%' height='auto' />
+            <h3> <?php echo $row['instructor_name']; ?></h3>
+            <p style='color: black'> <?php echo $row['bio']; ?></p>
+          </li>
+      <?php
+          }
+        }
+      ?>
+    </ul>
   </body>
 </html>

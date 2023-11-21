@@ -4,24 +4,37 @@ body {
     padding: 0;
 }
 
-.taskbar {
-    background-color:pink;
+.taskbar, .taskbar-2 {
     overflow: hidden;
     display: flex;
     justify-content: center;
 }
 
-.taskbar ul {
+.taskbar {
+    background-color:pink;
+}
+
+.taskbar-2 {
+    margin-right: 580px;
+    margin-top: 60px;
+    background-color: white;
+}
+
+.taskbar ul, .taskbar-2 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.taskbar li {
+.taskbar li, .taskbar-2 li {
     float: left;
 }
 
-.taskbar li a {
+.taskbar-2 li {
+    margin-right: 50px;
+}
+
+.taskbar li a, .taskbar-2 li a {
     display: block;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -29,28 +42,44 @@ body {
     text-decoration: none;
 }
 
-.taskbar li a:hover {
+.taskbar li a:hover, .taskbar-2 li a:hover {
     background-color: #ddd;
     color: black;
 }
+
 .mucluc {
     font-size: 30px;
 }
-h1 {
+
+.facebook-logo {
+    margin-left: 10px;
+}
+
+.facebook-logo img {
+    width: 30px;
+    height: auto;
+}
+
+h1, h3 {
     text-align: center;
-    font-size: 50px;
     color: #000000;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.h3 {
+    margin-top: 100px;
 }
 
 p {
     font-size: 18px;
     color: #ffffff;
+    position: relative;
+    z-index: 1;
 }
 
-h1, p {
-    position: relative;
-    z-index: 1; /* Để văn bản hiển thị phía trên ảnh */
-}
 .main-content::before {
     content: "";
     position: absolute;
@@ -58,27 +87,33 @@ h1, p {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* Hiển thị phía dưới văn bản */
-}
-
-.bcv-header{
-    color:black;
-    text-align: center; 
-    font-size: 50px;
+    z-index: 0;
 }
 
 .container {
+    margin: 100px 0;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.sub-container {
-    text-align: center;
-    margin: 10px;
+.button {
+    color: white;
+    padding: 15px 30px;
+    background-color: green;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.sub-container img {
-    max-width: 100%;
-    height: auto;
+.course {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    font-weight: bolder;
+    gap: 2em;
+}
+
+.course-tag {
+    border: solid 1px;
+    border-radius: 1em;
 }

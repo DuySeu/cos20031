@@ -1,23 +1,21 @@
 <?php
-include_once('../includes/dbConnect.php');
-if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["courseName"])) {
-  $courseName = $_GET["courseName"];
-  $sql = "SELECT * FROM courses WHERE course_name = '$courseName'";
-} else {
-  $sql = "SELECT * FROM courses";
-}
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
+  include_once('../includes/dbConnect.php');
+  if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["courseName"])) {
+    $courseName = $_GET["courseName"];
+    $sql = "SELECT * FROM courses WHERE course_name = '$courseName'";
+  } else {
+    $sql = "SELECT * FROM courses LIMIT 15";
+  }
+  $result = mysqli_query($conn, $sql);
+  $resultCheck = mysqli_num_rows($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <title>Trang Web Ví Dụ</title>
-  <link rel="stylesheet" href="../css/course.css" />
-</head>
-
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trang Web Ví Dụ</title>
+    <link rel="stylesheet" href="../css/course.css" />
+  </head>
 <body>
   <div class="taskbar">
     <ul>
@@ -48,13 +46,11 @@ $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
       while ($row = mysqli_fetch_assoc($result)) {
     ?>
-
         <li style='border: solid 1px; border-radius: 1em;'>
           <img style='border-radius: 1em 1em 0 0' src='../image/course.jpg' alt='' width='100%' height='auto' />
           <h3> <?php echo $row['course_name']; ?></h3>
           <p style='color: black'> <?php echo $row['description']; ?></p>
         </li>
-
     <?php
       }
     }
