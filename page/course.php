@@ -21,13 +21,17 @@
     <ul>
         <li class="mucluc"><a href="../index.php">Home page</a></li>
         <li class="mucluc"><a href="course.php">Course</a></li>
-        <li class="mucluc"><a href="certificate.php">certificate</a></li>
+        <li class="mucluc"><a href="certificate.php">Certificate</a></li>
         <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
         <li class="mucluc"><a href="jobopportunity.php"> Job opportunity</a></li>
         <li class="mucluc"><a href="User.php">User</a></li>
         <li class="mucluc"><a href="Userreview.php">User Review</a></li>
         <li class="mucluc"><a href="login.php">Login</a></li>
     </ul>
+  </div>
+    <div>
+    <button onclick="window.location.href='http://localhost/cos20031/page/coursecompletion.php'">Course-completion</button>
+    <button onclick="window.location.href='http://localhost/cos20031/page/enrollments.php'">Course-completion</button>
   </div>
   <div class="taskbar-2">
     <form action="course.php" method="get">

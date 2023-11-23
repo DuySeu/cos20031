@@ -22,7 +22,7 @@
       <ul>
         <li class="mucluc"><a href="index.php">Home page</a></li>
         <li class="mucluc"><a href="page/course.php">Course</a></li>
-        <li class="mucluc"><a href="page/certificate.php">certificate</a></li>
+        <li class="mucluc"><a href="page/certificate.php">Certificate</a></li>
         <li class="mucluc"><a href="page/candicateprofile.php">Candicate profile</a></li>
         <li class="mucluc"><a href="page/jobopportunity.php"> Job opportunity</a></li>
         <li class="mucluc"><a href="page/User.php">User</a></li>

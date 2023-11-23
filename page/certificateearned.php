@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Trang Web Ví Dụ</title>
-    <link rel="stylesheet" href="../css/certificate.css" />
+    <link rel="stylesheet" href="../css/certificateearned.css" />
   </head>
   <body>
     <div class="taskbar">
@@ -18,6 +18,3 @@
         <li class="mucluc"><a href="login.php">Login</a></li>
       </ul>
     </div>
-    <div>
-    <button onclick="window.location.href='http://localhost/cos20031/page/certificateearned.php'">Earned</button>
-  </div>

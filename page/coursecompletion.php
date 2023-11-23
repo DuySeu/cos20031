@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Trang Web Ví Dụ</title>
-    <link rel="stylesheet" href="../css/certificate.css" />
+    <link rel="stylesheet" href="../css/coursecompletion.css" />
   </head>
-  <body>
-    <div class="taskbar">
+<body>
+  <div class="taskbar">
     <ul>
     <li class="mucluc"><a href="../index.php">Home page</a></li>
         <li class="mucluc"><a href="course.php">Course</a></li>
@@ -16,8 +16,5 @@
         <li class="mucluc"><a href="User.php">User</a></li>
         <li class="mucluc"><a href="Userreview.php">User Review</a></li>
         <li class="mucluc"><a href="login.php">Login</a></li>
-      </ul>
-    </div>
-    <div>
-    <button onclick="window.location.href='http://localhost/cos20031/page/certificateearned.php'">Earned</button>
+    </ul>
   </div>
