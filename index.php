@@ -29,7 +29,7 @@
     </div>
 
     <div class="main-content">
-      <p class ="title"; style="color: white; font-size: 70px;">Welcome to our platform !</p>
+      <h1 class ="title"; style="color: white; font-size: 70px;">Welcome to our platform !</h1>
       <p>Our platform is created for community purposes. Especially for those </br>
       who need to acquire knowledge and those who want to transmit this knowledge. Simply put,</br>
       we provide a place of teaching and learning for everyone who needs knowledge in social life.</p>
@@ -38,7 +38,7 @@
       <p class="bcv-header">Advisory Board – Lecturers</p>
     </div>
     <div class="taskbar-2">
-      <form action="candicateprofile.php" method="get">
+      <form action="index.php" method="get">
         <ul>
           <li><button type="submit">All</a></li>
           <li><button type="submit" name="level" value="Advanced">Advanced</a></li>
@@ -46,7 +46,7 @@
         </ul>
       </form>
     </div>
-    <ul class="instructors">
+    <ul style=" display: grid; list-style: none; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); font-weight: bolder; gap: 2em; ">      
       <?php
         if ($resultCheck > 0) {
          while ($row = mysqli_fetch_assoc($result)) {
