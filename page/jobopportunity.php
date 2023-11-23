@@ -1,9 +1,20 @@
+<?php
+  include_once('../includes/dbConnect.php');
+  if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["level"])) {
+    $level = $_GET["level"];
+    $sql = "SELECT * FROM job_listings WHERE education = '$level'";
+  } else {
+    $sql = "SELECT * FROM job_listings LIMIT 15";
+  }
+  $result = mysqli_query($conn, $sql);
+  $resultCheck = mysqli_num_rows($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Demo</title>
-    <link rel="stylesheet" href="../css/jobopportunity.css" />
+    <title>Trang Web Ví Dụ</title>
+    <link rel="stylesheet" href="../css/course.css" />
   </head>
   <body>
     <div class="taskbar">
@@ -13,19 +24,33 @@
         <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
         <li class="mucluc"><a href="jobopportunity.php"> Job opportunity</a></li>
         <li class="mucluc"><a href="contact.php">Contact</a></li>
+        <li class="mucluc"><a href="login.php">Login</a></li>
       </ul>
     </div>
-
-    <div class="main-content">
+  <div class="taskbar-2">
+    <form action="candicateprofile.php" method="get">
+      <ul>
+        <li><button type="submit">All</a></li>
+        <li><button type="submit" name="level" value="College">College</a></li>
+        <li><button type="submit" name="level" value="Graduate School">Graduate School</a></li>
+        <li><button type="submit" name="level" value="High School">High School</a></li>
+      </ul>
+    </form>
+  </div>
+    <div class="bcv">
+      <p class="bcv-header">Cadidate</p>
     </div>
-    <div class="anhcohoivieclam">
-      <img src="../image/Candicate.svg" alt="" width="800" height="800" />
-      <form action="" class="form">
-        <h5>Log in</h5>
-        <input type="text" placeholder="Username" />
-        <input type="text" placeholder="Password" />
-        <input type="submit" value="Login"/>
-      </form>
+    <div class="job">
+      <?php
+        if ($resultCheck > 0) {
+         while ($row = mysqli_fetch_assoc($result)) {
+      ?>
+        
+
+      <?php
+          }
+        }
+      ?>
     </div>
     <div class="bcv">
     <h1>Why Greeliving Hub is the best platform ?</h1>
@@ -56,5 +81,4 @@
         <p style="color: black; text-align: center">The exchange community is closely linked between <br> businesses - training organizations - students</p>
       </div>
     </div>
-  </body>
-</html>
+    

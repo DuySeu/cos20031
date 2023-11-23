@@ -24,6 +24,7 @@
       <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
       <li class="mucluc"><a href="jobopportunity.php"> Job opportunity</a></li>
       <li class="mucluc"><a href="contact.php">Contact</a></li>
+      <li class="mucluc"><a href="login.php">Login</a></li>
     </ul>
   </div>
   <div class="taskbar-2">
