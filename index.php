@@ -14,16 +14,19 @@
   <head>
     <meta charset="UTF-8" />
     <title>Trang Web Ví Dụ</title>
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/index.css" /> 
+    <link rel="stylesheet" href="css/course.css" /> 
   </head>
   <body>
     <div class="taskbar">
       <ul>
         <li class="mucluc"><a href="index.php">Home page</a></li>
         <li class="mucluc"><a href="page/course.php">Course</a></li>
+        <li class="mucluc"><a href="page/certificate.php">certificate</a></li>
         <li class="mucluc"><a href="page/candicateprofile.php">Candicate profile</a></li>
         <li class="mucluc"><a href="page/jobopportunity.php"> Job opportunity</a></li>
-        <li class="mucluc"><a href="page/contact.php">Contact</a></li>
+        <li class="mucluc"><a href="page/User.php">User</a></li>
+        <li class="mucluc"><a href="page/Userreview.php">User Review</a></li>
         <li class="mucluc"><a href="page/login.php">Login</a></li>
       </ul>
     </div>
@@ -40,9 +43,9 @@
     <div class="taskbar-2">
       <form action="index.php" method="get">
         <ul>
-          <li><button type="submit">All</a></li>
-          <li><button type="submit" name="level" value="Advanced">Advanced</a></li>
-          <li><button type="submit" name="level" value="Expert">Expert</a></li>
+          <li class="buttonn"><button type="submit">All</a></li>
+          <li class="buttonn"><button type="submit" name="level" value="Advanced">Advanced</a></li>
+          <li class="buttonn"><button type="submit" name="level" value="Expert">Expert</a></li>
         </ul>
       </form>
     </div>

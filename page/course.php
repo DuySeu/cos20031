@@ -19,12 +19,14 @@
 <body>
   <div class="taskbar">
     <ul>
-      <li class="mucluc"><a href="../index.php">Home page</a></li>
-      <li class="mucluc"><a href="course.php">Course</a></li>
-      <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
-      <li class="mucluc"><a href="jobopportunity.php"> Job opportunity</a></li>
-      <li class="mucluc"><a href="contact.php">Contact</a></li>
-      <li class="mucluc"><a href="login.php">Login</a></li>
+        <li class="mucluc"><a href="../index.php">Home page</a></li>
+        <li class="mucluc"><a href="course.php">Course</a></li>
+        <li class="mucluc"><a href="certificate.php">certificate</a></li>
+        <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
+        <li class="mucluc"><a href="jobopportunity.php"> Job opportunity</a></li>
+        <li class="mucluc"><a href="User.php">User</a></li>
+        <li class="mucluc"><a href="Userreview.php">User Review</a></li>
+        <li class="mucluc"><a href="login.php">Login</a></li>
     </ul>
   </div>
   <div class="taskbar-2">

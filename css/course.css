@@ -15,6 +15,7 @@ body {
 }
 
 .taskbar-2 {
+    font-weight: bolder;
     margin-right: 580px;
     margin-top: 60px;
     background-color: white;
@@ -107,4 +108,10 @@ p {
 .course-tag {
     border: solid 1px;
     border-radius: 1em;
+}
+.buttonn{ 
+    display: block;
+    width: 50px;
+    height: 30px;
+
 }
