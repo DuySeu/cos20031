@@ -21,7 +21,7 @@
     <ul>
     <li class="mucluc"><a href="../index.php">Home page</a></li>
         <li class="mucluc"><a href="course.php">Course</a></li>
-        <li class="mucluc"><a href="certificate.php">certificate</a></li>
+        <li class="mucluc"><a href="certificate.php">Certificate</a></li>
         <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
         <li class="mucluc"><a href="jobopportunity.php"> Job opportunity</a></li>
         <li class="mucluc"><a href="User.php">User</a></li>
