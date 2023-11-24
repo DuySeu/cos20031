@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Demo</title>
-    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/web.css" />
   </head>
   <body>
     <div class="taskbar">
@@ -18,7 +18,6 @@
       </ul>
     </div>
 
-    <div class="main-content">
     </div>
     <div class="anhcohoivieclam">
       <img src="../image/Candicate.svg" alt="" width="800" height="800" />
@@ -57,6 +56,5 @@
         <h3 style="text-align: center">No.5</h3>
         <p style="color: black; text-align: center">The exchange community is closely linked between <br> businesses - training organizations - students</p>
       </div>
-    </div>
   </body>
 </html>

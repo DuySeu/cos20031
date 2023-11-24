@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <title>Trang Web Ví Dụ</title>
-    <link rel="stylesheet" href="../css/coursecompletion.css" />
+    <link rel="stylesheet" href="../css/web.css" />
   </head>
 <body>
   <div class="taskbar">
     <ul>
-    <li class="mucluc"><a href="../index.php">Home page</a></li>
+        <li class="mucluc"><a href="../index.php">Home page</a></li>
         <li class="mucluc"><a href="course.php">Course</a></li>
         <li class="mucluc"><a href="certificate.php">Certificate</a></li>
         <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>

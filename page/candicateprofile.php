@@ -14,7 +14,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Trang Web Ví Dụ</title>
-    <link rel="stylesheet" href="../css/course.css" />
+    <link rel="stylesheet" href="../css/web.css" />
   </head>
   <body>
     <div class="taskbar">

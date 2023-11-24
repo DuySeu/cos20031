@@ -14,7 +14,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Trang Web Ví Dụ</title>
-    <link rel="stylesheet" href="../css/course.css" />
+    <link rel="stylesheet" href="../css/web.css" />
   </head>
 <body>
   <div class="taskbar">
@@ -30,8 +30,8 @@
     </ul>
   </div>
     <div>
-    <button onclick="window.location.href='http://localhost/cos20031/page/coursecompletion.php'">Course-completion</button>
-    <button onclick="window.location.href='http://localhost/cos20031/page/enrollments.php'">Course-completion</button>
+      <li ><a href="coursecompletion.php">Course Completion</a></li>
+      <li ><a href="certificateearned.php">Certificate Earned</a></li>
   </div>
   <div class="taskbar-2">
     <form action="course.php" method="get">
