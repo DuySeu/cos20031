@@ -55,8 +55,12 @@
       ?>
           <li style='border: solid 1px; border-radius: 1em;'>
             <img style='border-radius: 1em 1em 0 0' src='../image/course.jpg' alt='' width='100%' height='auto' />
-            <h3> <?php echo $row['course_name']; ?></h3>
-            <p style='color: black'> <?php echo $row['description']; ?></p>
+            <h3 class="title-name">
+              <?php echo $row['course_name']; ?>
+            </h3>
+            <div class="assignment">
+              <?php echo $row['description']; ?>
+            </div>
           </li>
       <?php
         }

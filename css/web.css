@@ -104,9 +104,11 @@ form > input {
 h3 {
     text-align: center;
     color: #000000;
-    margin-top: 100px;
+    margin-top: 0;
 }
-
+title-name  {
+    text-align: center;
+}
 .main-content::before {
     content: "";
     position: absolute;
@@ -224,3 +226,66 @@ h3 {
 .reason {
     margin: 0 1em;
 }
+
+.card {
+    width: 300px;
+    height: 150px;
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .card .additional {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    transition: width 0.4s;
+    overflow: hidden;
+    z-index: 2;
+  }
+  
+  .card.green .additional {
+    background: linear-gradient(#92bCa6, #A2CCB6);
+  }
+  
+  .card:hover .additional {
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .card .additional .more-info {
+    width: 300px;
+    position: absolute;
+    height: 100%;
+  }
+  
+  .card .additional .more-info h1 {
+    color: #fff;
+  }
+  
+  .card.green .additional .more-info h1 {
+    color: #224C36;
+  }
+  
+  .card .additional .coords {
+    margin: 0 1rem;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .card.green .additional .coords {
+    color: #325C46;
+  }
+
+  
+  .card .general {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 1rem;
+    padding-top: 0;
+  }

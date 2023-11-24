@@ -55,7 +55,9 @@
       ?>
           <li style='border: solid 1px; border-radius: 1em;'>
             <img style='border-radius: 1em 1em 0 0' src='image/Mr-jan.jpg' alt='' width='100%' height='auto' />
-            <h3> <?php echo $row['instructor_name']; ?></h3>
+            <h3 class="title-name">
+              <?php echo $row['instructor_name']; ?>
+            </h3>
             <p style='color: black'> <?php echo $row['bio']; ?></p>
           </li>
       <?php
