@@ -186,3 +186,41 @@ h3 {
     list-style: none;
     font-weight: bolder;
 }
+
+.certificate {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    font-weight: bolder;
+    gap: 1em;
+    padding: 0 2em;
+}
+
+.cerificate-display {
+    border: 0.5em solid tan;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0.5em;
+}
+.logo {
+    color: tan;
+}
+
+.marquee {
+    color: tan;
+    font-size: 23px;
+    margin: 0 5px;
+}
+.assignment {
+    margin: 0.5em 1em;
+}
+.person {
+    border-bottom: 1px solid black;
+    font-size: 28px;
+    font-style: italic;
+    text-align: right;
+    margin: 0 1em;
+}
+.reason {
+    margin: 0 1em;
+}
