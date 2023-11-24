@@ -19,7 +19,6 @@
       </ul>
     </div>
     <div>
-      <li ><a href="coursecompletion.php">Course Completion</a></li>
       <li ><a href="certificateearned.php">Certificate Earned</a></li>
     </div>
   </body>

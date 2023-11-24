@@ -31,7 +31,7 @@
     </div>
       <div>
         <li ><a href="coursecompletion.php">Course Completion</a></li>
-        <li ><a href="certificateearned.php">Certificate Earned</a></li>
+        <li ><a href="enrollment.php">Enrollment</a></li>
       </div>
     <div class="taskbar-2">
       <form action="course.php" method="get">
