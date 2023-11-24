@@ -30,9 +30,9 @@
       </ul>
     </div>
       <p class="bcv-header">Cadidate</p>
-    <div class="sql-task">
+    <div class="taskbar-2">
       <form action="candicateprofile.php" method="get">
-        <ul>
+        <ul class="sql-task">
           <li><button type="submit">All</a></li>
           <li><button type="submit" name="level" value="College">College</a></li>
           <li><button type="submit" name="level" value="Graduate School">Graduate School</a></li>
@@ -46,23 +46,14 @@
          while ($row = mysqli_fetch_assoc($result)) {
       ?>
         <li class="card green">
-          <div class="additional">
-            <div class="more-info">
-              <h3>
-                <?php echo $row['full_name']; ?>
-              </h3>
-              <div class="coords">
-                <p style='color: black'>Skill: <?php echo $row['skill']; ?></p>
-                <p style='color: black'>Education: <?php echo $row['education']; ?></p>
-              </div>
-            </div>
-          </div>
           <div class="general">
             <h3>
               <?php echo $row['full_name']; ?>
             </h3>
             <p style='color: black'>Preferred Job: <?php echo $row['preferred_job']; ?></p>
             <p style='color: black'>Experience: <?php echo $row['experience']; ?></p>
+            <p style='color: black'>Skill: <?php echo $row['skill']; ?></p>
+            <p style='color: black'>Education: <?php echo $row['education']; ?></p>
           </div>
         </li>
       <?php

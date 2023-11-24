@@ -1,10 +1,15 @@
 <?php
   include_once('../includes/dbConnect.php');
-  if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["courseName"])) {
-    $courseName = $_GET["courseName"];
-    $sql = "SELECT * FROM courses WHERE course_name = '$courseName'";
-  } else {
-    $sql = "SELECT * FROM courses LIMIT 15";
+  if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    if (isset($_GET["courseName"]) && $_GET["courseName"] !== "All") {
+      $courseName = $_GET["courseName"];
+      $sql = "SELECT * FROM courses WHERE course_name = '$courseName'";
+    } elseif (isset($_GET["search"]) && !empty($_GET["search"])) {
+      $search = $_GET["search"];
+      $sql = "SELECT * FROM courses WHERE course_name LIKE '%$search%'";
+    } else {
+      $sql = "SELECT * FROM courses LIMIT 15";
+    }
   }
   $result = mysqli_query($conn, $sql);
   $resultCheck = mysqli_num_rows($result);
@@ -29,10 +34,10 @@
           <li class="mucluc"><a href="login.php">Login</a></li>
       </ul>
     </div>
-      <div>
+      <!-- <div>
         <li ><a href="coursecompletion.php">Course Completion</a></li>
-        <li ><a href="enrollments.php">Enrollment</a></li>
-      </div>
+        <li ><a href="enrollment.php">Enrollment</a></li>
+      </div> -->
     <div class="taskbar-2">
       <form action="course.php" method="get">
         <ul class="sql-task">
@@ -42,6 +47,7 @@
           <li><button type="submit" name="courseName" value="Biology">Biology</a></li>
           <li><button type="submit" name="courseName" value="Art">Art</a></li>
           <li><button type="submit" name="courseName" value="Geography">Geography</a></li>
+          <input class="search" type="text" name="search" placeholder="Search...">
         </ul>
       </form>
     </div>
