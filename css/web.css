@@ -192,10 +192,9 @@ title-name  {
 .certificate {
     display: grid;
     list-style: none;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     font-weight: bolder;
     gap: 1em;
-    padding: 0 2em;
 }
 
 .cerificate-display {
@@ -228,8 +227,8 @@ title-name  {
 }
 
 .card {
-    width: 300px;
-    height: 150px;
+    width: 450px;
+    height: 200px;
     box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
     border-radius: 6px;
     overflow: hidden;
@@ -243,6 +242,7 @@ title-name  {
     transition: width 0.4s;
     overflow: hidden;
     z-index: 2;
+    padding: 1rem 0;
   }
   
   .card.green .additional {
@@ -255,37 +255,36 @@ title-name  {
   }
   
   .card .additional .more-info {
-    width: 300px;
+    width: 450px;
     position: absolute;
     height: 100%;
-  }
-  
-  .card .additional .more-info h1 {
-    color: #fff;
-  }
-  
-  .card.green .additional .more-info h1 {
-    color: #224C36;
   }
   
   .card .additional .coords {
     margin: 0 1rem;
-    color: #fff;
     font-size: 1rem;
   }
   
-  .card.green .additional .coords {
-    color: #325C46;
-  }
-
-  
   .card .general {
     height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
     box-sizing: border-box;
     padding: 1rem;
-    padding-top: 0;
+  }
+  nav {
+    text-transform: uppercase;
+    text-align: center;
+  }
+  nav .apply {
+    text-decoration: none;
+    color: lawngreen;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.5em;
+  }
+  
+  nav .apply:hover {
+    font-weight: bold;
+    color: white;
+    background-color: lawngreen;
+    transition: 0.3s;
   }
