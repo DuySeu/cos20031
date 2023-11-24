@@ -1,32 +1,34 @@
 <?php
-  include_once('../includes/dbConnect.php');
-  if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["level"])) {
-    $level = $_GET["level"];
-    $sql = "SELECT * FROM job_listings WHERE education = '$level'";
-  } else {
-    $sql = "SELECT * FROM job_listings LIMIT 15";
-  }
-  $result = mysqli_query($conn, $sql);
-  $resultCheck = mysqli_num_rows($result);
+include_once('../includes/dbConnect.php');
+if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["level"])) {
+  $level = $_GET["level"];
+  $sql = "SELECT * FROM job_listings WHERE education = '$level'";
+} else {
+  $sql = "SELECT * FROM job_listings LIMIT 15";
+}
+$result = mysqli_query($conn, $sql);
+$resultCheck = mysqli_num_rows($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Trang Web Ví Dụ</title>
-    <link rel="stylesheet" href="../css/course.css" />
-  </head>
-  <body>
-    <div class="taskbar">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Trang Web Ví Dụ</title>
+  <link rel="stylesheet" href="../css/jobopportunity.css" />
+</head>
+
+<body>
+  <div class="taskbar">
     <ul>
-        <li class="mucluc"><a href="../index.php">Home page</a></li>
-        <li class="mucluc"><a href="course.php">Course</a></li>
-        <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
-        <li class="mucluc"><a href="jobopportunity.php"> Job opportunity</a></li>
-        <li class="mucluc"><a href="contact.php">Contact</a></li>
-        <li class="mucluc"><a href="login.php">Login</a></li>
-      </ul>
-    </div>
+      <li class="mucluc"><a href="../index.php">Home page</a></li>
+      <li class="mucluc"><a href="course.php">Course</a></li>
+      <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
+      <li class="mucluc"><a href="jobopportunity.php"> Job opportunity</a></li>
+      <li class="mucluc"><a href="contact.php">Contact</a></li>
+      <li class="mucluc"><a href="login.php">Login</a></li>
+    </ul>
+  </div>
   <div class="taskbar-2">
     <form action="candicateprofile.php" method="get">
       <ul>
@@ -37,22 +39,60 @@
       </ul>
     </form>
   </div>
-    <div class="bcv">
-      <p class="bcv-header">Cadidate</p>
-    </div>
-    <div class="job">
+  <div class="job">
+    <table class="table">
+      <tr class="text-center">
+        <th class="ms-2">Job Title</th>
+        <th class="ms-2">Company</th>
+        <th class="ms-2">Job Description</th>
+        <th class="ms-2">Location</th>
+        <th class="ms-2">Salary</th>
+        <th class="ms-2">Expriry Date</th>
+        <th class="ms-2">Contact Email</th>
+        <th class="ms-2">Contact Number</th>
+      </tr>
       <?php
-        if ($resultCheck > 0) {
-         while ($row = mysqli_fetch_assoc($result)) {
-      ?>
-        
+      if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+          $job_title = $row['job_title'];
+          $company_name = $row['company_name'];
+          $job_description = $row['job_description'];
+          $location = $row['location'];
+          $salary = $row['salary'];
+          $expiry_date = $row['expiry_date'];
+          $contact_email = $row['contact_email'];
+          $contact_phone = $row['contact_phone'];
 
-      <?php
-          }
+          echo "
+          <tr class='text-center'>
+          <td>$job_title</td>
+          <td>$company_name</td>
+          <td>$job_description</td>
+          <td>$location</td>
+          <td>$salary</td>
+          <td>$expiry_date</td>
+          <td>$contact_email</td>
+          <td>$contact_phone</td>";
         }
+      }
       ?>
+    </table>
+
+    <div class="query_time">
+    <?php 
+      $startTime = microtime(true);
+      $result = mysqli_query($conn, "SELECT job_id, job_title, company_name FROM job_listings");
+      $endTime = microtime(true);
+      $executionTime = ($endTime - $startTime) * 1000;
+      echo "Query took " . $executionTime . " milliseconds to execute.";
+    ?>
     </div>
-    <div class="bcv">
+    
+  </div>
+  <div class="bcv">
+    <p class="bcv-header">Cadidate</p>
+  </div>
+  <div class="bcv">
     <h1>Why Greeliving Hub is the best platform ?</h1>
     <div class="container">
       <div class="sub-container">
@@ -81,4 +121,3 @@
         <p style="color: black; text-align: center">The exchange community is closely linked between <br> businesses - training organizations - students</p>
       </div>
     </div>
-    
