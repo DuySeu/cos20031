@@ -8,7 +8,7 @@
   <body>
     <div class="taskbar">
     <ul>
-    <li class="mucluc"><a href="../index.php">Home page</a></li>
+        <li class="mucluc"><a href="../index.php">Home page</a></li>
         <li class="mucluc"><a href="course.php">Course</a></li>
         <li class="mucluc"><a href="certificate.php">Certificate</a></li>
         <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
@@ -19,5 +19,8 @@
       </ul>
     </div>
     <div>
-    <button onclick="window.location.href='http://localhost/cos20031/page/certificateearned.php'">Earned</button>
-  </div>
+      <li ><a href="coursecompletion.php">Course Completion</a></li>
+      <li ><a href="certificateearned.php">Certificate Earned</a></li>
+    </div>
+  </body>
+</html>

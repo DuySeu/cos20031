@@ -30,6 +30,7 @@
     </div>
     <div class="bcv">
       <h1>Why Greeliving Hub is the best platform ?</h1>
+    </div>
     <div class="container">
       <div class="sub-container">
         <img src="../image/No.1.svg" alt="" width="225" height="225" />

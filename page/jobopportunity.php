@@ -55,7 +55,8 @@
       ?>
     </div>
     <div class="bcv">
-    <h1>Why Greeliving Hub is the best platform ?</h1>
+      <h1>Why Greeliving Hub is the best platform ?</h1>
+    </div>
     <div class="container">
       <div class="sub-container">
         <img src="../image/No.1.svg" alt="" width="225" height="225" />
@@ -83,4 +84,5 @@
         <p style="color: black; text-align: center">The exchange community is closely linked between <br> businesses - training organizations - students</p>
       </div>
     </div>
-    
+  </body>
+</html>
