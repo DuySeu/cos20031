@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <title>Demo</title>
-    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/web.css" />
   </head>
   <body>
     <div class="taskbar">
     <ul>
-        <li class="mucluc"><a href="../index.php">Home page</a></li>
-        <li class="mucluc"><a href="course.php">Course</a></li>
+    <li class="mucluc"><a href="course.php">Course</a></li>
+        <li class="mucluc"><a href="certificate.php">certificate</a></li>
         <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
         <li class="mucluc"><a href="jobopportunity.php"> Job opportunity</a></li>
-        <li class="mucluc"><a href="contact.php">Contact</a></li>
+        <li class="mucluc"><a href="User.php">User</a></li>
+        <li class="mucluc"><a href="Userreview.php">User Review</a></li>
         <li class="mucluc"><a href="login.php">Login</a></li>
       </ul>
     </div>
 
-    <div class="main-content">
     </div>
     <div class="anhcohoivieclam">
       <img src="../image/Candicate.svg" alt="" width="800" height="800" />
@@ -30,6 +30,7 @@
     </div>
     <div class="bcv">
       <h1>Why Greeliving Hub is the best platform ?</h1>
+    </div>
     <div class="container">
       <div class="sub-container">
         <img src="../image/No.1.svg" alt="" width="225" height="225" />
@@ -56,6 +57,5 @@
         <h3 style="text-align: center">No.5</h3>
         <p style="color: black; text-align: center">The exchange community is closely linked between <br> businesses - training organizations - students</p>
       </div>
-    </div>
   </body>
 </html>
