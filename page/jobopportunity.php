@@ -33,7 +33,7 @@
     <div class="bcv">
       <p class="bcv-header">Job Listings</p>
     </div>
-  <!-- <div class="taskbar-2">
+  <div class="taskbar-2">
     <form action="jobopportunity.php" method="get">
       <ul class="sql-task">
         <li><button type="submit">All</a></li>
@@ -41,10 +41,7 @@
       </ul>
     </form>
   </div>
-    <div class="bcv">
-      <p class="bcv-header">Cadidate</p>
-    </div>
-    <div class="job">
+    <div class="certificate">
       <?php
         if ($resultCheck > 0) {
          while ($row = mysqli_fetch_assoc($result)) {
