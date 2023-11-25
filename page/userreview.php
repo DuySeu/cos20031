@@ -28,30 +28,30 @@
       </ul>
     </div>
     <div class="review">
-    <table style="width: 100%;">
-          <tr>
-            <th>Review Name</th>
-            <th>Course Review</th>
-            <th>Rating</th>
-            <th>Review</th>
-            <th>Date</th>
-          </tr>
-          <?php
-            if ($resultCheck > 0) {
-              while ($row = mysqli_fetch_assoc($result)) {
-          ?>
-          <tr>
-            <td><?php echo $row['username']; ?></td>
-            <td><?php echo $row['course_name']; ?></td>
-            <td><?php echo $row['rating']; ?></td>
-            <td><?php echo $row['review_text']; ?></td>
-            <td><?php echo $row['review_date']; ?></td>
-          </tr>
-          <?php
+      <table style="width: 100%;">
+            <tr>
+              <th>Review Name</th>
+              <th>Course Review</th>
+              <th>Rating</th>
+              <th>Review</th>
+              <th>Date</th>
+            </tr>
+            <?php
+              if ($resultCheck > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+            <tr>
+              <td><?php echo $row['username']; ?></td>
+              <td><?php echo $row['course_name']; ?></td>
+              <td><?php echo $row['rating']; ?></td>
+              <td><?php echo $row['review_text']; ?></td>
+              <td><?php echo $row['review_date']; ?></td>
+            </tr>
+            <?php
+                }
               }
-            }
-          ?>
-    </table>
+            ?>
+      </table>
     </div>
   </body>
 </html>
