@@ -19,7 +19,7 @@
       <ul>
           <li class="mucluc"><a href="../index.php">Home page</a></li>
           <li class="mucluc"><a href="course.php">Course</a></li>
-          <li class="mucluc"><a href="certificate.php">certificate</a></li>
+          <li class="mucluc"><a href="certificate.php">Certificate</a></li>
           <li class="mucluc"><a href="candicateprofile.php">Candicate profile</a></li>
           <li class="mucluc"><a href="jobopportunity.php"> Job opportunity</a></li>
           <li class="mucluc"><a href="User.php">User</a></li>
@@ -27,7 +27,8 @@
           <li class="mucluc"><a href="login.php">Login</a></li>
       </ul>
     </div>
-    <div class="review">
+    <p class="bcv-header">Review</p>
+    <div style="margin: 2em;">
       <table style="width: 100%;">
             <tr>
               <th>Review Name</th>

@@ -218,6 +218,8 @@ main {
     gap: 1em;
 }
 
+
+
 td, th {
     border: 1px solid lightgray;
     text-align: center;
@@ -228,5 +230,14 @@ tr:nth-child(even) {
     background-color: lightgray;
 }
 .btn {
-    background-color: lightblue;
+    text-decoration: none;
+    color: white;
+    background: mediumblue;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.btn:hover {
+    color: mediumblue;
+    transition: 0.3s;
+    background-color: white;
 }

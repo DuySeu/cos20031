@@ -24,8 +24,9 @@
           <li class="mucluc"><a href="login.php">Login</a></li>
       </ul>
     </div>
-    <div class="review">
-      <table style="width: 90%;">
+    <p class="bcv-header">User list</p>
+    <div style="margin: 2em;">
+      <table style="width: 100%;">
         <tr>
           <th>User ID</th>
           <th>Name </th>
