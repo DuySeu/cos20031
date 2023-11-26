@@ -95,6 +95,12 @@ p {
     font-size: 20px;
     font-weight: bold;
 }
+.buttonn{
+    padding: 5px 15px;
+    color: white;
+    background-color: palevioletred;
+    font-weight: bolder;
+}
 
 .course {
     display: grid;

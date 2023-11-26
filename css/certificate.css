@@ -26,3 +26,9 @@
 .reason {
     margin: 0 1em;
 }
+.buttonn{
+    padding: 5px 15px;
+    color: white;
+    background-color: palevioletred;
+    font-weight: bolder;
+}

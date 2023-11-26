@@ -33,17 +33,17 @@ $resultCheck = mysqli_num_rows($result);
     </ul>
   </div>
   <div>
-    <li><a href="certificateearned.php">Certificate Earned</a></li>
+    <li style="margin-top: 50px"><a class="buttonn" href="certificateearned.php">Certificate Earned</a></li>
   </div>
   <div class="taskbar-2">
     <form action="certificate.php" method="get">
       <ul class="sql-task">
-        <li><button type="submit">All</button></li>
-        <li><button type="submit" name="courseName" value="Computer Science">Computer Science</button></li>
-        <li><button type="submit" name="courseName" value="Mathematics">Math</button></li>
-        <li><button type="submit" name="courseName" value="Biology">Biology</button></li>
-        <li><button type="submit" name="courseName" value="Art">Art</button></li>
-        <li><button type="submit" name="courseName" value="Geography">Geography</button></li>
+        <li><button class="buttonn"type="submit">All</button></li>
+        <li><button class="buttonn"type="submit" name="courseName" value="Computer Science">Computer Science</button></li>
+        <li><button class="buttonn"type="submit" name="courseName" value="Mathematics">Math</button></li>
+        <li><button class="buttonn"type="submit" name="courseName" value="Biology">Biology</button></li>
+        <li><button class="buttonn"type="submit" name="courseName" value="Art">Art</button></li>
+        <li><button class="buttonn"type="submit" name="courseName" value="Geography">Geography</button></li>
       </ul>
     </form>
   </div>
