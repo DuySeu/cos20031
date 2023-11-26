@@ -34,10 +34,10 @@
           <li class="mucluc"><a href="login.php">Login</a></li>
       </ul>
     </div>
-      <!-- <div>
+      <div>
         <li ><a href="coursecompletion.php">Course Completion</a></li>
-        <li ><a href="enrollment.php">Enrollment</a></li>
-      </div> -->
+        <li ><a href="enrollments.php">Enrollment</a></li>
+      </div>
     <div class="taskbar-2">
       <form action="course.php" method="get">
         <ul class="sql-task">
@@ -74,53 +74,6 @@
       ?>
     </ul>
     </div>
-    <main>
-    <hr id="headerdivider">
-    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
-        <fieldset id="bigform1">
-        <legend id="legendofbigform">Course Review</legend>
-            <fieldset>
-                <legend>Personal information</legend>
-                <p>
-                    <label for="firstname">User_ID</label> 
-                    <input type="text" name="firstname" id="firstname" maxlength="25" size="50" required="required">
-                </p>
-            </fieldset>
-
-            <fieldset>
-                <legend>Course Information</legend>
-                <p>
-                    <label for="streetaddress">Course_ID</label> 
-                    <input type="text" name="streetaddress" id="streetaddress" maxlength="40" size="50" required="required">
-                </p>
-            </fieldset>
-            <fieldset>
-                <legend>Service Rating (1-5)</legend>
-                <div class="rating">
-                  <input type="radio" id="star5" name="rating" value="5" required>
-                  <label for="star5"></label>
-                  <input type="radio" id="star4" name="rating" value="4" required>
-                  <label for="star4"></label>
-                  <input type="radio" id="star3" name="rating" value="3" required>
-                  <label for="star3"></label>
-                  <input type="radio" id="star2" name="rating" value="2" required>
-                  <label for="star2"></label>
-                  <input type="radio" id="star1" name="rating" value="1" required>
-                  <label for="star1"></label>
-                </div>
-              </fieldset>
-            <fieldset>
-                <legend>User Comment</legend>
-                <textarea id="enquiry" name="enquiry" rows="5" cols="50" placeholder="Specify a particular aspect you are interested in!"></textarea>
-            </fieldset>
-
-            
-              
-            <input type= "submit" value="Submit" class="button">
-            <input type= "reset" value="Reset" class="button">
-        </form>
-        </fieldset>
-    </main>
     
     <div class="bcv">
       <h1>Why Greeliving Hub is the best platform ?</h1>

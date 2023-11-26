@@ -16,6 +16,7 @@
     <meta charset="UTF-8" />
     <title>Trang Web Ví Dụ</title>
     <link rel="stylesheet" href="../css/web.css" />
+    <link rel="stylesheet" href="../css/card.css" />
   </head>
   <body>
     <div class="taskbar">
@@ -36,8 +37,8 @@
    <div class="taskbar-2">
     <form action="jobopportunity.php" method="get">
       <ul class="sql-task">
-        <li><button type="submit">All</a></li>
-        <li><button type="submit" name="available" value="College">Available</a></li>
+        <li><button type="submit">All</button></li>
+        <li><button type="submit" name="available" value="College">Available</button></li>
       </ul>
     </form>
   </div>
@@ -77,74 +78,6 @@
         }
       ?>
     </div>
-    <main>
-      <hr id="headerdivider">
-      <form method="post" action="">
-        <fieldset id="bigform2">
-          <legend id="legendofbigform">Job Application</legend>
-
-          <fieldset>
-            <legend>Job Information</legend>
-            <p>
-              <label for="jobID">Job_ID</label> 
-              <input type="text" name="jobID" id="jobID" maxlength="25" size="50" required="required">
-            </p>
-          </fieldset>
-
-          <fieldset>
-            <legend>Course Information</legend>
-            <p>
-              <label for="courseID">Course_ID</label> 
-              <input type="text" name="courseID" id="courseID" maxlength="40" size="50" required="required">
-            </p>
-          </fieldset>
-
-          <fieldset>
-            <legend>Application Date</legend>
-            <label for="day">Day:</label>
-            <select id="day" name="day" required></select>
-
-            <label for="month">Month:</label>
-            <select id="month" name="month" required></select>
-
-            <label for="year">Year:</label>
-            <select id="year" name="year" required></select>
-          </fieldset>
-
-          <input type="submit" value="Submit" class="button">
-          <input type="reset" value="Reset" class="button">
-        </fieldset>
-      </form>
-
-      <script>
-        var daySelect = document.getElementById("day");
-        for (var i = 1; i <= 31; i++) {
-          var option = document.createElement("option");
-          option.value = i;
-          option.text = i;
-          daySelect.add(option);
-        }
-        var monthSelect = document.getElementById("month");
-        var months = [
-          "January", "February", "March", "April", "May", "June",
-          "July", "August", "September", "October", "November", "December"
-        ];
-        for (var i = 0; i < months.length; i++) {
-          var option = document.createElement("option");
-          option.value = months[i];
-          option.text = months[i];
-          monthSelect.add(option);
-        }
-        var yearSelect = document.getElementById("year");
-        var currentYear = new Date().getFullYear();
-        for (var i = currentYear; i >= 1900; i--) {
-          var option = document.createElement("option");
-          option.value = i;
-          option.text = i;
-          yearSelect.add(option);
-        }
-      </script>
-    </main>
     <div class="bcv">
       <h1>Why Greeliving Hub is the best platform ?</h1>
     </div>

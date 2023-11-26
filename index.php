@@ -1,7 +1,7 @@
 <?php
   include_once('includes/dbConnect.php');
   if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["level"])) {
-    $level = $_GET["expertise"];
+    $level = $_GET["level"];
     $sql = "SELECT * FROM instructors WHERE expertise = '$level'";
   } else {
     $sql = "SELECT * FROM instructors LIMIT 15";
@@ -59,6 +59,7 @@
               <?php echo $row['instructor_name']; ?>
             </h3>
             <p style='color: black'> <?php echo $row['bio']; ?></p>
+            <p style='color: black'> Expertise <?php echo $row['expertise']; ?></p>
           </li>
       <?php
           }

@@ -15,6 +15,7 @@
     <meta charset="UTF-8" />
     <title>Trang Web Ví Dụ</title>
     <link rel="stylesheet" href="../css/web.css" />
+    <link rel="stylesheet" href="../css/certificate.css" />
   </head>
   <body>
     <div class="taskbar">
@@ -35,12 +36,12 @@
     <div class="taskbar-2">
       <form action="certificate.php" method="get">
         <ul class="sql-task">
-          <li><button type="submit">All</a></li>
-          <li><button type="submit" name="courseName" value="Computer Science">Computer Science</a></li>
-          <li><button type="submit" name="courseName" value="Mathematics">Math</a></li>
-          <li><button type="submit" name="courseName" value="Biology">Biology</a></li>
-          <li><button type="submit" name="courseName" value="Art">Art</a></li>
-          <li><button type="submit" name="courseName" value="Geography">Geography</a></li>
+          <li><button type="submit">All</button></li>
+          <li><button type="submit" name="courseName" value="Computer Science">Computer Science</button></li>
+          <li><button type="submit" name="courseName" value="Mathematics">Math</button></li>
+          <li><button type="submit" name="courseName" value="Biology">Biology</button></li>
+          <li><button type="submit" name="courseName" value="Art">Art</button></li>
+          <li><button type="submit" name="courseName" value="Geography">Geography</button></li>
         </ul>
       </form>
     </div>

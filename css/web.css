@@ -123,7 +123,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+    height: auto; 
   }
 #bigform1{
     margin-top: 200px;
@@ -144,6 +144,9 @@ main {
     background-color: green;
     font-size: 20px;
     font-weight: bold;
+    display: block;
+    width: 50px;
+    height: 30px;
 }
 
 .course {
@@ -159,14 +162,13 @@ main {
     border-radius: 1em;
 }
 
-
 .title {
     font-family: fantasy;
 }
 
 .main-content {
     position: relative;
-    height: 100vh;
+    height: auto;
     background-image: url('../image/ucl-1.png');
     background-size: cover;
     background-position: center;
@@ -194,14 +196,6 @@ main {
     height: auto;
 }
 
-
-
-.buttonn {
-    display: block;
-    width: 50px;
-    height: 30px;
-}
-
 .sql-task {
     display: flex;
     list-style: none;
@@ -214,7 +208,7 @@ main {
     margin-bottom: 10px;
     width: 200px;
     box-sizing: border-box;
-  }
+}
 
 .certificate {
     display: grid;
@@ -224,94 +218,26 @@ main {
     gap: 1em;
 }
 
-.cerificate-display {
-    border: 0.5em solid tan;
-    display: table-cell;
-    vertical-align: middle;
-    padding: 0.5em;
-}
-.logo {
-    color: tan;
-}
 
-.marquee {
-    color: tan;
-    font-size: 23px;
-    margin: 0 5px;
-}
-.assignment {
-    margin: 0.5em 1em;
-}
-.person {
-    border-bottom: 1px solid black;
-    font-size: 28px;
-    font-style: italic;
-    text-align: right;
-    margin: 0 1em;
-}
-.reason {
-    margin: 0 1em;
-}
 
-.card {
-    width: 450px;
-    height: 200px;
-    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .card .additional {
-    position: absolute;
-    width: 0;
-    height: 100%;
-    transition: width 0.4s;
-    overflow: hidden;
-    z-index: 2;
-    padding: 1rem 0;
-  }
-  
-  .card.green .additional {
-    background: linear-gradient(#92bCa6, #A2CCB6);
-  }
-  
-  .card:hover .additional {
-    width: 100%;
-    border-radius: 0 5px 5px 0;
-  }
-  
-  .card .additional .more-info {
-    width: 450px;
-    position: absolute;
-    height: 100%;
-  }
-  
-  .card .additional .coords {
-    margin: 0 1rem;
-    font-size: 1rem;
-  }
-  
-  .card .general {
-    height: 100%;
-    box-sizing: border-box;
-    padding: 1rem;
-  }
-  nav {
-    text-transform: uppercase;
+td, th {
+    border: 1px solid lightgray;
     text-align: center;
-  }
-  nav .apply {
+    padding: 8px;
+}
+ 
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+.btn {
     text-decoration: none;
-    color: lawngreen;
-    background-color: white;
-    border-radius: 10px;
-    padding: 0.5em;
-  }
-  
-  nav .apply:hover {
-    font-weight: bold;
     color: white;
-    background-color: lawngreen;
+    background: mediumblue;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.btn:hover {
+    color: mediumblue;
     transition: 0.3s;
-  }
+    background-color: white;
+}

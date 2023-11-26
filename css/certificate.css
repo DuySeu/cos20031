@@ -1,0 +1,28 @@
+.cerificate-display {
+    border: 0.5em solid tan;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0.5em;
+}
+.logo {
+    color: tan;
+}
+
+.marquee {
+    color: tan;
+    font-size: 23px;
+    margin: 0 5px;
+}
+.assignment {
+    margin: 0.5em 1em;
+}
+.person {
+    border-bottom: 1px solid black;
+    font-size: 28px;
+    font-style: italic;
+    text-align: right;
+    margin: 0 1em;
+}
+.reason {
+    margin: 0 1em;
+}
