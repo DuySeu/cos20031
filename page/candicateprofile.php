@@ -34,10 +34,10 @@
     <div class="taskbar-2">
       <form action="candicateprofile.php" method="get">
         <ul class="sql-task">
-          <li><button type="submit">All</a></li>
-          <li><button type="submit" name="level" value="College">College</a></li>
-          <li><button type="submit" name="level" value="Graduate School">Graduate School</a></li>
-          <li><button type="submit" name="level" value="High School">High School</a></li>
+          <li><button class="buttonn"type="submit">All</a></li>
+          <li><button class="buttonn"type="submit" name="level" value="College">College</a></li>
+          <li><button class="buttonn"type="submit" name="level" value="Graduate School">Graduate School</a></li>
+          <li><button class="buttonn"type="submit" name="level" value="High School">High School</a></li>
         </ul>
       </form>
     </div>

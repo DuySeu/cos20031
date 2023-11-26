@@ -42,9 +42,9 @@
     <div class="taskbar-2">
       <form action="index.php" method="get">
         <ul class="sql-task">
-          <li class="buttonn"><button type="submit">All</a></li>
-          <li class="buttonn"><button type="submit" name="level" value="Advanced">Advanced</a></li>
-          <li class="buttonn"><button type="submit" name="level" value="Expert">Expert</a></li>
+          <li><button class="buttonn" type="submit">All</a></li>
+          <li><button class="buttonn" type="submit" name="level" value="Advanced">Advanced</a></li>
+          <li><button class="buttonn"type="submit" name="level" value="Expert">Expert</a></li>
         </ul>
       </form>
     </div>

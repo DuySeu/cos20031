@@ -37,8 +37,8 @@
    <div class="taskbar-2">
     <form action="jobopportunity.php" method="get">
       <ul class="sql-task">
-        <li><button type="submit">All</button></li>
-        <li><button type="submit" name="available" value="College">Available</button></li>
+        <li><button class="buttonn" type="submit">All</button></li>
+        <li><button class="buttonn" type="submit" name="available" value="College">Available</button></li>
       </ul>
     </form>
   </div>

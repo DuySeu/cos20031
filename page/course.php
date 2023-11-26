@@ -35,18 +35,18 @@
       </ul>
     </div>
       <div>
-        <li ><a href="coursecompletion.php">Course Completion</a></li>
-        <li ><a href="enrollments.php">Enrollment</a></li>
+        <li style="margin-bottom: 30px; margin-top: 50px"><a class="buttonn" href="coursecompletion.php">Course Completion</a></li>
+        <li><a class="buttonn" href="enrollments.php">Enrollment</a></li>
       </div>
     <div class="taskbar-2">
       <form action="course.php" method="get">
         <ul class="sql-task">
-          <li><button type="submit">All</a></li>
-          <li><button type="submit" name="courseName" value="Computer Science">Computer Science</a></li>
-          <li><button type="submit" name="courseName" value="Mathematics">Math</a></li>
-          <li><button type="submit" name="courseName" value="Biology">Biology</a></li>
-          <li><button type="submit" name="courseName" value="Art">Art</a></li>
-          <li><button type="submit" name="courseName" value="Geography">Geography</a></li>
+          <li><button class="buttonn" type="submit">All</a></li>
+          <li><button class="buttonn" type="submit" name="courseName" value="Computer Science">Computer Science</a></li>
+          <li><button class="buttonn" type="submit" name="courseName" value="Mathematics">Math</a></li>
+          <li><button class="buttonn" type="submit" name="courseName" value="Biology">Biology</a></li>
+          <li><button class="buttonn" type="submit" name="courseName" value="Art">Art</a></li>
+          <li><button class="buttonn" type="submit" name="courseName" value="Geography">Geography</a></li>
           <input class="search" type="text" name="search" placeholder="Search...">
         </ul>
       </form>

@@ -3,6 +3,12 @@ body {
     margin: 0;
     padding: 0;
 }
+.buttonn{
+    padding: 5px 15px;
+    color: white;
+    background-color: palevioletred;
+    font-weight: bolder;
+}
 
 .taskbar, .taskbar-2 {
     overflow: hidden;
