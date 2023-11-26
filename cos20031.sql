@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 26, 2023 lúc 06:53 AM
--- Phiên bản máy phục vụ: 10.4.27-MariaDB
--- Phiên bản PHP: 8.2.0
+-- Host: 127.0.0.1
+-- Generation Time: Nov 26, 2023 at 02:55 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `cos20031`
+-- Database: `cos20031`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `candidate_profiles`
+-- Table structure for table `candidate_profiles`
 --
 
 CREATE TABLE `candidate_profiles` (
@@ -38,7 +38,7 @@ CREATE TABLE `candidate_profiles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `candidate_profiles`
+-- Dumping data for table `candidate_profiles`
 --
 
 INSERT INTO `candidate_profiles` (`candidate_id`, `user_id`, `full_name`, `skill`, `education`, `experience`, `preferred_job`) VALUES
@@ -245,7 +245,7 @@ INSERT INTO `candidate_profiles` (`candidate_id`, `user_id`, `full_name`, `skill
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `certificates`
+-- Table structure for table `certificates`
 --
 
 CREATE TABLE `certificates` (
@@ -257,7 +257,7 @@ CREATE TABLE `certificates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `certificates`
+-- Dumping data for table `certificates`
 --
 
 INSERT INTO `certificates` (`certificate_id`, `certificate_name`, `description`, `issuing_authority`, `validity_period`) VALUES
@@ -1266,7 +1266,7 @@ INSERT INTO `certificates` (`certificate_id`, `certificate_name`, `description`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `certificates_earned`
+-- Table structure for table `certificates_earned`
 --
 
 CREATE TABLE `certificates_earned` (
@@ -1277,7 +1277,7 @@ CREATE TABLE `certificates_earned` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `certificates_earned`
+-- Dumping data for table `certificates_earned`
 --
 
 INSERT INTO `certificates_earned` (`certificate_earned_id`, `user_id`, `certificate_id`, `date_earned`) VALUES
@@ -1385,7 +1385,7 @@ INSERT INTO `certificates_earned` (`certificate_earned_id`, `user_id`, `certific
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `courses`
+-- Table structure for table `courses`
 --
 
 CREATE TABLE `courses` (
@@ -1400,215 +1400,215 @@ CREATE TABLE `courses` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `courses`
+-- Dumping data for table `courses`
 --
 
 INSERT INTO `courses` (`course_id`, `course_name`, `description`, `duration`, `certification_type`, `instructor_id`, `price`, `start_date`) VALUES
-(1, 'Geography', 'A cozy and inviting bungalow', 6, 'Language', 19, '0.00', '2022-05-06'),
-(2, 'Biology', 'A rustic cabin surrounded by mountains', 4, 'Science', 32, '0.00', '2022-01-19'),
-(3, 'Mathematics', 'A contemporary townhouse with rooftop terrace', 5, 'Language', 10, '0.00', '2022-04-25'),
-(4, 'Art', 'A stylish loft with exposed brick walls', 4, 'Science', 24, '0.00', '2023-03-17'),
-(5, 'Art', 'A modern and spacious apartment in the city center', 5, 'History', 41, '0.00', '2022-10-22'),
-(6, 'Mathematics', 'A contemporary townhouse with rooftop terrace', 5, 'Language', 46, '0.00', '2023-08-18'),
-(7, 'Art', 'A cozy cottage nestled in the woods', 3, 'Science', 5, '0.00', '2023-01-11'),
-(8, 'Biology', 'A tranquil lakeside retreat', 5, 'Language', 34, '0.00', '2022-07-21'),
-(9, 'Art', 'A luxurious villa with a private pool', 5, 'Mathematics', 18, '0.00', '2022-01-04'),
-(10, 'Geography', 'A stylish loft with exposed brick walls', 6, 'Science', 37, '0.00', '2023-08-13'),
-(11, 'Art', 'A rustic cabin surrounded by mountains', 4, 'Language', 49, '0.00', '2022-03-21'),
-(12, 'Geography', 'A modern and spacious apartment in the city center', 6, 'History', 50, '0.00', '2023-09-26'),
-(13, 'History', 'A breathtaking view of the ocean', 5, 'Art', 13, '0.00', '2022-04-09'),
-(14, 'Art', 'A cozy cottage nestled in the woods', 5, 'Language', 14, '0.00', '2023-09-26'),
-(15, 'Physical Education', 'A breathtaking view of the ocean', 6, 'Science', 20, '0.00', '2022-10-16'),
-(16, 'Geography', 'A tranquil lakeside retreat', 6, 'Mathematics', 32, '0.00', '2023-03-10'),
-(17, 'Physics', 'A luxurious villa with a private pool', 5, 'Language', 1, '0.00', '2023-09-03'),
-(18, 'Computer Science', 'A cozy and inviting bungalow', 3, 'Art', 43, '0.00', '2022-10-21'),
-(19, 'Music', 'A modern and spacious apartment in the city center', 5, 'Science', 25, '0.00', '2023-04-04'),
-(20, 'Music', 'A charming farmhouse with a beautiful garden', 3, 'Art', 30, '0.00', '2022-12-01'),
-(21, 'Biology', 'A charming farmhouse with a beautiful garden', 4, 'Science', 19, '0.00', '2022-03-04'),
-(22, 'Physical Education', 'A breathtaking view of the ocean', 3, 'Art', 33, '0.00', '2022-08-03'),
-(23, 'Music', 'A luxurious villa with a private pool', 5, 'Science', 16, '0.00', '2023-09-13'),
-(24, 'Chemistry', 'A breathtaking view of the ocean', 6, 'Mathematics', 11, '0.00', '2022-03-06'),
-(25, 'Computer Science', 'A modern and spacious apartment in the city center', 3, 'Art', 37, '0.00', '2023-04-16'),
-(26, 'Music', 'A tranquil lakeside retreat', 4, 'History', 40, '0.00', '2023-09-03'),
-(27, 'Physics', 'A breathtaking view of the ocean', 6, 'Science', 22, '0.00', '2023-02-04'),
-(28, 'Art', 'A rustic cabin surrounded by mountains', 3, 'Mathematics', 10, '0.00', '2022-01-28'),
-(29, 'Biology', 'A cozy and inviting bungalow', 4, 'History', 46, '0.00', '2022-04-03'),
-(30, 'English', 'A stylish loft with exposed brick walls', 6, 'History', 21, '0.00', '2023-05-11'),
-(31, 'Biology', 'A luxurious villa with a private pool', 4, 'Language', 33, '0.00', '2023-07-09'),
-(32, 'Music', 'A modern and spacious apartment in the city center', 3, 'Mathematics', 7, '0.00', '2023-04-17'),
-(33, 'Music', 'A modern and spacious apartment in the city center', 5, 'Language', 16, '0.00', '2022-02-04'),
-(34, 'Chemistry', 'A modern and spacious apartment in the city center', 5, 'Language', 50, '0.00', '2022-10-03'),
-(35, 'Physics', 'A charming farmhouse with a beautiful garden', 3, 'Art', 26, '0.00', '2022-07-18'),
-(36, 'Music', 'A cozy and inviting bungalow', 6, 'Mathematics', 45, '0.00', '2023-06-03'),
-(37, 'Physical Education', 'A luxurious villa with a private pool', 5, 'Science', 26, '0.00', '2023-05-02'),
-(38, 'English', 'A luxurious villa with a private pool', 4, 'Art', 2, '0.00', '2022-06-19'),
-(39, 'Physics', 'A tranquil lakeside retreat', 6, 'Language', 16, '0.00', '2023-04-18'),
-(40, 'Geography', 'A luxurious villa with a private pool', 6, 'Language', 49, '0.00', '2022-03-26'),
-(41, 'Biology', 'A luxurious villa with a private pool', 4, 'History', 4, '0.00', '2022-05-15'),
-(42, 'Physics', 'A luxurious villa with a private pool', 3, 'Art', 41, '0.00', '2022-02-24'),
-(43, 'Geography', 'A stylish loft with exposed brick walls', 4, 'Art', 16, '0.00', '2023-06-22'),
-(44, 'Computer Science', 'A contemporary townhouse with rooftop terrace', 3, 'History', 41, '0.00', '2023-03-13'),
-(45, 'English', 'A cozy and inviting bungalow', 4, 'History', 30, '0.00', '2022-04-13'),
-(46, 'Physics', 'A luxurious villa with a private pool', 3, 'Mathematics', 28, '0.00', '2023-07-22'),
-(47, 'Mathematics', 'A breathtaking view of the ocean', 5, 'Science', 1, '0.00', '2023-08-06'),
-(48, 'Computer Science', 'A charming farmhouse with a beautiful garden', 4, 'Art', 12, '0.00', '2023-09-22'),
-(49, 'History', 'A breathtaking view of the ocean', 3, 'Mathematics', 23, '0.00', '2022-01-10'),
-(50, 'Computer Science', 'A cozy and inviting bungalow', 3, 'Art', 48, '0.00', '2022-10-20'),
-(51, 'Art', 'A cozy and inviting bungalow', 6, 'Mathematics', 25, '0.00', '2022-01-25'),
-(52, 'English', 'A modern and spacious apartment in the city center', 3, 'Science', 4, '0.00', '2022-04-06'),
-(53, 'Computer Science', 'A rustic cabin surrounded by mountains', 4, 'Art', 34, '0.00', '2023-05-11'),
-(54, 'Art', 'A tranquil lakeside retreat', 6, 'Language', 11, '0.00', '2022-07-08'),
-(55, 'Chemistry', 'A breathtaking view of the ocean', 4, 'History', 12, '0.00', '2023-04-21'),
-(56, 'Physics', 'A contemporary townhouse with rooftop terrace', 6, 'Mathematics', 38, '0.00', '2023-05-20'),
-(57, 'Chemistry', 'A luxurious villa with a private pool', 3, 'Art', 44, '0.00', '2022-01-02'),
-(58, 'Chemistry', 'A breathtaking view of the ocean', 5, 'Language', 8, '0.00', '2023-04-06'),
-(59, 'History', 'A breathtaking view of the ocean', 6, 'Art', 2, '0.00', '2023-01-25'),
-(60, 'Art', 'A luxurious villa with a private pool', 5, 'Mathematics', 40, '0.00', '2022-11-08'),
-(61, 'History', 'A cozy cottage nestled in the woods', 3, 'Art', 40, '0.00', '2022-01-05'),
-(62, 'Physical Education', 'A breathtaking view of the ocean', 5, 'Science', 4, '0.00', '2022-02-19'),
-(63, 'Art', 'A breathtaking view of the ocean', 5, 'Art', 31, '0.00', '2023-04-08'),
-(64, 'Chemistry', 'A breathtaking view of the ocean', 6, 'Mathematics', 29, '0.00', '2023-06-05'),
-(65, 'Mathematics', 'A contemporary townhouse with rooftop terrace', 6, 'Art', 28, '0.00', '2023-01-16'),
-(66, 'Chemistry', 'A luxurious villa with a private pool', 5, 'Mathematics', 18, '0.00', '2022-09-25'),
-(67, 'Computer Science', 'A modern and spacious apartment in the city center', 4, 'Mathematics', 5, '0.00', '2023-07-01'),
-(68, 'English', 'A rustic cabin surrounded by mountains', 6, 'Art', 36, '0.00', '2022-01-05'),
-(69, 'Art', 'A stylish loft with exposed brick walls', 6, 'Mathematics', 30, '0.00', '2022-09-14'),
-(70, 'Geography', 'A cozy cottage nestled in the woods', 5, 'Art', 47, '0.00', '2023-06-09'),
-(71, 'English', 'A cozy and inviting bungalow', 4, 'Language', 45, '0.00', '2023-05-02'),
-(72, 'Physics', 'A modern and spacious apartment in the city center', 3, 'Mathematics', 4, '0.00', '2022-08-15'),
-(73, 'Music', 'A rustic cabin surrounded by mountains', 6, 'History', 8, '0.00', '2022-12-12'),
-(74, 'Geography', 'A tranquil lakeside retreat', 4, 'Science', 20, '0.00', '2022-05-20'),
-(75, 'Physics', 'A cozy cottage nestled in the woods', 3, 'Language', 44, '0.00', '2023-08-19'),
-(76, 'English', 'A contemporary townhouse with rooftop terrace', 3, 'Art', 38, '0.00', '2022-04-07'),
-(77, 'Physics', 'A cozy cottage nestled in the woods', 6, 'Mathematics', 33, '0.00', '2023-09-11'),
-(78, 'English', 'A contemporary townhouse with rooftop terrace', 6, 'Science', 19, '0.00', '2022-06-09'),
-(79, 'Computer Science', 'A tranquil lakeside retreat', 3, 'Art', 22, '0.00', '2023-01-15'),
-(80, 'English', 'A breathtaking view of the ocean', 3, 'Language', 29, '0.00', '2022-10-14'),
-(81, 'Physics', 'A rustic cabin surrounded by mountains', 6, 'Mathematics', 13, '0.00', '2022-02-24'),
-(82, 'Physical Education', 'A tranquil lakeside retreat', 6, 'Language', 25, '0.00', '2022-08-29'),
-(83, 'Physical Education', 'A contemporary townhouse with rooftop terrace', 5, 'History', 1, '0.00', '2023-09-04'),
-(84, 'Art', 'A rustic cabin surrounded by mountains', 5, 'Mathematics', 47, '0.00', '2023-01-26'),
-(85, 'Physical Education', 'A breathtaking view of the ocean', 4, 'Art', 27, '0.00', '2023-09-27'),
-(86, 'Chemistry', 'A luxurious villa with a private pool', 5, 'History', 47, '0.00', '2023-09-30'),
-(87, 'Physical Education', 'A rustic cabin surrounded by mountains', 6, 'Art', 48, '0.00', '2022-02-01'),
-(88, 'Physics', 'A stylish loft with exposed brick walls', 3, 'Language', 10, '0.00', '2022-07-06'),
-(89, 'Art', 'A cozy and inviting bungalow', 5, 'Science', 21, '0.00', '2023-10-23'),
-(90, 'Chemistry', 'A tranquil lakeside retreat', 5, 'History', 13, '0.00', '2023-08-25'),
-(91, 'Mathematics', 'A luxurious villa with a private pool', 5, 'History', 26, '0.00', '2023-05-10'),
-(92, 'Art', 'A stylish loft with exposed brick walls', 3, 'Art', 17, '0.00', '2022-06-13'),
-(93, 'Physical Education', 'A luxurious villa with a private pool', 4, 'History', 31, '0.00', '2023-08-11'),
-(94, 'Geography', 'A contemporary townhouse with rooftop terrace', 4, 'Art', 40, '0.00', '2022-03-13'),
-(95, 'History', 'A rustic cabin surrounded by mountains', 4, 'Science', 3, '0.00', '2023-09-04'),
-(96, 'Physics', 'A tranquil lakeside retreat', 3, 'Mathematics', 38, '0.00', '2023-06-27'),
-(97, 'Physics', 'A tranquil lakeside retreat', 5, 'Art', 27, '0.00', '2022-03-16'),
-(98, 'Art', 'A luxurious villa with a private pool', 4, 'Language', 44, '0.00', '2023-05-08'),
-(99, 'Physical Education', 'A luxurious villa with a private pool', 4, 'History', 4, '0.00', '2022-03-02'),
-(100, 'Computer Science', 'A contemporary townhouse with rooftop terrace', 6, 'Language', 18, '0.00', '2023-03-28'),
-(101, 'English', 'A cozy and inviting bungalow', 3, 'Mathematics', 49, '0.00', '2023-05-19'),
-(102, 'English', 'A cozy cottage nestled in the woods', 6, 'History', 3, '0.00', '2023-06-10'),
-(103, 'Art', 'A tranquil lakeside retreat', 4, 'Language', 20, '0.00', '2022-06-10'),
-(104, 'Physics', 'A breathtaking view of the ocean', 5, 'History', 1, '0.00', '2022-09-29'),
-(105, 'Music', 'A tranquil lakeside retreat', 5, 'History', 4, '0.00', '2023-03-24'),
-(106, 'English', 'A contemporary townhouse with rooftop terrace', 4, 'History', 5, '0.00', '2023-06-11'),
-(107, 'Computer Science', 'A luxurious villa with a private pool', 6, 'Language', 28, '0.00', '2023-05-11'),
-(108, 'Geography', 'A tranquil lakeside retreat', 3, 'History', 36, '0.00', '2023-04-29'),
-(109, 'Music', 'A charming farmhouse with a beautiful garden', 3, 'Science', 20, '0.00', '2022-10-07'),
-(110, 'Chemistry', 'A cozy cottage nestled in the woods', 6, 'Language', 1, '0.00', '2022-11-05'),
-(111, 'Physical Education', 'A cozy cottage nestled in the woods', 6, 'History', 38, '0.00', '2023-03-25'),
-(112, 'Physics', 'A cozy and inviting bungalow', 3, 'Mathematics', 27, '0.00', '2022-05-17'),
-(113, 'Mathematics', 'A charming farmhouse with a beautiful garden', 4, 'History', 21, '0.00', '2023-10-06'),
-(114, 'Chemistry', 'A breathtaking view of the ocean', 3, 'Art', 4, '0.00', '2022-06-09'),
-(115, 'Geography', 'A stylish loft with exposed brick walls', 4, 'Mathematics', 48, '0.00', '2022-05-09'),
-(116, 'Art', 'A luxurious villa with a private pool', 6, 'History', 15, '0.00', '2022-10-04'),
-(117, 'Physics', 'A cozy cottage nestled in the woods', 4, 'Science', 31, '0.00', '2022-11-24'),
-(118, 'Art', 'A charming farmhouse with a beautiful garden', 3, 'Mathematics', 8, '0.00', '2022-03-19'),
-(119, 'Art', 'A rustic cabin surrounded by mountains', 5, 'Science', 33, '0.00', '2023-06-14'),
-(120, 'Biology', 'A cozy cottage nestled in the woods', 4, 'Mathematics', 34, '0.00', '2022-09-07'),
-(121, 'Physical Education', 'A luxurious villa with a private pool', 3, 'History', 32, '0.00', '2023-05-07'),
-(122, 'History', 'A tranquil lakeside retreat', 5, 'Language', 41, '0.00', '2023-06-06'),
-(123, 'Geography', 'A contemporary townhouse with rooftop terrace', 4, 'Mathematics', 20, '0.00', '2022-06-04'),
-(124, 'Art', 'A tranquil lakeside retreat', 5, 'Language', 12, '0.00', '2023-04-08'),
-(125, 'Mathematics', 'A charming farmhouse with a beautiful garden', 4, 'Science', 15, '0.00', '2023-09-01'),
-(126, 'Mathematics', 'A charming farmhouse with a beautiful garden', 6, 'Mathematics', 50, '0.00', '2022-12-06'),
-(127, 'Geography', 'A luxurious villa with a private pool', 5, 'Science', 18, '0.00', '2023-04-23'),
-(128, 'History', 'A stylish loft with exposed brick walls', 3, 'Art', 50, '0.00', '2023-05-06'),
-(129, 'Physics', 'A modern and spacious apartment in the city center', 5, 'Art', 1, '0.00', '2022-08-14'),
-(130, 'English', 'A rustic cabin surrounded by mountains', 3, 'Language', 25, '0.00', '2022-02-25'),
-(131, 'History', 'A contemporary townhouse with rooftop terrace', 5, 'Language', 14, '0.00', '2022-06-19'),
-(132, 'Geography', 'A cozy cottage nestled in the woods', 5, 'History', 11, '0.00', '2023-09-25'),
-(133, 'Biology', 'A contemporary townhouse with rooftop terrace', 3, 'Science', 48, '0.00', '2023-03-01'),
-(134, 'Physics', 'A cozy cottage nestled in the woods', 5, 'Science', 36, '0.00', '2023-06-05'),
-(135, 'Art', 'A cozy and inviting bungalow', 6, 'Mathematics', 2, '0.00', '2022-01-21'),
-(136, 'Art', 'A luxurious villa with a private pool', 3, 'Art', 30, '0.00', '2023-07-22'),
-(137, 'Computer Science', 'A cozy and inviting bungalow', 3, 'Mathematics', 15, '0.00', '2022-09-16'),
-(138, 'Computer Science', 'A contemporary townhouse with rooftop terrace', 6, 'Art', 43, '0.00', '2023-10-25'),
-(139, 'Geography', 'A tranquil lakeside retreat', 3, 'Language', 4, '0.00', '2023-01-11'),
-(140, 'History', 'A tranquil lakeside retreat', 6, 'Mathematics', 20, '0.00', '2022-06-15'),
-(141, 'Computer Science', 'A rustic cabin surrounded by mountains', 3, 'Science', 22, '0.00', '2022-12-16'),
-(142, 'Physics', 'A charming farmhouse with a beautiful garden', 5, 'Mathematics', 35, '0.00', '2022-08-01'),
-(143, 'Biology', 'A cozy and inviting bungalow', 4, 'Art', 43, '0.00', '2022-09-19'),
-(144, 'Computer Science', 'A cozy cottage nestled in the woods', 4, 'Art', 27, '0.00', '2023-05-28'),
-(145, 'Mathematics', 'A luxurious villa with a private pool', 4, 'History', 39, '0.00', '2022-04-13'),
-(146, 'Music', 'A luxurious villa with a private pool', 6, 'Language', 48, '0.00', '2023-01-10'),
-(147, 'Geography', 'A cozy cottage nestled in the woods', 6, 'Science', 28, '0.00', '2023-03-17'),
-(148, 'Music', 'A contemporary townhouse with rooftop terrace', 4, 'Language', 27, '0.00', '2023-05-17'),
-(149, 'Physical Education', 'A breathtaking view of the ocean', 6, 'Art', 41, '0.00', '2023-05-29'),
-(150, 'Art', 'A stylish loft with exposed brick walls', 6, 'Art', 15, '0.00', '2022-06-02'),
-(151, 'Physics', 'A cozy and inviting bungalow', 4, 'Art', 15, '0.00', '2023-07-18'),
-(152, 'Art', 'A stylish loft with exposed brick walls', 4, 'Art', 24, '0.00', '2022-12-04'),
-(153, 'Chemistry', 'A luxurious villa with a private pool', 3, 'Science', 10, '0.00', '2023-05-26'),
-(154, 'Biology', 'A contemporary townhouse with rooftop terrace', 6, 'Art', 3, '0.00', '2022-05-19'),
-(155, 'Art', 'A contemporary townhouse with rooftop terrace', 6, 'Language', 25, '0.00', '2022-07-24'),
-(156, 'English', 'A breathtaking view of the ocean', 4, 'History', 6, '0.00', '2022-12-29'),
-(157, 'Geography', 'A cozy and inviting bungalow', 3, 'Language', 42, '0.00', '2023-05-05'),
-(158, 'English', 'A charming farmhouse with a beautiful garden', 5, 'Art', 17, '0.00', '2023-02-26'),
-(159, 'Biology', 'A rustic cabin surrounded by mountains', 3, 'History', 15, '0.00', '2023-10-04'),
-(160, 'Mathematics', 'A stylish loft with exposed brick walls', 4, 'Science', 40, '0.00', '2023-07-01'),
-(161, 'Biology', 'A contemporary townhouse with rooftop terrace', 5, 'Art', 25, '0.00', '2022-08-05'),
-(162, 'Chemistry', 'A stylish loft with exposed brick walls', 4, 'Mathematics', 49, '0.00', '2022-06-27'),
-(163, 'Biology', 'A charming farmhouse with a beautiful garden', 3, 'Language', 4, '0.00', '2023-09-18'),
-(164, 'Computer Science', 'A stylish loft with exposed brick walls', 6, 'Science', 2, '0.00', '2023-07-23'),
-(165, 'Physics', 'A cozy cottage nestled in the woods', 6, 'History', 47, '0.00', '2023-03-22'),
-(166, 'Music', 'A breathtaking view of the ocean', 6, 'History', 21, '0.00', '2022-11-07'),
-(167, 'English', 'A rustic cabin surrounded by mountains', 4, 'Language', 22, '0.00', '2023-04-08'),
-(168, 'Computer Science', 'A luxurious villa with a private pool', 3, 'Science', 44, '0.00', '2023-04-07'),
-(169, 'Music', 'A stylish loft with exposed brick walls', 6, 'Art', 18, '0.00', '2022-08-30'),
-(170, 'Geography', 'A cozy cottage nestled in the woods', 5, 'Art', 29, '0.00', '2022-10-31'),
-(171, 'Biology', 'A rustic cabin surrounded by mountains', 4, 'Science', 1, '0.00', '2023-05-25'),
-(172, 'Mathematics', 'A stylish loft with exposed brick walls', 5, 'Mathematics', 10, '0.00', '2022-12-11'),
-(173, 'Geography', 'A charming farmhouse with a beautiful garden', 5, 'History', 23, '0.00', '2022-04-19'),
-(174, 'Computer Science', 'A charming farmhouse with a beautiful garden', 6, 'Science', 24, '0.00', '2022-06-24'),
-(175, 'Biology', 'A contemporary townhouse with rooftop terrace', 6, 'Language', 8, '0.00', '2022-01-23'),
-(176, 'Physical Education', 'A stylish loft with exposed brick walls', 6, 'History', 25, '0.00', '2022-02-04'),
-(177, 'Music', 'A cozy cottage nestled in the woods', 6, 'Science', 47, '0.00', '2022-06-30'),
-(178, 'Biology', 'A breathtaking view of the ocean', 4, 'Mathematics', 48, '0.00', '2023-06-29'),
-(179, 'Biology', 'A cozy and inviting bungalow', 5, 'History', 2, '0.00', '2022-09-12'),
-(180, 'Physics', 'A rustic cabin surrounded by mountains', 4, 'Language', 50, '0.00', '2022-04-01'),
-(181, 'History', 'A luxurious villa with a private pool', 4, 'Science', 8, '0.00', '2023-07-22'),
-(182, 'Art', 'A tranquil lakeside retreat', 3, 'History', 16, '0.00', '2023-10-02'),
-(183, 'Chemistry', 'A breathtaking view of the ocean', 3, 'Art', 42, '0.00', '2022-05-06'),
-(184, 'English', 'A contemporary townhouse with rooftop terrace', 3, 'Language', 34, '0.00', '2022-08-17'),
-(185, 'Mathematics', 'A cozy and inviting bungalow', 6, 'Science', 30, '0.00', '2023-02-13'),
-(186, 'Mathematics', 'A charming farmhouse with a beautiful garden', 6, 'Mathematics', 35, '0.00', '2023-03-03'),
-(187, 'Physical Education', 'A luxurious villa with a private pool', 4, 'Language', 50, '0.00', '2022-11-08'),
-(188, 'Geography', 'A luxurious villa with a private pool', 5, 'History', 26, '0.00', '2022-04-29'),
-(189, 'Music', 'A breathtaking view of the ocean', 6, 'History', 17, '0.00', '2023-07-13'),
-(190, 'Physics', 'A cozy and inviting bungalow', 6, 'Language', 15, '0.00', '2022-10-20'),
-(191, 'Geography', 'A charming farmhouse with a beautiful garden', 4, 'Mathematics', 18, '0.00', '2023-06-22'),
-(192, 'Music', 'A cozy and inviting bungalow', 3, 'History', 42, '0.00', '2023-09-18'),
-(193, 'Physical Education', 'A cozy and inviting bungalow', 5, 'Art', 5, '0.00', '2022-02-22'),
-(194, 'Music', 'A contemporary townhouse with rooftop terrace', 3, 'Science', 11, '0.00', '2022-05-25'),
-(195, 'Mathematics', 'A tranquil lakeside retreat', 6, 'Art', 22, '0.00', '2023-01-23'),
-(196, 'English', 'A tranquil lakeside retreat', 3, 'Science', 29, '0.00', '2022-09-14'),
-(197, 'Physical Education', 'A modern and spacious apartment in the city center', 5, 'Language', 25, '0.00', '2022-04-24'),
-(198, 'Art', 'A tranquil lakeside retreat', 5, 'History', 12, '0.00', '2023-05-08'),
-(199, 'Chemistry', 'A stylish loft with exposed brick walls', 3, 'Language', 47, '0.00', '2023-01-25'),
-(200, 'English', 'A cozy cottage nestled in the woods', 4, 'Science', 48, '0.00', '2023-09-23');
+(1, 'Geography', 'A cozy and inviting bungalow', 6, 'Language', 19, 0.00, '2022-05-06'),
+(2, 'Biology', 'A rustic cabin surrounded by mountains', 4, 'Science', 32, 0.00, '2022-01-19'),
+(3, 'Mathematics', 'A contemporary townhouse with rooftop terrace', 5, 'Language', 10, 0.00, '2022-04-25'),
+(4, 'Art', 'A stylish loft with exposed brick walls', 4, 'Science', 24, 0.00, '2023-03-17'),
+(5, 'Art', 'A modern and spacious apartment in the city center', 5, 'History', 41, 0.00, '2022-10-22'),
+(6, 'Mathematics', 'A contemporary townhouse with rooftop terrace', 5, 'Language', 46, 0.00, '2023-08-18'),
+(7, 'Art', 'A cozy cottage nestled in the woods', 3, 'Science', 5, 0.00, '2023-01-11'),
+(8, 'Biology', 'A tranquil lakeside retreat', 5, 'Language', 34, 0.00, '2022-07-21'),
+(9, 'Art', 'A luxurious villa with a private pool', 5, 'Mathematics', 18, 0.00, '2022-01-04'),
+(10, 'Geography', 'A stylish loft with exposed brick walls', 6, 'Science', 37, 0.00, '2023-08-13'),
+(11, 'Art', 'A rustic cabin surrounded by mountains', 4, 'Language', 49, 0.00, '2022-03-21'),
+(12, 'Geography', 'A modern and spacious apartment in the city center', 6, 'History', 50, 0.00, '2023-09-26'),
+(13, 'History', 'A breathtaking view of the ocean', 5, 'Art', 13, 0.00, '2022-04-09'),
+(14, 'Art', 'A cozy cottage nestled in the woods', 5, 'Language', 14, 0.00, '2023-09-26'),
+(15, 'Physical Education', 'A breathtaking view of the ocean', 6, 'Science', 20, 0.00, '2022-10-16'),
+(16, 'Geography', 'A tranquil lakeside retreat', 6, 'Mathematics', 32, 0.00, '2023-03-10'),
+(17, 'Physics', 'A luxurious villa with a private pool', 5, 'Language', 1, 0.00, '2023-09-03'),
+(18, 'Computer Science', 'A cozy and inviting bungalow', 3, 'Art', 43, 0.00, '2022-10-21'),
+(19, 'Music', 'A modern and spacious apartment in the city center', 5, 'Science', 25, 0.00, '2023-04-04'),
+(20, 'Music', 'A charming farmhouse with a beautiful garden', 3, 'Art', 30, 0.00, '2022-12-01'),
+(21, 'Biology', 'A charming farmhouse with a beautiful garden', 4, 'Science', 19, 0.00, '2022-03-04'),
+(22, 'Physical Education', 'A breathtaking view of the ocean', 3, 'Art', 33, 0.00, '2022-08-03'),
+(23, 'Music', 'A luxurious villa with a private pool', 5, 'Science', 16, 0.00, '2023-09-13'),
+(24, 'Chemistry', 'A breathtaking view of the ocean', 6, 'Mathematics', 11, 0.00, '2022-03-06'),
+(25, 'Computer Science', 'A modern and spacious apartment in the city center', 3, 'Art', 37, 0.00, '2023-04-16'),
+(26, 'Music', 'A tranquil lakeside retreat', 4, 'History', 40, 0.00, '2023-09-03'),
+(27, 'Physics', 'A breathtaking view of the ocean', 6, 'Science', 22, 0.00, '2023-02-04'),
+(28, 'Art', 'A rustic cabin surrounded by mountains', 3, 'Mathematics', 10, 0.00, '2022-01-28'),
+(29, 'Biology', 'A cozy and inviting bungalow', 4, 'History', 46, 0.00, '2022-04-03'),
+(30, 'English', 'A stylish loft with exposed brick walls', 6, 'History', 21, 0.00, '2023-05-11'),
+(31, 'Biology', 'A luxurious villa with a private pool', 4, 'Language', 33, 0.00, '2023-07-09'),
+(32, 'Music', 'A modern and spacious apartment in the city center', 3, 'Mathematics', 7, 0.00, '2023-04-17'),
+(33, 'Music', 'A modern and spacious apartment in the city center', 5, 'Language', 16, 0.00, '2022-02-04'),
+(34, 'Chemistry', 'A modern and spacious apartment in the city center', 5, 'Language', 50, 0.00, '2022-10-03'),
+(35, 'Physics', 'A charming farmhouse with a beautiful garden', 3, 'Art', 26, 0.00, '2022-07-18'),
+(36, 'Music', 'A cozy and inviting bungalow', 6, 'Mathematics', 45, 0.00, '2023-06-03'),
+(37, 'Physical Education', 'A luxurious villa with a private pool', 5, 'Science', 26, 0.00, '2023-05-02'),
+(38, 'English', 'A luxurious villa with a private pool', 4, 'Art', 2, 0.00, '2022-06-19'),
+(39, 'Physics', 'A tranquil lakeside retreat', 6, 'Language', 16, 0.00, '2023-04-18'),
+(40, 'Geography', 'A luxurious villa with a private pool', 6, 'Language', 49, 0.00, '2022-03-26'),
+(41, 'Biology', 'A luxurious villa with a private pool', 4, 'History', 4, 0.00, '2022-05-15'),
+(42, 'Physics', 'A luxurious villa with a private pool', 3, 'Art', 41, 0.00, '2022-02-24'),
+(43, 'Geography', 'A stylish loft with exposed brick walls', 4, 'Art', 16, 0.00, '2023-06-22'),
+(44, 'Computer Science', 'A contemporary townhouse with rooftop terrace', 3, 'History', 41, 0.00, '2023-03-13'),
+(45, 'English', 'A cozy and inviting bungalow', 4, 'History', 30, 0.00, '2022-04-13'),
+(46, 'Physics', 'A luxurious villa with a private pool', 3, 'Mathematics', 28, 0.00, '2023-07-22'),
+(47, 'Mathematics', 'A breathtaking view of the ocean', 5, 'Science', 1, 0.00, '2023-08-06'),
+(48, 'Computer Science', 'A charming farmhouse with a beautiful garden', 4, 'Art', 12, 0.00, '2023-09-22'),
+(49, 'History', 'A breathtaking view of the ocean', 3, 'Mathematics', 23, 0.00, '2022-01-10'),
+(50, 'Computer Science', 'A cozy and inviting bungalow', 3, 'Art', 48, 0.00, '2022-10-20'),
+(51, 'Art', 'A cozy and inviting bungalow', 6, 'Mathematics', 25, 0.00, '2022-01-25'),
+(52, 'English', 'A modern and spacious apartment in the city center', 3, 'Science', 4, 0.00, '2022-04-06'),
+(53, 'Computer Science', 'A rustic cabin surrounded by mountains', 4, 'Art', 34, 0.00, '2023-05-11'),
+(54, 'Art', 'A tranquil lakeside retreat', 6, 'Language', 11, 0.00, '2022-07-08'),
+(55, 'Chemistry', 'A breathtaking view of the ocean', 4, 'History', 12, 0.00, '2023-04-21'),
+(56, 'Physics', 'A contemporary townhouse with rooftop terrace', 6, 'Mathematics', 38, 0.00, '2023-05-20'),
+(57, 'Chemistry', 'A luxurious villa with a private pool', 3, 'Art', 44, 0.00, '2022-01-02'),
+(58, 'Chemistry', 'A breathtaking view of the ocean', 5, 'Language', 8, 0.00, '2023-04-06'),
+(59, 'History', 'A breathtaking view of the ocean', 6, 'Art', 2, 0.00, '2023-01-25'),
+(60, 'Art', 'A luxurious villa with a private pool', 5, 'Mathematics', 40, 0.00, '2022-11-08'),
+(61, 'History', 'A cozy cottage nestled in the woods', 3, 'Art', 40, 0.00, '2022-01-05'),
+(62, 'Physical Education', 'A breathtaking view of the ocean', 5, 'Science', 4, 0.00, '2022-02-19'),
+(63, 'Art', 'A breathtaking view of the ocean', 5, 'Art', 31, 0.00, '2023-04-08'),
+(64, 'Chemistry', 'A breathtaking view of the ocean', 6, 'Mathematics', 29, 0.00, '2023-06-05'),
+(65, 'Mathematics', 'A contemporary townhouse with rooftop terrace', 6, 'Art', 28, 0.00, '2023-01-16'),
+(66, 'Chemistry', 'A luxurious villa with a private pool', 5, 'Mathematics', 18, 0.00, '2022-09-25'),
+(67, 'Computer Science', 'A modern and spacious apartment in the city center', 4, 'Mathematics', 5, 0.00, '2023-07-01'),
+(68, 'English', 'A rustic cabin surrounded by mountains', 6, 'Art', 36, 0.00, '2022-01-05'),
+(69, 'Art', 'A stylish loft with exposed brick walls', 6, 'Mathematics', 30, 0.00, '2022-09-14'),
+(70, 'Geography', 'A cozy cottage nestled in the woods', 5, 'Art', 47, 0.00, '2023-06-09'),
+(71, 'English', 'A cozy and inviting bungalow', 4, 'Language', 45, 0.00, '2023-05-02'),
+(72, 'Physics', 'A modern and spacious apartment in the city center', 3, 'Mathematics', 4, 0.00, '2022-08-15'),
+(73, 'Music', 'A rustic cabin surrounded by mountains', 6, 'History', 8, 0.00, '2022-12-12'),
+(74, 'Geography', 'A tranquil lakeside retreat', 4, 'Science', 20, 0.00, '2022-05-20'),
+(75, 'Physics', 'A cozy cottage nestled in the woods', 3, 'Language', 44, 0.00, '2023-08-19'),
+(76, 'English', 'A contemporary townhouse with rooftop terrace', 3, 'Art', 38, 0.00, '2022-04-07'),
+(77, 'Physics', 'A cozy cottage nestled in the woods', 6, 'Mathematics', 33, 0.00, '2023-09-11'),
+(78, 'English', 'A contemporary townhouse with rooftop terrace', 6, 'Science', 19, 0.00, '2022-06-09'),
+(79, 'Computer Science', 'A tranquil lakeside retreat', 3, 'Art', 22, 0.00, '2023-01-15'),
+(80, 'English', 'A breathtaking view of the ocean', 3, 'Language', 29, 0.00, '2022-10-14'),
+(81, 'Physics', 'A rustic cabin surrounded by mountains', 6, 'Mathematics', 13, 0.00, '2022-02-24'),
+(82, 'Physical Education', 'A tranquil lakeside retreat', 6, 'Language', 25, 0.00, '2022-08-29'),
+(83, 'Physical Education', 'A contemporary townhouse with rooftop terrace', 5, 'History', 1, 0.00, '2023-09-04'),
+(84, 'Art', 'A rustic cabin surrounded by mountains', 5, 'Mathematics', 47, 0.00, '2023-01-26'),
+(85, 'Physical Education', 'A breathtaking view of the ocean', 4, 'Art', 27, 0.00, '2023-09-27'),
+(86, 'Chemistry', 'A luxurious villa with a private pool', 5, 'History', 47, 0.00, '2023-09-30'),
+(87, 'Physical Education', 'A rustic cabin surrounded by mountains', 6, 'Art', 48, 0.00, '2022-02-01'),
+(88, 'Physics', 'A stylish loft with exposed brick walls', 3, 'Language', 10, 0.00, '2022-07-06'),
+(89, 'Art', 'A cozy and inviting bungalow', 5, 'Science', 21, 0.00, '2023-10-23'),
+(90, 'Chemistry', 'A tranquil lakeside retreat', 5, 'History', 13, 0.00, '2023-08-25'),
+(91, 'Mathematics', 'A luxurious villa with a private pool', 5, 'History', 26, 0.00, '2023-05-10'),
+(92, 'Art', 'A stylish loft with exposed brick walls', 3, 'Art', 17, 0.00, '2022-06-13'),
+(93, 'Physical Education', 'A luxurious villa with a private pool', 4, 'History', 31, 0.00, '2023-08-11'),
+(94, 'Geography', 'A contemporary townhouse with rooftop terrace', 4, 'Art', 40, 0.00, '2022-03-13'),
+(95, 'History', 'A rustic cabin surrounded by mountains', 4, 'Science', 3, 0.00, '2023-09-04'),
+(96, 'Physics', 'A tranquil lakeside retreat', 3, 'Mathematics', 38, 0.00, '2023-06-27'),
+(97, 'Physics', 'A tranquil lakeside retreat', 5, 'Art', 27, 0.00, '2022-03-16'),
+(98, 'Art', 'A luxurious villa with a private pool', 4, 'Language', 44, 0.00, '2023-05-08'),
+(99, 'Physical Education', 'A luxurious villa with a private pool', 4, 'History', 4, 0.00, '2022-03-02'),
+(100, 'Computer Science', 'A contemporary townhouse with rooftop terrace', 6, 'Language', 18, 0.00, '2023-03-28'),
+(101, 'English', 'A cozy and inviting bungalow', 3, 'Mathematics', 49, 0.00, '2023-05-19'),
+(102, 'English', 'A cozy cottage nestled in the woods', 6, 'History', 3, 0.00, '2023-06-10'),
+(103, 'Art', 'A tranquil lakeside retreat', 4, 'Language', 20, 0.00, '2022-06-10'),
+(104, 'Physics', 'A breathtaking view of the ocean', 5, 'History', 1, 0.00, '2022-09-29'),
+(105, 'Music', 'A tranquil lakeside retreat', 5, 'History', 4, 0.00, '2023-03-24'),
+(106, 'English', 'A contemporary townhouse with rooftop terrace', 4, 'History', 5, 0.00, '2023-06-11'),
+(107, 'Computer Science', 'A luxurious villa with a private pool', 6, 'Language', 28, 0.00, '2023-05-11'),
+(108, 'Geography', 'A tranquil lakeside retreat', 3, 'History', 36, 0.00, '2023-04-29'),
+(109, 'Music', 'A charming farmhouse with a beautiful garden', 3, 'Science', 20, 0.00, '2022-10-07'),
+(110, 'Chemistry', 'A cozy cottage nestled in the woods', 6, 'Language', 1, 0.00, '2022-11-05'),
+(111, 'Physical Education', 'A cozy cottage nestled in the woods', 6, 'History', 38, 0.00, '2023-03-25'),
+(112, 'Physics', 'A cozy and inviting bungalow', 3, 'Mathematics', 27, 0.00, '2022-05-17'),
+(113, 'Mathematics', 'A charming farmhouse with a beautiful garden', 4, 'History', 21, 0.00, '2023-10-06'),
+(114, 'Chemistry', 'A breathtaking view of the ocean', 3, 'Art', 4, 0.00, '2022-06-09'),
+(115, 'Geography', 'A stylish loft with exposed brick walls', 4, 'Mathematics', 48, 0.00, '2022-05-09'),
+(116, 'Art', 'A luxurious villa with a private pool', 6, 'History', 15, 0.00, '2022-10-04'),
+(117, 'Physics', 'A cozy cottage nestled in the woods', 4, 'Science', 31, 0.00, '2022-11-24'),
+(118, 'Art', 'A charming farmhouse with a beautiful garden', 3, 'Mathematics', 8, 0.00, '2022-03-19'),
+(119, 'Art', 'A rustic cabin surrounded by mountains', 5, 'Science', 33, 0.00, '2023-06-14'),
+(120, 'Biology', 'A cozy cottage nestled in the woods', 4, 'Mathematics', 34, 0.00, '2022-09-07'),
+(121, 'Physical Education', 'A luxurious villa with a private pool', 3, 'History', 32, 0.00, '2023-05-07'),
+(122, 'History', 'A tranquil lakeside retreat', 5, 'Language', 41, 0.00, '2023-06-06'),
+(123, 'Geography', 'A contemporary townhouse with rooftop terrace', 4, 'Mathematics', 20, 0.00, '2022-06-04'),
+(124, 'Art', 'A tranquil lakeside retreat', 5, 'Language', 12, 0.00, '2023-04-08'),
+(125, 'Mathematics', 'A charming farmhouse with a beautiful garden', 4, 'Science', 15, 0.00, '2023-09-01'),
+(126, 'Mathematics', 'A charming farmhouse with a beautiful garden', 6, 'Mathematics', 50, 0.00, '2022-12-06'),
+(127, 'Geography', 'A luxurious villa with a private pool', 5, 'Science', 18, 0.00, '2023-04-23'),
+(128, 'History', 'A stylish loft with exposed brick walls', 3, 'Art', 50, 0.00, '2023-05-06'),
+(129, 'Physics', 'A modern and spacious apartment in the city center', 5, 'Art', 1, 0.00, '2022-08-14'),
+(130, 'English', 'A rustic cabin surrounded by mountains', 3, 'Language', 25, 0.00, '2022-02-25'),
+(131, 'History', 'A contemporary townhouse with rooftop terrace', 5, 'Language', 14, 0.00, '2022-06-19'),
+(132, 'Geography', 'A cozy cottage nestled in the woods', 5, 'History', 11, 0.00, '2023-09-25'),
+(133, 'Biology', 'A contemporary townhouse with rooftop terrace', 3, 'Science', 48, 0.00, '2023-03-01'),
+(134, 'Physics', 'A cozy cottage nestled in the woods', 5, 'Science', 36, 0.00, '2023-06-05'),
+(135, 'Art', 'A cozy and inviting bungalow', 6, 'Mathematics', 2, 0.00, '2022-01-21'),
+(136, 'Art', 'A luxurious villa with a private pool', 3, 'Art', 30, 0.00, '2023-07-22'),
+(137, 'Computer Science', 'A cozy and inviting bungalow', 3, 'Mathematics', 15, 0.00, '2022-09-16'),
+(138, 'Computer Science', 'A contemporary townhouse with rooftop terrace', 6, 'Art', 43, 0.00, '2023-10-25'),
+(139, 'Geography', 'A tranquil lakeside retreat', 3, 'Language', 4, 0.00, '2023-01-11'),
+(140, 'History', 'A tranquil lakeside retreat', 6, 'Mathematics', 20, 0.00, '2022-06-15'),
+(141, 'Computer Science', 'A rustic cabin surrounded by mountains', 3, 'Science', 22, 0.00, '2022-12-16'),
+(142, 'Physics', 'A charming farmhouse with a beautiful garden', 5, 'Mathematics', 35, 0.00, '2022-08-01'),
+(143, 'Biology', 'A cozy and inviting bungalow', 4, 'Art', 43, 0.00, '2022-09-19'),
+(144, 'Computer Science', 'A cozy cottage nestled in the woods', 4, 'Art', 27, 0.00, '2023-05-28'),
+(145, 'Mathematics', 'A luxurious villa with a private pool', 4, 'History', 39, 0.00, '2022-04-13'),
+(146, 'Music', 'A luxurious villa with a private pool', 6, 'Language', 48, 0.00, '2023-01-10'),
+(147, 'Geography', 'A cozy cottage nestled in the woods', 6, 'Science', 28, 0.00, '2023-03-17'),
+(148, 'Music', 'A contemporary townhouse with rooftop terrace', 4, 'Language', 27, 0.00, '2023-05-17'),
+(149, 'Physical Education', 'A breathtaking view of the ocean', 6, 'Art', 41, 0.00, '2023-05-29'),
+(150, 'Art', 'A stylish loft with exposed brick walls', 6, 'Art', 15, 0.00, '2022-06-02'),
+(151, 'Physics', 'A cozy and inviting bungalow', 4, 'Art', 15, 0.00, '2023-07-18'),
+(152, 'Art', 'A stylish loft with exposed brick walls', 4, 'Art', 24, 0.00, '2022-12-04'),
+(153, 'Chemistry', 'A luxurious villa with a private pool', 3, 'Science', 10, 0.00, '2023-05-26'),
+(154, 'Biology', 'A contemporary townhouse with rooftop terrace', 6, 'Art', 3, 0.00, '2022-05-19'),
+(155, 'Art', 'A contemporary townhouse with rooftop terrace', 6, 'Language', 25, 0.00, '2022-07-24'),
+(156, 'English', 'A breathtaking view of the ocean', 4, 'History', 6, 0.00, '2022-12-29'),
+(157, 'Geography', 'A cozy and inviting bungalow', 3, 'Language', 42, 0.00, '2023-05-05'),
+(158, 'English', 'A charming farmhouse with a beautiful garden', 5, 'Art', 17, 0.00, '2023-02-26'),
+(159, 'Biology', 'A rustic cabin surrounded by mountains', 3, 'History', 15, 0.00, '2023-10-04'),
+(160, 'Mathematics', 'A stylish loft with exposed brick walls', 4, 'Science', 40, 0.00, '2023-07-01'),
+(161, 'Biology', 'A contemporary townhouse with rooftop terrace', 5, 'Art', 25, 0.00, '2022-08-05'),
+(162, 'Chemistry', 'A stylish loft with exposed brick walls', 4, 'Mathematics', 49, 0.00, '2022-06-27'),
+(163, 'Biology', 'A charming farmhouse with a beautiful garden', 3, 'Language', 4, 0.00, '2023-09-18'),
+(164, 'Computer Science', 'A stylish loft with exposed brick walls', 6, 'Science', 2, 0.00, '2023-07-23'),
+(165, 'Physics', 'A cozy cottage nestled in the woods', 6, 'History', 47, 0.00, '2023-03-22'),
+(166, 'Music', 'A breathtaking view of the ocean', 6, 'History', 21, 0.00, '2022-11-07'),
+(167, 'English', 'A rustic cabin surrounded by mountains', 4, 'Language', 22, 0.00, '2023-04-08'),
+(168, 'Computer Science', 'A luxurious villa with a private pool', 3, 'Science', 44, 0.00, '2023-04-07'),
+(169, 'Music', 'A stylish loft with exposed brick walls', 6, 'Art', 18, 0.00, '2022-08-30'),
+(170, 'Geography', 'A cozy cottage nestled in the woods', 5, 'Art', 29, 0.00, '2022-10-31'),
+(171, 'Biology', 'A rustic cabin surrounded by mountains', 4, 'Science', 1, 0.00, '2023-05-25'),
+(172, 'Mathematics', 'A stylish loft with exposed brick walls', 5, 'Mathematics', 10, 0.00, '2022-12-11'),
+(173, 'Geography', 'A charming farmhouse with a beautiful garden', 5, 'History', 23, 0.00, '2022-04-19'),
+(174, 'Computer Science', 'A charming farmhouse with a beautiful garden', 6, 'Science', 24, 0.00, '2022-06-24'),
+(175, 'Biology', 'A contemporary townhouse with rooftop terrace', 6, 'Language', 8, 0.00, '2022-01-23'),
+(176, 'Physical Education', 'A stylish loft with exposed brick walls', 6, 'History', 25, 0.00, '2022-02-04'),
+(177, 'Music', 'A cozy cottage nestled in the woods', 6, 'Science', 47, 0.00, '2022-06-30'),
+(178, 'Biology', 'A breathtaking view of the ocean', 4, 'Mathematics', 48, 0.00, '2023-06-29'),
+(179, 'Biology', 'A cozy and inviting bungalow', 5, 'History', 2, 0.00, '2022-09-12'),
+(180, 'Physics', 'A rustic cabin surrounded by mountains', 4, 'Language', 50, 0.00, '2022-04-01'),
+(181, 'History', 'A luxurious villa with a private pool', 4, 'Science', 8, 0.00, '2023-07-22'),
+(182, 'Art', 'A tranquil lakeside retreat', 3, 'History', 16, 0.00, '2023-10-02'),
+(183, 'Chemistry', 'A breathtaking view of the ocean', 3, 'Art', 42, 0.00, '2022-05-06'),
+(184, 'English', 'A contemporary townhouse with rooftop terrace', 3, 'Language', 34, 0.00, '2022-08-17'),
+(185, 'Mathematics', 'A cozy and inviting bungalow', 6, 'Science', 30, 0.00, '2023-02-13'),
+(186, 'Mathematics', 'A charming farmhouse with a beautiful garden', 6, 'Mathematics', 35, 0.00, '2023-03-03'),
+(187, 'Physical Education', 'A luxurious villa with a private pool', 4, 'Language', 50, 0.00, '2022-11-08'),
+(188, 'Geography', 'A luxurious villa with a private pool', 5, 'History', 26, 0.00, '2022-04-29'),
+(189, 'Music', 'A breathtaking view of the ocean', 6, 'History', 17, 0.00, '2023-07-13'),
+(190, 'Physics', 'A cozy and inviting bungalow', 6, 'Language', 15, 0.00, '2022-10-20'),
+(191, 'Geography', 'A charming farmhouse with a beautiful garden', 4, 'Mathematics', 18, 0.00, '2023-06-22'),
+(192, 'Music', 'A cozy and inviting bungalow', 3, 'History', 42, 0.00, '2023-09-18'),
+(193, 'Physical Education', 'A cozy and inviting bungalow', 5, 'Art', 5, 0.00, '2022-02-22'),
+(194, 'Music', 'A contemporary townhouse with rooftop terrace', 3, 'Science', 11, 0.00, '2022-05-25'),
+(195, 'Mathematics', 'A tranquil lakeside retreat', 6, 'Art', 22, 0.00, '2023-01-23'),
+(196, 'English', 'A tranquil lakeside retreat', 3, 'Science', 29, 0.00, '2022-09-14'),
+(197, 'Physical Education', 'A modern and spacious apartment in the city center', 5, 'Language', 25, 0.00, '2022-04-24'),
+(198, 'Art', 'A tranquil lakeside retreat', 5, 'History', 12, 0.00, '2023-05-08'),
+(199, 'Chemistry', 'A stylish loft with exposed brick walls', 3, 'Language', 47, 0.00, '2023-01-25'),
+(200, 'English', 'A cozy cottage nestled in the woods', 4, 'Science', 48, 0.00, '2023-09-23');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `course_completion`
+-- Table structure for table `course_completion`
 --
 
 CREATE TABLE `course_completion` (
@@ -1619,7 +1619,7 @@ CREATE TABLE `course_completion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `course_completion`
+-- Dumping data for table `course_completion`
 --
 
 INSERT INTO `course_completion` (`course_completion_id`, `user_id`, `course_id`, `completion_date`) VALUES
@@ -1676,7 +1676,7 @@ INSERT INTO `course_completion` (`course_completion_id`, `user_id`, `course_id`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `enrollments`
+-- Table structure for table `enrollments`
 --
 
 CREATE TABLE `enrollments` (
@@ -1687,115 +1687,117 @@ CREATE TABLE `enrollments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `enrollments`
+-- Dumping data for table `enrollments`
 --
 
 INSERT INTO `enrollments` (`enrollment_id`, `user_id`, `course_id`, `enrollment_date`) VALUES
-(1, 496, 108, '2023-05-27'),
-(2, 109, 15, '2022-09-10'),
-(3, 214, 2, '2022-07-07'),
-(4, 470, 37, '2023-02-04'),
-(5, 176, 53, '2023-05-30'),
-(6, 387, 2, '2022-10-09'),
-(7, 250, 11, '2023-01-08'),
-(8, 102, 43, '2022-07-22'),
-(9, 197, 67, '2023-06-21'),
-(10, 173, 2, '2023-06-19'),
-(11, 120, 85, '2022-02-27'),
-(12, 192, 88, '2023-04-15'),
-(13, 318, 112, '2023-11-01'),
-(14, 5, 191, '2022-01-11'),
-(15, 92, 154, '2023-04-06'),
-(16, 166, 56, '2023-02-10'),
-(17, 365, 141, '2022-04-12'),
-(18, 343, 14, '2022-02-06'),
-(19, 40, 177, '2022-01-07'),
-(20, 198, 55, '2022-09-01'),
-(21, 413, 29, '2022-09-22'),
-(22, 253, 28, '2023-03-31'),
-(23, 192, 78, '2023-11-10'),
-(24, 261, 145, '2023-02-22'),
-(25, 70, 84, '2022-08-02'),
-(26, 204, 96, '2023-06-18'),
-(27, 230, 180, '2023-08-31'),
-(28, 133, 49, '2023-05-07'),
-(29, 246, 95, '2022-09-05'),
-(30, 244, 151, '2022-04-19'),
-(31, 284, 112, '2022-03-26'),
-(32, 356, 170, '2022-06-11'),
-(33, 15, 83, '2023-04-03'),
-(34, 267, 143, '2023-07-24'),
-(35, 85, 155, '2022-03-15'),
-(36, 135, 134, '2022-05-20'),
-(37, 466, 3, '2022-09-04'),
-(38, 420, 109, '2022-08-19'),
-(39, 401, 169, '2022-12-12'),
-(40, 285, 63, '2023-08-30'),
-(41, 155, 38, '2022-11-08'),
-(42, 205, 66, '2023-09-28'),
-(43, 334, 36, '2023-06-25'),
-(44, 340, 4, '2023-05-18'),
-(45, 448, 197, '2022-07-21'),
-(46, 120, 34, '2023-06-18'),
-(47, 90, 137, '2022-09-21'),
-(48, 7, 200, '2022-06-05'),
-(49, 445, 176, '2023-10-29'),
-(50, 47, 50, '2022-05-22'),
-(51, 240, 10, '2022-09-20'),
-(52, 491, 174, '2023-06-28'),
-(53, 46, 161, '2023-06-04'),
-(54, 158, 169, '2023-02-20'),
-(55, 194, 105, '2023-03-16'),
-(56, 428, 147, '2022-03-05'),
-(57, 357, 4, '2022-06-18'),
-(58, 245, 60, '2022-01-25'),
-(59, 481, 103, '2022-10-18'),
-(60, 261, 35, '2022-10-16'),
-(61, 142, 103, '2023-10-24'),
-(62, 33, 35, '2023-02-24'),
-(63, 226, 9, '2022-08-27'),
-(64, 185, 198, '2023-04-28'),
-(65, 190, 167, '2022-02-07'),
-(66, 340, 70, '2022-02-23'),
-(67, 214, 56, '2022-02-20'),
-(68, 101, 44, '2023-09-01'),
-(69, 145, 148, '2023-07-13'),
-(70, 425, 1, '2022-09-10'),
-(71, 174, 181, '2022-10-28'),
-(72, 356, 130, '2023-04-24'),
-(73, 414, 24, '2023-10-24'),
-(74, 341, 61, '2022-12-06'),
-(75, 279, 143, '2023-07-30'),
-(76, 185, 171, '2023-01-27'),
-(77, 461, 129, '2023-03-25'),
-(78, 219, 131, '2022-05-10'),
-(79, 104, 101, '2022-11-15'),
-(80, 280, 57, '2022-04-06'),
-(81, 60, 87, '2023-09-27'),
-(82, 35, 163, '2022-08-05'),
-(83, 211, 63, '2023-06-18'),
-(84, 241, 34, '2022-05-20'),
-(85, 397, 76, '2022-03-27'),
-(86, 472, 162, '2022-12-30'),
-(87, 476, 43, '2023-09-05'),
-(88, 160, 91, '2023-10-24'),
-(89, 181, 53, '2022-06-01'),
-(90, 260, 17, '2022-07-03'),
-(91, 209, 101, '2022-02-07'),
-(92, 95, 180, '2022-04-20'),
-(93, 79, 67, '2022-06-27'),
-(94, 325, 74, '2022-12-29'),
-(95, 459, 96, '2022-09-04'),
-(96, 328, 118, '2023-05-22'),
-(97, 240, 177, '2023-08-01'),
-(98, 229, 36, '2022-12-25'),
-(99, 474, 68, '2022-03-22'),
-(100, 286, 140, '2022-03-30');
+(1, 32, 14, '2023-11-26'),
+(2, 496, 108, '2023-05-27'),
+(3, 109, 15, '2022-09-10'),
+(4, 214, 2, '2022-07-07'),
+(5, 470, 37, '2023-02-04'),
+(6, 176, 53, '2023-05-30'),
+(7, 387, 2, '2022-10-09'),
+(8, 250, 11, '2023-01-08'),
+(9, 102, 43, '2022-07-22'),
+(10, 197, 67, '2023-06-21'),
+(11, 173, 2, '2023-06-19'),
+(12, 120, 85, '2022-02-27'),
+(13, 192, 88, '2023-04-15'),
+(14, 318, 112, '2023-11-01'),
+(15, 5, 191, '2022-01-11'),
+(16, 92, 154, '2023-04-06'),
+(17, 166, 56, '2023-02-10'),
+(18, 365, 141, '2022-04-12'),
+(19, 343, 14, '2022-02-06'),
+(20, 40, 177, '2022-01-07'),
+(21, 198, 55, '2022-09-01'),
+(22, 413, 29, '2022-09-22'),
+(23, 253, 28, '2023-03-31'),
+(24, 192, 78, '2023-11-10'),
+(25, 261, 145, '2023-02-22'),
+(26, 70, 84, '2022-08-02'),
+(27, 204, 96, '2023-06-18'),
+(28, 230, 180, '2023-08-31'),
+(29, 133, 49, '2023-05-07'),
+(30, 246, 95, '2022-09-05'),
+(31, 244, 151, '2022-04-19'),
+(32, 284, 112, '2022-03-26'),
+(33, 356, 170, '2022-06-11'),
+(34, 15, 83, '2023-04-03'),
+(35, 267, 143, '2023-07-24'),
+(36, 85, 155, '2022-03-15'),
+(37, 135, 134, '2022-05-20'),
+(38, 466, 3, '2022-09-04'),
+(39, 420, 109, '2022-08-19'),
+(40, 401, 169, '2022-12-12'),
+(41, 285, 63, '2023-08-30'),
+(42, 155, 38, '2022-11-08'),
+(43, 205, 66, '2023-09-28'),
+(44, 334, 36, '2023-06-25'),
+(45, 340, 4, '2023-05-18'),
+(46, 448, 197, '2022-07-21'),
+(47, 120, 34, '2023-06-18'),
+(48, 90, 137, '2022-09-21'),
+(49, 7, 200, '2022-06-05'),
+(50, 445, 176, '2023-10-29'),
+(51, 47, 50, '2022-05-22'),
+(52, 240, 10, '2022-09-20'),
+(53, 491, 174, '2023-06-28'),
+(54, 46, 161, '2023-06-04'),
+(55, 158, 169, '2023-02-20'),
+(56, 194, 105, '2023-03-16'),
+(57, 428, 147, '2022-03-05'),
+(58, 357, 4, '2022-06-18'),
+(59, 245, 60, '2022-01-25'),
+(60, 481, 103, '2022-10-18'),
+(61, 261, 35, '2022-10-16'),
+(62, 142, 103, '2023-10-24'),
+(63, 33, 35, '2023-02-24'),
+(64, 226, 9, '2022-08-27'),
+(65, 185, 198, '2023-04-28'),
+(66, 190, 167, '2022-02-07'),
+(67, 340, 70, '2022-02-23'),
+(68, 214, 56, '2022-02-20'),
+(69, 101, 44, '2023-09-01'),
+(70, 145, 148, '2023-07-13'),
+(71, 425, 1, '2022-09-10'),
+(72, 174, 181, '2022-10-28'),
+(73, 356, 130, '2023-04-24'),
+(74, 414, 24, '2023-10-24'),
+(75, 341, 61, '2022-12-06'),
+(76, 279, 143, '2023-07-30'),
+(77, 185, 171, '2023-01-27'),
+(78, 461, 129, '2023-03-25'),
+(79, 219, 131, '2022-05-10'),
+(80, 104, 101, '2022-11-15'),
+(81, 280, 57, '2022-04-06'),
+(82, 60, 87, '2023-09-27'),
+(83, 35, 163, '2022-08-05'),
+(84, 211, 63, '2023-06-18'),
+(85, 241, 34, '2022-05-20'),
+(86, 397, 76, '2022-03-27'),
+(87, 472, 162, '2022-12-30'),
+(88, 476, 43, '2023-09-05'),
+(89, 160, 91, '2023-10-24'),
+(90, 181, 53, '2022-06-01'),
+(91, 260, 17, '2022-07-03'),
+(92, 209, 101, '2022-02-07'),
+(93, 95, 180, '2022-04-20'),
+(94, 79, 67, '2022-06-27'),
+(95, 325, 74, '2022-12-29'),
+(96, 459, 96, '2022-09-04'),
+(97, 328, 118, '2023-05-22'),
+(98, 240, 177, '2023-08-01'),
+(99, 229, 36, '2022-12-25'),
+(100, 474, 68, '2022-03-22'),
+(101, 286, 140, '2022-03-30'),
+(102, 33, 11, '2023-11-26');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `instructors`
+-- Table structure for table `instructors`
 --
 
 CREATE TABLE `instructors` (
@@ -1806,13 +1808,13 @@ CREATE TABLE `instructors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `instructors`
+-- Dumping data for table `instructors`
 --
 
 INSERT INTO `instructors` (`instructor_id`, `instructor_name`, `expertise`, `bio`) VALUES
 (1, 'John Smith', 'Advanced', 'Dedicated to fostering critical thinking and problem-solving skills.'),
-(2, 'Tuan Dat', 'Expert', 'Bio for Instructor 1'),
-(3, 'Nguyen Quoc Duy', 'Advanced', 'Programming is awesome'),
+(2, 'Instructor 1', 'Expertise 1', 'Bio for Instructor 1'),
+(3, 'Instructor 2', 'Expertise 2', 'Bio for Instructor 2'),
 (4, 'Emily Johnson', 'Expert', 'Expertise in curriculum development and instructional design.'),
 (5, 'Christopher Thomas', 'Expert', 'Skilled in using technology to enhance learning experiences.'),
 (6, 'Ryan Lewis', 'Expert', 'Known for creating a positive and inclusive learning environment.'),
@@ -1864,126 +1866,133 @@ INSERT INTO `instructors` (`instructor_id`, `instructor_name`, `expertise`, `bio
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `job_application`
+-- Table structure for table `job_application`
 --
 
 CREATE TABLE `job_application` (
   `application_id` int(11) NOT NULL,
   `job_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
-  `applied` enum('T','F') NOT NULL
+  `application_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `job_application`
+-- Dumping data for table `job_application`
 --
 
-INSERT INTO `job_application` (`application_id`, `job_id`, `user_id`, `applied`) VALUES
-(1, 8, 191, 'F'),
-(2, 52, 14, 'T'),
-(3, 88, 269, 'T'),
-(4, 19, 22, 'T'),
-(5, 79, 5, 'F'),
-(6, 51, 324, 'F'),
-(7, 36, 474, 'T'),
-(8, 29, 29, 'F'),
-(9, 37, 436, 'T'),
-(10, 22, 17, 'T'),
-(11, 92, 391, 'T'),
-(12, 86, 410, 'F'),
-(13, 40, 230, 'F'),
-(14, 25, 364, 'T'),
-(15, 46, 114, 'F'),
-(16, 23, 149, 'T'),
-(17, 69, 491, 'F'),
-(18, 100, 467, 'T'),
-(19, 83, 416, 'T'),
-(20, 6, 49, 'F'),
-(21, 53, 62, 'T'),
-(22, 17, 272, 'T'),
-(23, 5, 33, 'F'),
-(24, 16, 349, 'F'),
-(25, 26, 83, 'T'),
-(26, 98, 63, 'T'),
-(27, 96, 284, 'T'),
-(28, 30, 150, 'F'),
-(29, 97, 260, 'T'),
-(30, 82, 291, 'T'),
-(31, 18, 471, 'F'),
-(32, 42, 492, 'F'),
-(33, 89, 120, 'T'),
-(34, 76, 335, 'T'),
-(35, 66, 76, 'F'),
-(36, 33, 141, 'T'),
-(37, 47, 386, 'F'),
-(38, 90, 327, 'F'),
-(39, 20, 393, 'T'),
-(40, 13, 336, 'T'),
-(41, 3, 57, 'T'),
-(42, 81, 394, 'F'),
-(43, 67, 458, 'F'),
-(44, 61, 90, 'F'),
-(45, 34, 434, 'T'),
-(46, 32, 228, 'T'),
-(47, 57, 476, 'T'),
-(48, 87, 427, 'T'),
-(49, 49, 70, 'T'),
-(50, 12, 79, 'T'),
-(51, 44, 351, 'T'),
-(52, 31, 477, 'F'),
-(53, 75, 105, 'T'),
-(54, 10, 159, 'T'),
-(55, 11, 242, 'T'),
-(56, 91, 44, 'F'),
-(57, 72, 24, 'T'),
-(58, 48, 332, 'T'),
-(59, 80, 292, 'T'),
-(60, 77, 178, 'T'),
-(61, 71, 377, 'T'),
-(62, 39, 223, 'T'),
-(63, 95, 199, 'F'),
-(64, 55, 35, 'T'),
-(65, 84, 201, 'F'),
-(66, 41, 326, 'F'),
-(67, 63, 405, 'T'),
-(68, 35, 97, 'F'),
-(69, 62, 66, 'F'),
-(70, 43, 144, 'T'),
-(71, 45, 382, 'T'),
-(72, 28, 218, 'T'),
-(73, 85, 426, 'T'),
-(74, 73, 440, 'T'),
-(75, 74, 174, 'F'),
-(76, 7, 482, 'F'),
-(77, 50, 277, 'T'),
-(78, 4, 184, 'F'),
-(79, 9, 100, 'T'),
-(80, 58, 414, 'T'),
-(81, 93, 259, 'T'),
-(82, 64, 430, 'F'),
-(83, 68, 360, 'F'),
-(84, 78, 222, 'T'),
-(85, 65, 81, 'F'),
-(86, 94, 281, 'T'),
-(87, 2, 248, 'T'),
-(88, 14, 395, 'T'),
-(89, 70, 75, 'T'),
-(90, 24, 207, 'F'),
-(91, 15, 175, 'T'),
-(92, 38, 344, 'F'),
-(93, 54, 236, 'T'),
-(94, 56, 116, 'F'),
-(95, 60, 330, 'T'),
-(96, 99, 101, 'F'),
-(97, 15, 249, 'F'),
-(98, 31, 111, 'F'),
-(99, 4, 157, 'T'),
-(100, 20, 367, 'T');
+INSERT INTO `job_application` (`application_id`, `job_id`, `user_id`, `application_date`) VALUES
+(1, 5, 64, '2023-11-26'),
+(2, 61, 260, '2023-01-01'),
+(3, 92, 52, '2022-09-21'),
+(4, 77, 115, '2023-07-21'),
+(5, 57, 62, '2023-03-23'),
+(6, 9, 133, '2022-10-20'),
+(7, 29, 231, '2022-07-09'),
+(8, 90, 176, '2023-05-13'),
+(9, 81, 253, '2023-01-27'),
+(10, 53, 198, '2023-08-01'),
+(11, 96, 357, '2023-07-16'),
+(12, 48, 71, '2022-08-09'),
+(13, 19, 320, '2022-11-09'),
+(14, 20, 360, '2023-02-22'),
+(15, 49, 230, '2023-01-16'),
+(16, 95, 307, '2023-01-14'),
+(17, 77, 361, '2022-10-01'),
+(18, 59, 58, '2023-05-13'),
+(19, 84, 123, '2023-03-11'),
+(20, 87, 165, '2023-02-06'),
+(21, 20, 268, '2023-01-17'),
+(22, 84, 15, '2022-11-27'),
+(23, 93, 119, '2023-07-29'),
+(24, 44, 425, '2023-09-22'),
+(25, 22, 468, '2023-05-15'),
+(26, 98, 436, '2022-05-29'),
+(27, 8, 498, '2022-07-25'),
+(28, 15, 439, '2022-08-25'),
+(29, 64, 380, '2023-06-29'),
+(30, 16, 113, '2023-10-25'),
+(31, 87, 29, '2023-02-28'),
+(32, 84, 236, '2023-10-18'),
+(33, 33, 45, '2023-02-28'),
+(34, 3, 213, '2023-08-17'),
+(35, 63, 260, '2023-11-13'),
+(36, 83, 30, '2023-10-26'),
+(37, 49, 225, '2022-08-21'),
+(38, 83, 165, '2023-02-11'),
+(39, 100, 358, '2022-12-13'),
+(40, 46, 171, '2023-09-29'),
+(41, 93, 43, '2022-11-18'),
+(42, 34, 193, '2022-11-10'),
+(43, 75, 158, '2023-01-25'),
+(44, 92, 88, '2022-06-06'),
+(45, 73, 46, '2023-08-22'),
+(46, 70, 249, '2023-09-19'),
+(47, 70, 4, '2023-01-01'),
+(48, 41, 62, '2023-03-20'),
+(49, 12, 299, '2023-08-13'),
+(50, 13, 366, '2022-11-01'),
+(51, 76, 467, '2022-10-25'),
+(52, 72, 52, '2023-02-07'),
+(53, 64, 491, '2022-12-14'),
+(54, 59, 465, '2022-11-04'),
+(55, 68, 455, '2022-07-18'),
+(56, 94, 414, '2023-08-06'),
+(57, 57, 68, '2023-01-11'),
+(58, 60, 315, '2022-09-18'),
+(59, 90, 206, '2023-09-05'),
+(60, 71, 90, '2022-06-27'),
+(61, 46, 289, '2023-03-23'),
+(62, 77, 296, '2023-05-10'),
+(63, 38, 243, '2022-06-15'),
+(64, 72, 247, '2022-07-12'),
+(65, 48, 83, '2023-02-16'),
+(66, 28, 377, '2023-04-18'),
+(67, 95, 154, '2023-05-22'),
+(68, 78, 340, '2022-12-03'),
+(69, 98, 123, '2022-10-05'),
+(70, 80, 160, '2022-12-16'),
+(71, 78, 444, '2023-06-29'),
+(72, 3, 144, '2022-09-19'),
+(73, 6, 440, '2023-03-01'),
+(74, 2, 359, '2022-09-12'),
+(75, 92, 277, '2022-12-04'),
+(76, 21, 142, '2023-08-04'),
+(77, 25, 459, '2023-07-01'),
+(78, 94, 440, '2023-07-17'),
+(79, 31, 269, '2023-06-14'),
+(80, 48, 60, '2023-07-14'),
+(81, 31, 362, '2023-06-11'),
+(82, 97, 76, '2022-11-29'),
+(83, 22, 317, '2022-10-23'),
+(84, 68, 105, '2023-05-16'),
+(85, 89, 489, '2023-07-02'),
+(86, 13, 111, '2023-02-26'),
+(87, 21, 375, '2023-06-10'),
+(88, 49, 180, '2023-07-27'),
+(89, 60, 323, '2022-11-19'),
+(90, 80, 49, '2023-10-30'),
+(91, 62, 94, '2023-10-17'),
+(92, 80, 441, '2023-04-29'),
+(93, 79, 183, '2022-08-16'),
+(94, 58, 23, '2022-10-01'),
+(95, 21, 175, '2022-10-28'),
+(96, 10, 63, '2022-11-09'),
+(97, 14, 353, '2023-08-31'),
+(98, 73, 34, '2023-04-05'),
+(99, 80, 27, '2023-07-22'),
+(100, 77, 318, '2023-03-12'),
+(101, 75, 116, '2022-09-05'),
+(102, 5, 100, '2023-11-26'),
+(103, 5, 100, '2023-11-26'),
+(104, 32, 45, '2023-11-26'),
+(105, 32, 45, '2023-11-26'),
+(106, 32, 45, '2023-11-26'),
+(107, 32, 31, '2023-11-26');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `job_listings`
+-- Table structure for table `job_listings`
 --
 
 CREATE TABLE `job_listings` (
@@ -1992,122 +2001,122 @@ CREATE TABLE `job_listings` (
   `company_name` varchar(255) DEFAULT NULL,
   `job_description` text DEFAULT NULL,
   `location` varchar(255) DEFAULT NULL,
-  `salary` text DEFAULT NULL,
+  `salary` decimal(10,2) DEFAULT NULL,
   `expiry_date` date DEFAULT NULL,
   `contact_email` varchar(255) DEFAULT NULL,
   `contact_phone` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `job_listings`
+-- Dumping data for table `job_listings`
 --
 
 INSERT INTO `job_listings` (`job_id`, `job_title`, `company_name`, `job_description`, `location`, `salary`, `expiry_date`, `contact_email`, `contact_phone`) VALUES
-(1, 'Human Resources Manager', 'Vinte', 'Fusce consequat.', '63 Homewood Junction', '$4853.70', '2023-10-31', 'dshawell0@economist.com', '214-563-8988'),
-(2, 'Staff Accountant IV', 'Innotype', 'Duis aliquam convallis nunc.', '9 Drewry Avenue', '$3949.15', '2023-09-02', 'jugolotti1@dyndns.org', '253-594-7304'),
-(3, 'Associate Professor', 'Feednation', 'Ut at dolor quis odio consequat varius.', '53 Goodland Lane', '$3770.53', '2022-12-30', 'beagers2@jalbum.net', '339-610-6758'),
-(4, 'Systems Administrator III', 'Bluejam', 'Quisque porta volutpat erat.', '02 Mayfield Alley', '$2033.63', '2023-02-01', 'msollom3@whitehouse.gov', '912-606-8450'),
-(5, 'VP Quality Control', 'Wordify', 'In hac habitasse platea dictumst.', '40 Anthes Alley', '$4858.00', '2023-06-12', 'fdalgarnocht4@un.org', '885-648-3692'),
-(6, 'Payment Adjustment Coordinator', 'Photobean', 'Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.', '7078 Straubel Drive', '$2462.96', '2023-10-21', 'rvideneev5@kickstarter.com', '510-782-1002'),
-(7, 'Assistant Media Planner', 'Mynte', 'Phasellus sit amet erat.', '65 Crowley Hill', '$2698.37', '2023-10-22', 'csprade6@columbia.edu', '985-137-4007'),
-(8, 'Statistician I', 'Trudeo', 'Vestibulum rutrum rutrum neque.', '2 Bluejay Trail', '$1949.49', '2023-06-21', 'hcorrado7@photobucket.com', '668-652-6901'),
-(9, 'Programmer Analyst III', 'Photobean', 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.', '5 Cody Hill', '$4075.02', '2023-04-26', 'dretchford8@cisco.com', '152-764-2648'),
-(10, 'Recruiter', 'Gabcube', 'Maecenas tincidunt lacus at velit.', '392 Evergreen Terrace', '$4579.94', '2023-10-12', 'uminghi9@4shared.com', '163-559-8306'),
-(11, 'Automation Specialist I', 'Zoonder', 'Maecenas pulvinar lobortis est.', '49 Northwestern Court', '$1310.82', '2023-10-30', 'gmoggiea@histats.com', '456-944-0152'),
-(12, 'Administrative Officer', 'Miboo', 'Etiam justo.', '06 Clove Street', '$2146.08', '2023-03-05', 'ycardoob@51.la', '871-805-1007'),
-(13, 'Analyst Programmer', 'Tavu', 'Suspendisse potenti.', '581 Marquette Road', '$4715.46', '2023-06-24', 'wbushrodc@berkeley.edu', '126-916-4660'),
-(14, 'Occupational Therapist', 'Wikivu', 'Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.', '3948 Dovetail Street', '$915.57', '2023-09-27', 'dqueenboroughd@harvard.edu', '520-406-5224'),
-(15, 'Account Coordinator', 'Meevee', 'Aenean lectus.', '26988 Delladonna Plaza', '$4347.89', '2022-11-20', 'rlandmane@cocolog-nifty.com', '333-744-4670'),
-(16, 'Marketing Assistant', 'Eayo', 'Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.', '4 Atwood Crossing', '$4928.42', '2023-07-26', 'gberrowf@cbsnews.com', '277-141-6920'),
-(17, 'Structural Analysis Engineer', 'Flashspan', 'Mauris sit amet eros.', '42 Muir Point', '$510.68', '2023-02-02', 'crapinettg@dailymotion.com', '837-182-3186'),
-(18, 'General Manager', 'DabZ', 'Nam nulla.', '5 Susan Crossing', '$2074.09', '2023-06-28', 'mklimowiczh@jigsy.com', '588-366-4409'),
-(19, 'Senior Quality Engineer', 'Livefish', 'Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.', '97 Havey Terrace', '$4143.85', '2023-04-01', 'myourelli@sogou.com', '634-342-5030'),
-(20, 'Administrative Assistant IV', 'Feedbug', 'Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.', '60 Blaine Pass', '$1910.42', '2022-12-04', 'tteanbyj@seattletimes.com', '813-265-2745'),
-(21, 'Dental Hygienist', 'Demizz', 'Nunc rhoncus dui vel sem.', '7 Browning Street', '$2073.53', '2023-07-26', 'mtregonnak@blinklist.com', '678-373-0820'),
-(22, 'Sales Representative', 'Skinder', 'In hac habitasse platea dictumst.', '83 Schlimgen Alley', '$3314.80', '2022-12-25', 'ohabbonl@infoseek.co.jp', '592-705-3354'),
-(23, 'Marketing Manager', 'Linkbridge', 'Morbi porttitor lorem id ligula.', '549 Sachs Street', '$894.43', '2023-09-27', 'teacottm@nih.gov', '686-250-7461'),
-(24, 'Business Systems Development Analyst', 'Gigabox', 'Proin interdum mauris non ligula pellentesque ultrices.', '5041 Oak Valley Avenue', '$4471.10', '2023-06-17', 'cbedrosiann@acquirethisname.com', '421-381-9869'),
-(25, 'VP Product Management', 'Dynabox', 'Aliquam sit amet diam in magna bibendum imperdiet.', '06770 Elgar Place', '$4598.57', '2023-10-30', 'ndaniauo@craigslist.org', '462-876-6668'),
-(26, 'Nurse Practicioner', 'Meemm', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', '698 Menomonie Road', '$2323.66', '2023-10-29', 'mcolledgep@dmoz.org', '190-591-4803'),
-(27, 'Assistant Manager', 'Tazzy', 'Integer a nibh.', '312 Brentwood Circle', '$4987.61', '2023-03-23', 'ckleinsteinq@patch.com', '303-957-3313'),
-(28, 'Systems Administrator I', 'Oyoloo', 'Vestibulum rutrum rutrum neque.', '7279 Ruskin Terrace', '$2414.30', '2023-04-03', 'bveneurr@livejournal.com', '819-164-5622'),
-(29, 'Software Engineer IV', 'Kazio', 'Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.', '9 Northport Park', '$4951.85', '2023-06-28', 'rnorledges@chronoengine.com', '485-122-4165'),
-(30, 'Assistant Media Planner', 'Rhyloo', 'Mauris sit amet eros.', '63 Bellgrove Lane', '$646.01', '2023-06-06', 'ahardbattlet@prnewswire.com', '584-257-6791'),
-(31, 'Senior Developer', 'Roodel', 'Pellentesque viverra pede ac diam.', '1803 Comanche Park', '$3043.65', '2023-01-07', 'tbilsonu@huffingtonpost.com', '432-639-2870'),
-(32, 'Help Desk Technician', 'Browseblab', 'Nulla tempus.', '3 Maple Drive', '$4918.26', '2023-10-01', 'gdeev@geocities.com', '300-905-6127'),
-(33, 'Software Consultant', 'Kayveo', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.', '49596 Thackeray Drive', '$3761.04', '2023-01-19', 'tsinfieldw@topsy.com', '791-718-7102'),
-(34, 'Project Manager', 'Jaloo', 'Duis ac nibh.', '584 Steensland Avenue', '$3445.44', '2023-02-10', 'vbrowningx@cnbc.com', '624-783-4512'),
-(35, 'Structural Engineer', 'Skipfire', 'Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.', '06 Old Gate Way', '$1433.17', '2023-01-14', 'bdallimarey@elpais.com', '600-293-7021'),
-(36, 'Developer I', 'Mycat', 'Nulla mollis molestie lorem.', '2718 Barby Trail', '$1771.70', '2023-05-18', 'jwattinsz@51.la', '710-436-2271'),
-(37, 'Assistant Professor', 'Livetube', 'Mauris lacinia sapien quis libero.', '436 Fairfield Point', '$3693.25', '2023-04-19', 'banselmi10@sitemeter.com', '776-835-0175'),
-(38, 'Actuary', 'Camimbo', 'Nam tristique tortor eu pede.', '54 Eagan Court', '$3449.21', '2022-11-29', 'ldormon11@blog.com', '160-353-4932'),
-(39, 'General Manager', 'Buzzster', 'Nulla ac enim.', '7214 Amoth Court', '$3473.70', '2022-12-22', 'nviall12@amazon.de', '676-855-6049'),
-(40, 'Community Outreach Specialist', 'Divape', 'Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.', '0521 Chinook Place', '$2040.67', '2023-10-15', 'iclubb13@apache.org', '968-718-7620'),
-(41, 'Media Manager IV', 'Twimbo', 'Maecenas pulvinar lobortis est.', '317 Corry Court', '$3767.66', '2023-04-03', 'bshelp14@mediafire.com', '592-440-8462'),
-(42, 'VP Sales', 'Geba', 'Pellentesque eget nunc.', '2626 Dexter Plaza', '$987.50', '2023-08-11', 'qsam15@rambler.ru', '369-810-9398'),
-(43, 'Media Manager IV', 'Midel', 'Donec semper sapien a libero.', '3405 Crowley Court', '$4868.91', '2023-02-13', 'btidd16@technorati.com', '917-879-1727'),
-(44, 'Research Assistant II', 'Topicblab', 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.', '7 Larry Way', '$4647.17', '2023-10-26', 'gmorton17@trellian.com', '400-746-8123'),
-(45, 'Geologist II', 'Zooxo', 'Ut at dolor quis odio consequat varius.', '78 Caliangt Alley', '$4485.42', '2023-02-21', 'imeah18@surveymonkey.com', '357-644-5482'),
-(46, 'Human Resources Manager', 'Kazu', 'Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.', '9018 Delladonna Court', '$3221.86', '2022-11-26', 'lbagby19@army.mil', '563-370-0245'),
-(47, 'Senior Cost Accountant', 'Einti', 'In congue.', '28440 Larry Drive', '$4934.02', '2023-08-23', 'ddevere1a@auda.org.au', '499-585-9038'),
-(48, 'Account Coordinator', 'Jaxspan', 'Donec vitae nisi.', '47093 Pierstorff Drive', '$2453.90', '2023-01-19', 'bkunat1b@cafepress.com', '571-198-7714'),
-(49, 'Environmental Tech', 'Yata', 'Etiam faucibus cursus urna.', '4 Sundown Drive', '$3015.38', '2023-08-03', 'nleaming1c@51.la', '130-857-4081'),
-(50, 'Senior Editor', 'Digitube', 'Suspendisse ornare consequat lectus.', '10 Randy Trail', '$2353.40', '2023-02-08', 'mrittmeyer1d@mayoclinic.com', '458-395-9055'),
-(51, 'Database Administrator IV', 'DabZ', 'Duis bibendum.', '8531 Washington Pass', '$531.30', '2023-02-05', 'mmccobb1e@constantcontact.com', '388-834-7370'),
-(52, 'Developer I', 'Voolia', 'Morbi vel lectus in quam fringilla rhoncus.', '57343 Roth Drive', '$3682.70', '2022-12-12', 'csyncke1f@answers.com', '532-531-3779'),
-(53, 'Analog Circuit Design manager', 'Twimbo', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '4276 Milwaukee Park', '$1671.92', '2023-11-02', 'kleads1g@spiegel.de', '512-109-3637'),
-(54, 'Chemical Engineer', 'Tazz', 'Pellentesque at nulla.', '32529 Pankratz Alley', '$1850.13', '2023-06-24', 'ghurlestone1h@multiply.com', '502-465-7983'),
-(55, 'Structural Analysis Engineer', 'Lazzy', 'Curabitur convallis.', '286 Sunnyside Hill', '$1161.70', '2022-12-28', 'losgar1i@who.int', '349-322-4590'),
-(56, 'VP Marketing', 'Skidoo', 'Donec ut mauris eget massa tempor convallis.', '430 Toban Trail', '$1820.54', '2023-07-28', 'cpengelly1j@blogspot.com', '299-500-0375'),
-(57, 'Health Coach IV', 'Jabberstorm', 'Sed vel enim sit amet nunc viverra dapibus.', '96 Blue Bill Park Road', '$1350.42', '2023-03-13', 'dblaskett1k@etsy.com', '835-691-6045'),
-(58, 'Assistant Manager', 'Midel', 'Vestibulum sed magna at nunc commodo placerat.', '56 Bowman Hill', '$3677.51', '2023-05-15', 'naston1l@pbs.org', '328-500-7218'),
-(59, 'VP Accounting', 'Blogtags', 'Maecenas ut massa quis augue luctus tincidunt.', '94 Browning Center', '$3110.14', '2023-10-13', 'abountiff1m@vimeo.com', '601-212-2007'),
-(60, 'Nurse Practicioner', 'Ailane', 'Fusce posuere felis sed lacus.', '16730 Monica Lane', '$3866.32', '2023-11-13', 'kgittoes1n@ask.com', '810-945-4024'),
-(61, 'Senior Cost Accountant', 'Photospace', 'Nullam molestie nibh in lectus.', '7 Canary Lane', '$599.96', '2022-11-29', 'ksteade1o@ow.ly', '674-454-9894'),
-(62, 'Software Engineer II', 'Roodel', 'Integer tincidunt ante vel ipsum.', '89886 Carberry Parkway', '$2665.75', '2023-02-15', 'jwrought1p@discovery.com', '599-834-2408'),
-(63, 'Associate Professor', 'Brainsphere', 'Nulla ut erat id mauris vulputate elementum.', '09 Anzinger Crossing', '$722.55', '2023-04-09', 'btrinke1q@wix.com', '591-269-1723'),
-(64, 'Staff Accountant I', 'Tanoodle', 'Morbi quis tortor id nulla ultrices aliquet.', '6 Autumn Leaf Avenue', '$4778.11', '2023-08-11', 'cdransfield1r@bing.com', '964-799-0845'),
-(65, 'Accounting Assistant II', 'Kwideo', 'Fusce consequat.', '63 Larry Pass', '$772.65', '2023-10-02', 'dpoles1s@home.pl', '382-571-3907'),
-(66, 'GIS Technical Architect', 'Viva', 'Vestibulum ac est lacinia nisi venenatis tristique.', '6 Boyd Lane', '$3989.38', '2023-04-09', 'glanfranconi1t@indiegogo.com', '104-979-5564'),
-(67, 'Junior Executive', 'Devpulse', 'Mauris sit amet eros.', '1 Kinsman Junction', '$3779.41', '2022-12-09', 'lgethin1u@chron.com', '818-707-2614'),
-(68, 'Physical Therapy Assistant', 'Kare', 'Quisque ut erat.', '943 Weeping Birch Plaza', '$2267.91', '2023-09-04', 'pdutt1v@amazon.co.uk', '244-310-7467'),
-(69, 'Technical Writer', 'Gevee', 'Nam dui.', '867 Northridge Hill', '$2746.07', '2023-03-10', 'jtotaro1w@sohu.com', '462-772-5699'),
-(70, 'Nurse Practicioner', 'Brightdog', 'Pellentesque eget nunc.', '0 Hauk Center', '$2774.53', '2023-02-23', 'ohinchon1x@buzzfeed.com', '125-635-3855'),
-(71, 'Occupational Therapist', 'Eidel', 'Integer tincidunt ante vel ipsum.', '11713 Columbus Road', '$3163.60', '2023-07-03', 'jsalzen1y@feedburner.com', '973-624-5288'),
-(72, 'Assistant Manager', 'Buzzdog', 'Pellentesque ultrices mattis odio.', '060 Lindbergh Plaza', '$789.79', '2023-08-23', 'cfasham1z@amazon.co.uk', '189-213-1609'),
-(73, 'Administrative Officer', 'Realblab', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.', '9433 Sherman Pass', '$1411.18', '2022-11-22', 'rjandourek20@army.mil', '627-674-8834'),
-(74, 'Senior Sales Associate', 'Livefish', 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.', '2 Lawn Road', '$3626.49', '2023-10-13', 'dharries21@sciencedirect.com', '156-243-4126'),
-(75, 'Nuclear Power Engineer', 'Yata', 'Maecenas ut massa quis augue luctus tincidunt.', '4 Haas Avenue', '$4604.01', '2023-07-26', 'dmacmychem22@phpbb.com', '347-900-6542'),
-(76, 'VP Quality Control', 'Zooveo', 'Duis consequat dui nec nisi volutpat eleifend.', '8663 Mosinee Road', '$2102.15', '2023-01-23', 'ecrebo23@wordpress.com', '968-891-4882'),
-(77, 'Geological Engineer', 'Brainbox', 'In hac habitasse platea dictumst.', '9 Center Junction', '$4939.68', '2022-12-22', 'ezorzini24@hexun.com', '473-422-3808'),
-(78, 'Nuclear Power Engineer', 'Zoonoodle', 'Vestibulum ac est lacinia nisi venenatis tristique.', '885 Granby Street', '$2766.71', '2023-07-26', 'migounet25@unesco.org', '555-604-7856'),
-(79, 'Product Engineer', 'Meezzy', 'Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.', '87 Laurel Place', '$1051.09', '2023-09-24', 'warmor26@guardian.co.uk', '794-716-4663'),
-(80, 'Assistant Professor', 'Mita', 'Vestibulum sed magna at nunc commodo placerat.', '809 Oneill Pass', '$1561.16', '2023-06-07', 'hcreany27@umich.edu', '700-293-9589'),
-(81, 'Assistant Professor', 'Bubbletube', 'In congue.', '3 Manufacturers Point', '$4099.99', '2023-06-07', 'vblaasch28@wsj.com', '743-453-3607'),
-(82, 'Community Outreach Specialist', 'Tazz', 'Mauris sit amet eros.', '26 Waxwing Pass', '$1748.36', '2022-12-19', 'nhouliston29@google.cn', '314-507-8771'),
-(83, 'Analyst Programmer', 'Livepath', 'Nam nulla.', '45 Oakridge Circle', '$2783.89', '2023-08-04', 'lparis2a@linkedin.com', '942-734-5801'),
-(84, 'Junior Executive', 'Brainverse', 'Praesent id massa id nisl venenatis lacinia.', '5394 Meadow Ridge Parkway', '$2535.73', '2023-06-26', 'whackey2b@myspace.com', '930-348-4029'),
-(85, 'Editor', 'Plambee', 'Mauris sit amet eros.', '17 Red Cloud Way', '$2507.01', '2023-02-18', 'emunkley2c@skyrock.com', '215-609-6034'),
-(86, 'Biostatistician IV', 'Brainsphere', 'Nulla mollis molestie lorem.', '948 5th Place', '$4138.14', '2023-01-13', 'cletterick2d@elpais.com', '134-557-0352'),
-(87, 'Junior Executive', 'Browsebug', 'Pellentesque viverra pede ac diam.', '86963 Springview Plaza', '$3003.75', '2023-06-06', 'ehaxley2e@privacy.gov.au', '559-238-9094'),
-(88, 'Speech Pathologist', 'Zoomzone', 'In hac habitasse platea dictumst.', '80 Sycamore Court', '$2358.58', '2023-03-23', 'gspringle2f@time.com', '548-662-8366'),
-(89, 'Research Assistant II', 'Meejo', 'Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', '69 Schmedeman Place', '$874.43', '2023-02-02', 'scowland2g@ovh.net', '651-605-1116'),
-(90, 'Mechanical Systems Engineer', 'Twitterbridge', 'In hac habitasse platea dictumst.', '84077 Judy Terrace', '$943.04', '2023-03-09', 'hdavidov2h@cmu.edu', '229-456-9642'),
-(91, 'Technical Writer', 'Livetube', 'Morbi non lectus.', '0320 Rieder Center', '$500.70', '2022-11-19', 'rglabach2i@biglobe.ne.jp', '562-807-5805'),
-(92, 'Database Administrator I', 'Cogidoo', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.', '44 Shasta Way', '$4783.01', '2023-07-10', 'arenols2j@gov.uk', '670-277-2972'),
-(93, 'Technical Writer', 'Quimm', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.', '18 Bunker Hill Street', '$3174.79', '2022-11-27', 'rgyngell2k@nasa.gov', '959-331-1743'),
-(94, 'Pharmacist', 'Rhynyx', 'Curabitur convallis.', '7 Coleman Lane', '$1688.73', '2023-08-13', 'jreinhardt2l@google.pl', '227-159-6614'),
-(95, 'Quality Control Specialist', 'Gigabox', 'Vivamus vel nulla eget eros elementum pellentesque.', '22810 Kenwood Place', '$3146.70', '2023-09-08', 'lobrian2m@howstuffworks.com', '746-420-6921'),
-(96, 'VP Product Management', 'Katz', 'Duis aliquam convallis nunc.', '85022 Del Mar Alley', '$4461.78', '2022-12-05', 'litzhaki2n@wired.com', '158-843-6340'),
-(97, 'VP Sales', 'Minyx', 'Mauris sit amet eros.', '39 Upham Drive', '$4656.36', '2023-01-22', 'ewakes2o@macromedia.com', '713-151-0023'),
-(98, 'Quality Control Specialist', 'Babbleset', 'Suspendisse ornare consequat lectus.', '8 Commercial Hill', '$1304.56', '2023-09-26', 'jbohden2p@shinystat.com', '768-296-1051'),
-(99, 'Help Desk Technician', 'Realblab', 'Suspendisse potenti.', '4072 Victoria Crossing', '$2632.83', '2023-06-03', 'bsoutherton2q@arstechnica.com', '728-140-3092'),
-(100, 'Statistician IV', 'Flashpoint', 'Aenean auctor gravida sem.', '26235 Killdeer Street', '$4868.49', '2022-11-27', 'dmcsparran2r@sohu.com', '351-584-0268');
+(1, 'Web Developer', 'Tech Co.', 'Seeking a skilled web developer to join our team.', 'Cityville', 70000.00, '2023-03-01', 'jobs@techco.com', '+123456789'),
+(2, 'Software Engineer', 'InnoTech', 'Looking for software engineers with experience in Java.', 'Techland', 80000.00, '2023-03-15', 'jobs@innotech.com', '+987654321'),
+(3, 'Librarian', 'Bluezoom', 'Morbi non quam nec dui luctus rutrum.', '73 Stephen Drive', 0.00, '0000-00-00', 'tvinau2@rambler.ru', '947-254-7723'),
+(4, 'Food Chemist', 'Zooxo', 'Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', '54397 Eastwood Crossing', 0.00, '0000-00-00', 'amarzello3@abc.net.au', '322-116-3488'),
+(5, 'Programmer Analyst IV', 'Trupe', 'Morbi a ipsum.', '23 Green Ridge Drive', 0.00, '0000-00-00', 'mmingardo4@cmu.edu', '667-722-0771'),
+(6, 'GIS Technical Architect', 'Blogpad', 'In congue.', '4 Prairie Rose Center', 0.00, '0000-00-00', 'cmartynikhin5@ow.ly', '213-805-0144'),
+(7, 'Help Desk Operator', 'Aimbu', 'Aenean fermentum.', '68804 Bayside Lane', 0.00, '0000-00-00', 'tshermar6@japanpost.jp', '111-712-5086'),
+(8, 'Marketing Assistant', 'Jetwire', 'Fusce consequat.', '0840 Darwin Parkway', 0.00, '0000-00-00', 'nhackforth7@hostgator.com', '219-519-7906'),
+(9, 'Professor', 'Fanoodle', 'Praesent blandit lacinia erat.', '566 Forest Run Center', 0.00, '0000-00-00', 'jcraine8@myspace.com', '628-495-0766'),
+(10, 'Staff Scientist', 'Skipstorm', 'Curabitur convallis.', '81706 Florence Circle', 0.00, '0000-00-00', 'rswenson9@youtube.com', '327-482-6001'),
+(11, 'Account Coordinator', 'Thoughtsphere', 'Quisque porta volutpat erat.', '6 Linden Place', 0.00, '0000-00-00', 'iwrightema@liveinternet.ru', '124-850-9427'),
+(12, 'Junior Executive', 'Tanoodle', 'Nulla suscipit ligula in lacus.', '16 Schmedeman Plaza', 0.00, '0000-00-00', 'fdurstonb@example.com', '547-971-2605'),
+(13, 'Internal Auditor', 'Blogtags', 'In eleifend quam a odio.', '53037 Fieldstone Way', 0.00, '0000-00-00', 'pjaysc@blogger.com', '745-183-6051'),
+(14, 'Account Executive', 'Mydeo', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla.', '5526 Tennyson Road', 0.00, '0000-00-00', 'kroed@digg.com', '980-729-9050'),
+(15, 'GIS Technical Architect', 'Tazz', 'Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.', '34 Dottie Alley', 0.00, '0000-00-00', 'sollertone@imageshack.us', '510-528-7295'),
+(16, 'Senior Developer', 'Dabfeed', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.', '631 Barby Road', 0.00, '0000-00-00', 'dburmanf@geocities.com', '567-430-8327'),
+(17, 'Geologist I', 'Linktype', 'Nulla nisl.', '1 Hazelcrest Drive', 0.00, '0000-00-00', 'cjaszczakg@tiny.cc', '196-305-1511'),
+(18, 'Automation Specialist II', 'Youspan', 'Nullam sit amet turpis elementum ligula vehicula consequat.', '6771 Red Cloud Center', 0.00, '0000-00-00', 'ljoseburyh@baidu.com', '121-346-2253'),
+(19, 'VP Quality Control', 'Meevee', 'Duis mattis egestas metus.', '12744 Main Point', 0.00, '0000-00-00', 'lgilsoni@usatoday.com', '300-359-5994'),
+(20, 'Operator', 'Thoughtsphere', 'Etiam vel augue.', '49696 Redwing Crossing', 0.00, '0000-00-00', 'aleistj@altervista.org', '912-475-2718'),
+(21, 'Clinical Specialist', 'Blogpad', 'Nulla mollis molestie lorem.', '442 Burrows Point', 0.00, '0000-00-00', 'eticklek@weather.com', '901-810-5484'),
+(22, 'Financial Analyst', 'Eabox', 'Mauris sit amet eros.', '5 Autumn Leaf Drive', 0.00, '0000-00-00', 'scampanal@163.com', '210-579-9692'),
+(23, 'Account Representative II', 'Riffpedia', 'Proin risus.', '49068 Daystar Hill', 0.00, '0000-00-00', 'rjanochm@go.com', '456-421-5308'),
+(24, 'Desktop Support Technician', 'Tagcat', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.', '781 Canary Point', 0.00, '0000-00-00', 'kpervoen@51.la', '645-667-4770'),
+(25, 'Systems Administrator II', 'Meevee', 'Sed sagittis.', '88 Loeprich Junction', 0.00, '0000-00-00', 'cbarsbyo@imdb.com', '252-997-8144'),
+(26, 'Mechanical Systems Engineer', 'Skimia', 'Fusce posuere felis sed lacus.', '82 Crest Line Center', 0.00, '0000-00-00', 'kmcindoep@tamu.edu', '177-476-1439'),
+(27, 'Social Worker', 'Plajo', 'Praesent lectus.', '0 Hanson Road', 0.00, '0000-00-00', 'dizonq@myspace.com', '131-413-4789'),
+(28, 'Account Coordinator', 'Quimba', 'Phasellus in felis.', '81178 1st Avenue', 0.00, '0000-00-00', 'gtorrecillar@cmu.edu', '724-877-9250'),
+(29, 'Payment Adjustment Coordinator', 'Devpulse', 'Aliquam sit amet diam in magna bibendum imperdiet.', '1 Stuart Parkway', 0.00, '0000-00-00', 'fmanvilles@instagram.com', '512-942-4652'),
+(30, 'Web Designer III', 'Jaxspan', 'Nulla facilisi.', '689 Hoffman Circle', 0.00, '0000-00-00', 'mjamrowiczt@technorati.com', '462-571-4462'),
+(31, 'Senior Developer', 'Photojam', 'Vivamus vestibulum sagittis sapien.', '8205 Susan Road', 0.00, '0000-00-00', 'mnunanu@barnesandnoble.com', '153-236-3684'),
+(32, 'Marketing Assistant', 'Fliptune', 'Morbi quis tortor id nulla ultrices aliquet.', '1 Harbort Alley', 0.00, '0000-00-00', 'aleckeyv@taobao.com', '858-197-0491'),
+(33, 'Senior Sales Associate', 'Browsetype', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla.', '8220 Charing Cross Hill', 0.00, '0000-00-00', 'mmilmithw@omniture.com', '439-630-1916'),
+(34, 'Quality Control Specialist', 'Kazio', 'Vivamus vestibulum sagittis sapien.', '79545 Katie Avenue', 0.00, '0000-00-00', 'zreynaldsx@slate.com', '832-392-3925'),
+(35, 'Sales Representative', 'Skimia', 'Praesent blandit lacinia erat.', '07 Butterfield Street', 0.00, '0000-00-00', 'ksaveryy@rakuten.co.jp', '252-990-2487'),
+(36, 'Registered Nurse', 'DabZ', 'Nulla tempus.', '9 Paget Hill', 0.00, '0000-00-00', 'dphilcottz@imgur.com', '523-545-8740'),
+(37, 'VP Sales', 'Thoughtsphere', 'Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', '91 Sloan Center', 0.00, '0000-00-00', 'mcozby10@cnet.com', '179-438-2508'),
+(38, 'Nurse Practicioner', 'Bubblebox', 'Pellentesque at nulla.', '3 Namekagon Junction', 0.00, '0000-00-00', 'cwyley11@cdc.gov', '476-949-7945'),
+(39, 'VP Quality Control', 'Demizz', 'In eleifend quam a odio.', '86 Sachtjen Parkway', 0.00, '0000-00-00', 'edryburgh12@mashable.com', '584-786-1464'),
+(40, 'Project Manager', 'Twitterworks', 'Nulla ut erat id mauris vulputate elementum.', '14510 Arizona Terrace', 0.00, '0000-00-00', 'aleitche13@xrea.com', '856-109-0675'),
+(41, 'Civil Engineer', 'Ooba', 'Nulla ac enim.', '5 Annamark Hill', 0.00, '0000-00-00', 'wtweedle14@miibeian.gov.cn', '100-376-5614'),
+(42, 'GIS Technical Architect', 'Kwideo', 'Proin interdum mauris non ligula pellentesque ultrices.', '8 International Junction', 0.00, '0000-00-00', 'bdanielli15@eepurl.com', '943-436-6424'),
+(43, 'Social Worker', 'Babblestorm', 'Curabitur at ipsum ac tellus semper interdum.', '6 Dryden Alley', 0.00, '0000-00-00', 'rgalletley16@ifeng.com', '965-446-0236'),
+(44, 'Compensation Analyst', 'Thoughtbridge', 'Proin interdum mauris non ligula pellentesque ultrices.', '1999 Nelson Avenue', 0.00, '0000-00-00', 'wrollingson17@privacy.gov.au', '553-891-5759'),
+(45, 'Sales Representative', 'Innotype', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '3 Nova Hill', 0.00, '0000-00-00', 'rbentje18@fda.gov', '138-235-2357'),
+(46, 'VP Sales', 'Fatz', 'Phasellus sit amet erat.', '95518 Katie Junction', 0.00, '0000-00-00', 'msawers19@squarespace.com', '486-535-8382'),
+(47, 'Software Consultant', 'Zoonder', 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.', '89702 Kingsford Avenue', 0.00, '0000-00-00', 'fdegowe1a@boston.com', '941-372-6196'),
+(48, 'VP Sales', 'Zoombox', 'Integer non velit.', '840 Fuller Alley', 0.00, '0000-00-00', 'eelphee1b@reverbnation.com', '737-563-9519'),
+(49, 'Health Coach III', 'Jaxworks', 'Suspendisse potenti.', '863 Jenna Terrace', 0.00, '0000-00-00', 'cbalazs1c@php.net', '101-900-6574'),
+(50, 'Administrative Assistant I', 'Topicware', 'Nulla tempus.', '549 Grim Parkway', 0.00, '0000-00-00', 'saubery1d@google.com.au', '929-462-6162'),
+(51, 'Programmer II', 'Topicstorm', 'Vivamus vel nulla eget eros elementum pellentesque.', '40 Manitowish Court', 0.00, '0000-00-00', 'ishotter1e@e-recht24.de', '612-263-2467'),
+(52, 'Administrative Officer', 'Rhynoodle', 'In quis justo.', '7854 High Crossing Street', 0.00, '0000-00-00', 'kakeherst1f@51.la', '292-905-0516'),
+(53, 'Food Chemist', 'Lajo', 'In hac habitasse platea dictumst.', '77 Pleasure Circle', 0.00, '0000-00-00', 'afullagar1g@liveinternet.ru', '714-915-4493'),
+(54, 'Occupational Therapist', 'Twitterwire', 'Nulla mollis molestie lorem.', '2 Johnson Point', 0.00, '0000-00-00', 'spottberry1h@smh.com.au', '526-427-9485'),
+(55, 'Director of Sales', 'Meedoo', 'Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.', '70 Arapahoe Crossing', 0.00, '0000-00-00', 'stenny1i@whitehouse.gov', '427-792-7137'),
+(56, 'Accounting Assistant II', 'Twimbo', 'In sagittis dui vel nisl.', '8016 Menomonie Plaza', 0.00, '0000-00-00', 'croantree1j@springer.com', '506-988-9062'),
+(57, 'Accounting Assistant IV', 'Thoughtmix', 'Ut at dolor quis odio consequat varius.', '5 Laurel Plaza', 0.00, '0000-00-00', 'aharteley1k@surveymonkey.com', '997-605-9656'),
+(58, 'Analyst Programmer', 'Teklist', 'Vivamus vestibulum sagittis sapien.', '84 Brentwood Trail', 0.00, '0000-00-00', 'isanders1l@cmu.edu', '810-651-6747'),
+(59, 'Accountant I', 'Mudo', 'Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', '79126 Gale Place', 0.00, '0000-00-00', 'ktorrisi1m@dot.gov', '254-207-3404'),
+(60, 'Internal Auditor', 'Ainyx', 'Integer ac neque.', '7 Coleman Junction', 0.00, '0000-00-00', 'espavon1n@theguardian.com', '741-148-5344'),
+(61, 'Actuary', 'Quire', 'In blandit ultrices enim.', '6525 Buell Street', 0.00, '0000-00-00', 'hitzchaky1o@addthis.com', '919-953-7463'),
+(62, 'Systems Administrator I', 'Chatterbridge', 'Phasellus id sapien in sapien iaculis congue.', '900 Hansons Street', 0.00, '0000-00-00', 'bhinze1p@sakura.ne.jp', '518-304-3933'),
+(63, 'Structural Analysis Engineer', 'Tagopia', 'Mauris lacinia sapien quis libero.', '82323 Lakewood Gardens Alley', 0.00, '0000-00-00', 'htite1q@wordpress.com', '297-860-2539'),
+(64, 'Operator', 'Vidoo', 'Curabitur at ipsum ac tellus semper interdum.', '429 Melvin Circle', 0.00, '0000-00-00', 'mkeller1r@lycos.com', '162-804-1653'),
+(65, 'Senior Financial Analyst', 'Photobug', 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi.', '2 American Ash Center', 0.00, '0000-00-00', 'edelacote1s@amazon.co.jp', '142-496-7283'),
+(66, 'Research Assistant III', 'Chatterbridge', 'Suspendisse ornare consequat lectus.', '07 Briar Crest Junction', 0.00, '0000-00-00', 'devetts1t@xinhuanet.com', '776-664-5534'),
+(67, 'Accounting Assistant III', 'Twitterwire', 'Maecenas rhoncus aliquam lacus.', '040 Prairie Rose Center', 0.00, '0000-00-00', 'vsaltman1u@nasa.gov', '849-189-5992'),
+(68, 'Programmer Analyst I', 'Jazzy', 'Vestibulum sed magna at nunc commodo placerat.', '82391 Westridge Hill', 0.00, '0000-00-00', 'fcouche1v@prweb.com', '750-812-3801'),
+(69, 'Assistant Manager', 'Twinder', 'Aenean fermentum.', '9 Straubel Plaza', 0.00, '0000-00-00', 'mloadman1w@ow.ly', '857-820-2575'),
+(70, 'Programmer III', 'Vitz', 'Etiam pretium iaculis justo.', '96 Buena Vista Center', 0.00, '0000-00-00', 'jjersh1x@altervista.org', '260-775-0779'),
+(71, 'Database Administrator III', 'Realcube', 'Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.', '665 Sycamore Terrace', 0.00, '0000-00-00', 'tcettell1y@cocolog-nifty.com', '254-154-8506'),
+(72, 'Executive Secretary', 'Fatz', 'Morbi vel lectus in quam fringilla rhoncus.', '110 Dakota Point', 0.00, '0000-00-00', 'eprator1z@accuweather.com', '940-794-8313'),
+(73, 'Internal Auditor', 'Brainsphere', 'Morbi non quam nec dui luctus rutrum.', '99728 Stuart Street', 0.00, '0000-00-00', 'rrosenblatt20@spotify.com', '305-968-7790'),
+(74, 'Marketing Assistant', 'Quinu', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', '41 David Center', 0.00, '0000-00-00', 'sbrenard21@sogou.com', '601-697-4935'),
+(75, 'Software Test Engineer III', 'Roomm', 'Cras pellentesque volutpat dui.', '85 Mesta Way', 0.00, '0000-00-00', 'jillem22@godaddy.com', '295-409-2565'),
+(76, 'Software Engineer I', 'Yadel', 'Curabitur convallis.', '792 Express Park', 0.00, '0000-00-00', 'rbridgement23@arstechnica.com', '611-449-2455'),
+(77, 'Recruiting Manager', 'Voolith', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '053 Mcguire Hill', 0.00, '0000-00-00', 'lbritton24@sina.com.cn', '797-681-9408'),
+(78, 'Research Associate', 'Meejo', 'Phasellus id sapien in sapien iaculis congue.', '3336 Arizona Hill', 0.00, '0000-00-00', 'kvongladbach25@weibo.com', '257-478-4059'),
+(79, 'Developer III', 'Eimbee', 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi.', '0 Blaine Park', 0.00, '0000-00-00', 'asweedy26@tumblr.com', '657-228-9557'),
+(80, 'Nurse', 'Wikizz', 'In hac habitasse platea dictumst.', '6498 Kedzie Avenue', 0.00, '0000-00-00', 'hfollet27@about.me', '547-490-5105'),
+(81, 'Safety Technician III', 'Gabcube', 'Nunc purus.', '776 5th Crossing', 0.00, '0000-00-00', 'gillingworth28@unc.edu', '460-279-9571'),
+(82, 'Accounting Assistant IV', 'Yotz', 'Praesent id massa id nisl venenatis lacinia.', '5 Pepper Wood Avenue', 0.00, '0000-00-00', 'imartins29@nih.gov', '711-654-6281'),
+(83, 'Health Coach I', 'Wordify', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.', '84949 Troy Place', 0.00, '0000-00-00', 'rscales2a@va.gov', '274-511-5676'),
+(84, 'Recruiting Manager', 'Blogtag', 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.', '13 Erie Court', 0.00, '0000-00-00', 'dleving2b@freewebs.com', '147-720-1463'),
+(85, 'Mechanical Systems Engineer', 'Brightdog', 'Praesent blandit.', '85 School Way', 0.00, '0000-00-00', 'gluesley2c@arstechnica.com', '544-619-4431'),
+(86, 'Paralegal', 'Linklinks', 'Etiam pretium iaculis justo.', '7 North Point', 0.00, '0000-00-00', 'klettsom2d@google.ca', '480-421-6313'),
+(87, 'Computer Systems Analyst I', 'Bluejam', 'In est risus, auctor sed, tristique in, tempus sit amet, sem.', '78593 Glacier Hill Crossing', 0.00, '0000-00-00', 'mosharkey2e@w3.org', '331-375-6910'),
+(88, 'Information Systems Manager', 'Viva', 'Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.', '65295 Straubel Plaza', 0.00, '0000-00-00', 'bminor2f@nhs.uk', '928-140-0444'),
+(89, 'Financial Analyst', 'Dynabox', 'Mauris sit amet eros.', '12 Eagan Pass', 0.00, '0000-00-00', 'vdrover2g@uol.com.br', '529-545-2244'),
+(90, 'Administrative Officer', 'Thoughtblab', 'Nam dui.', '6849 Comanche Court', 0.00, '0000-00-00', 'arihosek2h@bluehost.com', '598-165-0659'),
+(91, 'Media Manager II', 'Blogspan', 'Duis aliquam convallis nunc.', '81 Carioca Avenue', 0.00, '0000-00-00', 'smulvany2i@java.com', '972-281-5997'),
+(92, 'Legal Assistant', 'Fivespan', 'Nullam molestie nibh in lectus.', '515 Old Shore Circle', 0.00, '0000-00-00', 'alohan2j@ucoz.com', '835-148-3275'),
+(93, 'Food Chemist', 'Oyondu', 'Curabitur in libero ut massa volutpat convallis.', '4 Waywood Avenue', 0.00, '0000-00-00', 'bkleinstein2k@histats.com', '425-642-0596'),
+(94, 'Social Worker', 'Skimia', 'Aliquam non mauris.', '82693 Anthes Plaza', 0.00, '0000-00-00', 'cfucher2l@msn.com', '983-547-6216'),
+(95, 'Chemical Engineer', 'Oba', 'Nulla mollis molestie lorem.', '35 Tennyson Way', 0.00, '0000-00-00', 'fsponton2m@vimeo.com', '130-527-7046'),
+(96, 'Technical Writer', 'Devify', 'Ut tellus.', '087 Sutherland Hill', 0.00, '0000-00-00', 'mclare2n@shareasale.com', '743-796-7134'),
+(97, 'Help Desk Operator', 'Edgeify', 'Duis aliquam convallis nunc.', '08874 Charing Cross Point', 0.00, '0000-00-00', 'averring2o@miitbeian.gov.cn', '497-770-9828'),
+(98, 'Sales Representative', 'Minyx', 'Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.', '072 Kings Alley', 0.00, '0000-00-00', 'stippett2p@businessweek.com', '130-964-7821'),
+(99, 'Account Executive', 'Oyoyo', 'Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.', '9455 Thierer Drive', 0.00, '0000-00-00', 'ninmett2q@booking.com', '215-796-9659'),
+(100, 'Help Desk Operator', 'Blogspan', 'Aenean fermentum.', '58 Blaine Pass', 0.00, '0000-00-00', 'aperet2r@wikispaces.com', '561-768-5600');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -2119,7 +2128,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `email`, `user_role`) VALUES
@@ -2626,7 +2635,7 @@ INSERT INTO `users` (`user_id`, `username`, `password`, `email`, `user_role`) VA
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user_reviews`
+-- Table structure for table `user_reviews`
 --
 
 CREATE TABLE `user_reviews` (
@@ -2639,7 +2648,7 @@ CREATE TABLE `user_reviews` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `user_reviews`
+-- Dumping data for table `user_reviews`
 --
 
 INSERT INTO `user_reviews` (`review_id`, `course_id`, `user_id`, `rating`, `review_text`, `review_date`) VALUES
@@ -2745,24 +2754,24 @@ INSERT INTO `user_reviews` (`review_id`, `course_id`, `user_id`, `rating`, `revi
 (100, 125, 286, 3, 'Excellent communication skills', '2023-01-10');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `candidate_profiles`
+-- Indexes for table `candidate_profiles`
 --
 ALTER TABLE `candidate_profiles`
   ADD PRIMARY KEY (`candidate_id`),
   ADD KEY `fk_candidate_profiles_users` (`user_id`);
 
 --
--- Chỉ mục cho bảng `certificates`
+-- Indexes for table `certificates`
 --
 ALTER TABLE `certificates`
   ADD PRIMARY KEY (`certificate_id`);
 
 --
--- Chỉ mục cho bảng `certificates_earned`
+-- Indexes for table `certificates_earned`
 --
 ALTER TABLE `certificates_earned`
   ADD PRIMARY KEY (`certificate_earned_id`),
@@ -2770,14 +2779,14 @@ ALTER TABLE `certificates_earned`
   ADD KEY `certificate_id` (`certificate_id`);
 
 --
--- Chỉ mục cho bảng `courses`
+-- Indexes for table `courses`
 --
 ALTER TABLE `courses`
   ADD PRIMARY KEY (`course_id`),
   ADD KEY `instructor_id` (`instructor_id`);
 
 --
--- Chỉ mục cho bảng `course_completion`
+-- Indexes for table `course_completion`
 --
 ALTER TABLE `course_completion`
   ADD PRIMARY KEY (`course_completion_id`),
@@ -2785,7 +2794,7 @@ ALTER TABLE `course_completion`
   ADD KEY `course_id` (`course_id`);
 
 --
--- Chỉ mục cho bảng `enrollments`
+-- Indexes for table `enrollments`
 --
 ALTER TABLE `enrollments`
   ADD PRIMARY KEY (`enrollment_id`),
@@ -2793,13 +2802,13 @@ ALTER TABLE `enrollments`
   ADD KEY `course_id` (`course_id`);
 
 --
--- Chỉ mục cho bảng `instructors`
+-- Indexes for table `instructors`
 --
 ALTER TABLE `instructors`
   ADD PRIMARY KEY (`instructor_id`);
 
 --
--- Chỉ mục cho bảng `job_application`
+-- Indexes for table `job_application`
 --
 ALTER TABLE `job_application`
   ADD PRIMARY KEY (`application_id`),
@@ -2807,19 +2816,20 @@ ALTER TABLE `job_application`
   ADD KEY `job_id` (`job_id`);
 
 --
--- Chỉ mục cho bảng `job_listings`
+-- Indexes for table `job_listings`
 --
 ALTER TABLE `job_listings`
-  ADD PRIMARY KEY (`job_id`);
+  ADD PRIMARY KEY (`job_id`),
+  ADD KEY `job_Search` (`job_id`,`job_title`,`company_name`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- Chỉ mục cho bảng `user_reviews`
+-- Indexes for table `user_reviews`
 --
 ALTER TABLE `user_reviews`
   ADD PRIMARY KEY (`review_id`),
@@ -2827,51 +2837,67 @@ ALTER TABLE `user_reviews`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `candidate_profiles`
+-- AUTO_INCREMENT for table `enrollments`
+--
+ALTER TABLE `enrollments`
+  MODIFY `enrollment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+
+--
+-- AUTO_INCREMENT for table `job_application`
+--
+ALTER TABLE `job_application`
+  MODIFY `application_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `candidate_profiles`
 --
 ALTER TABLE `candidate_profiles`
   ADD CONSTRAINT `fk_candidate_profiles_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
 
 --
--- Các ràng buộc cho bảng `certificates_earned`
+-- Constraints for table `certificates_earned`
 --
 ALTER TABLE `certificates_earned`
   ADD CONSTRAINT `certificates_earned_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
   ADD CONSTRAINT `certificates_earned_ibfk_2` FOREIGN KEY (`certificate_id`) REFERENCES `certificates` (`certificate_id`);
 
 --
--- Các ràng buộc cho bảng `courses`
+-- Constraints for table `courses`
 --
 ALTER TABLE `courses`
   ADD CONSTRAINT `courses_ibfk_1` FOREIGN KEY (`instructor_id`) REFERENCES `instructors` (`instructor_id`);
 
 --
--- Các ràng buộc cho bảng `course_completion`
+-- Constraints for table `course_completion`
 --
 ALTER TABLE `course_completion`
   ADD CONSTRAINT `course_completion_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
   ADD CONSTRAINT `course_completion_ibfk_2` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`);
 
 --
--- Các ràng buộc cho bảng `enrollments`
+-- Constraints for table `enrollments`
 --
 ALTER TABLE `enrollments`
   ADD CONSTRAINT `enrollments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
   ADD CONSTRAINT `enrollments_ibfk_2` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`);
 
 --
--- Các ràng buộc cho bảng `job_application`
+-- Constraints for table `job_application`
 --
 ALTER TABLE `job_application`
   ADD CONSTRAINT `job_application_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
   ADD CONSTRAINT `job_application_ibfk_2` FOREIGN KEY (`job_id`) REFERENCES `job_listings` (`job_id`);
 
 --
--- Các ràng buộc cho bảng `user_reviews`
+-- Constraints for table `user_reviews`
 --
 ALTER TABLE `user_reviews`
   ADD CONSTRAINT `user_reviews_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`),
