@@ -25,15 +25,15 @@ Select the database and navigate to "Import."
 Choose the SQL file in github: "cos20031.sql".
 
 Verify success and ensure data integrity.
-# 6. Navigate to Project Directory:
+# 7. Navigate to Project Directory:
     cd cos20031
 
-# 7. Install Project Dependencies:
+# 8. Install Project Dependencies:
 Depending on your project, you might need to install additional dependencies using Node Package Manager (NPM). Navigate to the project directory and run:
     npm install
 
 
-# 8. Run the Application:
+# 9. Run the Application:
 Open your web browser and navigate to one of this links below (replace with the correct path if necessary):
 
 http://localhost:8080/cos20031/index.php 
@@ -44,7 +44,7 @@ http://localhost/cos20031/index.php
 
 The application should now be accessible locally.
 
-# 9. Regularly Update:
+# 10. Regularly Update:
 To stay updated with the project, regularly pull the latest changes:
     git pull
 
