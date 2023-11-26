@@ -21,19 +21,18 @@ Configure the database connection parameters in the PHP files if needed.
     cd cos20031
 
 # 7. Install Project Dependencies:
-Depending on your project, you might need to install additional dependencies using Node Package Manager (NPM). 
-Navigate to the project directory and run:
+Depending on your project, you might need to install additional dependencies using Node Package Manager (NPM). Navigate to the project directory and run:
     npm install
 
 
 # 8. Run the Application:
 Open your web browser and navigate to one of this links below (replace with the correct path if necessary):
 
-    http://localhost:8080/cos20031/index.php 
+http://localhost:8080/cos20031/index.php 
 
-    http://localhost:80/cos20031/index.php 
+http://localhost:80/cos20031/index.php 
 
-    http://localhost/cos20031/index.php 
+http://localhost/cos20031/index.php 
 
 The application should now be accessible locally.
 
