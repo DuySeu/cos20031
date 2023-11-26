@@ -60,20 +60,6 @@
       </fieldset>
     </form>
 
-    <?php
-    include_once('../includes/dbConnect.php');
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["jobID"]) && isset($_POST["userID"])) {
-      $jobID = $_POST["jobID"];
-      $userID = $_POST["userID"];
-      $sql = "INSERT INTO job_application (job_id, user_id, application_date) VALUES ('$jobID', '$userID', curdate())";
-    }
-    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully";
-    } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
-    ?>
-
 
     <script>
       var daySelect = document.getElementById("day");
@@ -104,6 +90,20 @@
       }
     </script>
   </main>
-</body>
 
+  <?php
+    include_once('../includes/dbConnect.php');
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["jobID"]) && isset($_POST["userID"])) {
+      $jobID = $_POST["jobID"];
+      $userID = $_POST["userID"];
+      $sql = "INSERT INTO job_application (job_id, user_id, application_date) VALUES ('$jobID', '$userID', curdate())";
+      if (mysqli_query($conn, $sql)) {
+        echo "New record created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
+    }
+    ?>
+
+</body>
 </html>
