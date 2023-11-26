@@ -17,6 +17,14 @@ Start XAMPP and ensure that the Apache server is running.
 Place the cloned project files in the appropriate directory (usually htdocs for XAMPP).
 Configure the database connection parameters in the PHP files if needed.
 
+# 6. Database Setup in phpmyadmin:
+Access phpMyAdmin:
+Visit http://localhost/phpmyadmin/.
+Create a new database name: "cos20031".
+Select the database and navigate to "Import."
+Choose the SQL file in github: "cos20031.sql".
+
+Verify success and ensure data integrity.
 # 6. Navigate to Project Directory:
     cd cos20031
 
