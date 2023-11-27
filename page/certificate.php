@@ -38,12 +38,12 @@ $resultCheck = mysqli_num_rows($result);
   <div class="taskbar-2">
     <form action="certificate.php" method="get">
       <ul class="sql-task">
-        <li><button class="buttonn"type="submit">All</button></li>
-        <li><button class="buttonn"type="submit" name="courseName" value="Computer Science">Computer Science</button></li>
-        <li><button class="buttonn"type="submit" name="courseName" value="Mathematics">Math</button></li>
-        <li><button class="buttonn"type="submit" name="courseName" value="Biology">Biology</button></li>
-        <li><button class="buttonn"type="submit" name="courseName" value="Art">Art</button></li>
-        <li><button class="buttonn"type="submit" name="courseName" value="Geography">Geography</button></li>
+        <li><button class="buttonn" type="submit">All</button></li>
+        <li><button class="buttonn" type="submit" name="courseName" value="Computer Science">Computer Science</button></li>
+        <li><button class="buttonn" type="submit" name="courseName" value="Mathematics">Math</button></li>
+        <li><button class="buttonn" type="submit" name="courseName" value="Biology">Biology</button></li>
+        <li><button class="buttonn" type="submit" name="courseName" value="Art">Art</button></li>
+        <li><button class="buttonn" type="submit" name="courseName" value="Geography">Geography</button></li>
       </ul>
     </form>
   </div>
@@ -92,8 +92,8 @@ $resultCheck = mysqli_num_rows($result);
         <fieldset>
           <legend>Certificate Information</legend>
           <p>
-            <label for="course_id">Certificate_ID</label>
-            <input type="text" name="course_id" id="course_id" maxlength="40" size="50" required="required" placeholder="Enter certificate ID">
+            <label for="courseID">Certificate_ID</label>
+            <input type="text" name="courseID" id="courseID" maxlength="40" size="50" required="required" placeholder="Enter certificate ID">
           </p>
         </fieldset>
 
@@ -114,7 +114,7 @@ $resultCheck = mysqli_num_rows($result);
       </fieldset>
     </form>
 
-    
+
 
     <script>
       var daySelect = document.getElementById("day");
@@ -146,12 +146,13 @@ $resultCheck = mysqli_num_rows($result);
     </script>
   </main>
 
-  <?php
+  <div class="datahandling">
+    <?php
     include_once('../includes/dbConnect.php');
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["userID"]) && isset($_POST["course_id"])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["userID"]) && isset($_POST["courseID"])) {
       $userID = $_POST["userID"];
-      $course_id = $_POST["course_id"];
-      $sql = "INSERT INTO enrollments (user_id, course_id, enrollment_date) VALUES ('$userID', '$course_id', curdate())";
+      $courseID = $_POST["courseID"];
+      $sql = "INSERT INTO certificates_earned (user_id, certificate_id, date_earned) VALUES ('$userID', '$courseID', curdate())";
       if (mysqli_query($conn, $sql)) {
         echo "Record created";
       } else {
@@ -159,7 +160,7 @@ $resultCheck = mysqli_num_rows($result);
       }
     }
     ?>
-
+  </div>
 </body>
 
 </html>

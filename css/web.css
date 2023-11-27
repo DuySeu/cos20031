@@ -128,15 +128,17 @@ main {
 #bigform1{
     margin-top: 200px;
   }
-#bigform{
-    margin-bottom: 600px
-}
 
   form {
     width: 60%;
     margin: auto;
   }
   
+  .datahandling {
+    width: 40%;
+    margin: auto;
+    margin-top: 10px;
+  }
   
 .button {
     color: white;
