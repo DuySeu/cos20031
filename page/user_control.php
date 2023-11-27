@@ -21,15 +21,19 @@
     </ul>
   </div>
   <div class="bcv">
-    <p class="bcv-header">Job Application</p>
+    <p class="bcv-header">Edit</p>
   </div>
     <hr id="headerdivider">
-    <form action="job_application.php" method="post">
+    <form action="" method="">
       <fieldset id="bigform2">
-        <label for="jobID">Job ID:</label><br>
-        <input type="text" name="jobID" id="jobID" required="required" placeholder="Enter job ID" maxlength="25" size="50"><br>
-        <label for="userID">User ID:</label><br>
-        <input type="text" name="userID" id="userID" required="required" placeholder="Enter user ID" maxlength="40" size="50"><br><br>
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" id="name" required="required" placeholder="Enter new name" maxlength="25" size="50"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="text" name="password" id="password" required="required" placeholder="Enter new password" maxlength="40" size="50"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="text" name="email" id="email" required="required" placeholder="Enter new email" maxlength="40" size="50"><br><br>
+        <label for="role">Role:</label><br>
+        <input type="text" name="role" id="role" required="required" placeholder="Enter new role" maxlength="40" size="50"><br><br>
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">
       </fieldset>

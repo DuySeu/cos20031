@@ -32,9 +32,9 @@ $resultCheck = mysqli_num_rows($result);
       <li class="mucluc"><a href="login.php">Login</a></li>
     </ul>
   </div>
-  <div>
-    <li style="margin-top: 50px"><a class="buttonn" href="certificateearned.php">Certificate Earned</a></li>
-  </div>
+  <ul class="sql-task">
+    <li><a class="buttonn" href="certificateearned.php">Certificate Earned</a></li>
+  </ul>
   <div class="taskbar-2">
     <form action="certificate.php" method="get">
       <ul class="sql-task">

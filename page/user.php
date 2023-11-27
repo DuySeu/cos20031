@@ -45,7 +45,7 @@
           <td><?php echo $row['password']; ?></td>
           <td><?php echo $row['email']; ?></td>
           <td><?php echo $row['user_role']; ?></td>
-          <td><a href="#" class="btn">Edit</a></td>
+          <td><a href="user_control.php" class="btn">Edit</a></td>
         </tr>
       <?php
           }
