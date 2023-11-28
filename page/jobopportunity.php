@@ -70,7 +70,6 @@
             <p style='color: black'>Company Name: <?php echo $row['company_name']; ?></p>
             <p style='color: black'>Job Description: <?php echo $row['job_description']; ?></p>
             <p style='color: black'>Salary: <?php echo $row['salary']; ?></p>
-            <p style='color: black'>Expiry Date: <?php echo $row['expiry_date']; ?></p>
           </div>
         </li>
       <?php

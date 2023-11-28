@@ -1,3 +1,12 @@
+<?php
+  include_once('../includes/dbConnect.php');
+  $sql = "SELECT courses.course_name, users.username, course_completion.completion_date
+          FROM courses, course_completion, users
+          WHERE courses.course_id = course_completion.course_id
+          AND users.user_id = course_completion.user_id";
+  $result = mysqli_query($conn, $sql);
+  $resultCheck = mysqli_num_rows($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,47 +27,28 @@
           <li class="mucluc"><a href="login.php">Login</a></li>
       </ul>
     </div>
-    <hr id="headerdivider">
-    <form method="post" action="">
-      <fieldset id="bigform1">
-        <legend id="legendofbigform">Course Review</legend>
-            <fieldset>
-                <legend>Personal information</legend>
-                <p>
-                    <label for="firstname">User_ID</label> 
-                    <input type="text" name="firstname" id="firstname" maxlength="25" size="50" required="required">
-                </p>
-            </fieldset>
-
-            <fieldset>
-                <legend>Course Information</legend>
-                <p>
-                    <label for="streetaddress">Course_ID</label> 
-                    <input type="text" name="streetaddress" id="streetaddress" maxlength="40" size="50" required="required">
-                </p>
-            </fieldset>
-            <fieldset>
-                <legend>Service Rating (1-5)</legend>
-                <div class="rating">
-                  <input type="radio" id="star5" name="rating" value="5" required>
-                  <label for="star5"></label>
-                  <input type="radio" id="star4" name="rating" value="4" required>
-                  <label for="star4"></label>
-                  <input type="radio" id="star3" name="rating" value="3" required>
-                  <label for="star3"></label>
-                  <input type="radio" id="star2" name="rating" value="2" required>
-                  <label for="star2"></label>
-                  <input type="radio" id="star1" name="rating" value="1" required>
-                  <label for="star1"></label>
-                </div>
-              </fieldset>
-            <fieldset>
-                <legend>User Comment</legend>
-                <textarea id="enquiry" name="enquiry" rows="5" cols="50" placeholder="Specify a particular aspect you are interested in!"></textarea>
-            </fieldset>
-            <input type= "submit" value="Submit" class="button">
-            <input type= "reset" value="Reset" class="button">
-      </fieldset>
-    </form>
+    <p class="bcv-header">Course Completed</p>
+    <div style="margin: 2em;">
+      <table style="width: 100%;">
+            <tr>
+              <th>Course Name</th>
+              <th>Name</th>
+              <th>Date</th>
+            </tr>
+            <?php
+              if ($resultCheck > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+            <tr>
+              <td><?php echo $row['course_name']; ?></td>
+              <td><?php echo $row['username']; ?></td>
+              <td><?php echo $row['completion_date']; ?></td>
+            </tr>
+            <?php
+                }
+              }
+            ?>
+      </table>
+    </div>
   </body>
 </html>

@@ -1,3 +1,13 @@
+<?php
+  include_once('../includes/dbConnect.php');
+  $sql = "SELECT courses.course_name, users.username, enrollments.enrollment_date
+          FROM courses, enrollments, users
+          WHERE courses.course_id = enrollments.course_id
+          AND users.user_id = enrollments.user_id
+          ORDER BY enrollments.enrollment_date DESC";
+  $result = mysqli_query($conn, $sql);
+  $resultCheck = mysqli_num_rows($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,7 +28,6 @@
           <li class="mucluc"><a href="login.php">Login</a></li>
       </ul>
     </div>
-    <main>
       <hr id="headerdivider">
       <form method="post" action="enrollments.php">
         <fieldset id="bigform2">
@@ -27,7 +36,7 @@
           <fieldset>
             <legend>User Information</legend>
             <p>
-              <label for="userID">User ID</label> 
+              <label for="userID"></label> 
               <input type="text" name="userID" id="userID" maxlength="25" size="50" required="required" placeholder="Enter user ID">
             </p>
           </fieldset>
@@ -35,7 +44,7 @@
           <fieldset>
             <legend>Personal Information</legend>
             <p>
-              <label for="courseID">User_ID</label> 
+              <label for="courseID"></label> 
               <input type="text" name="courseID" id="courseID" maxlength="40" size="50" required="required" placeholder="Enter course ID">
             </p>
           </fieldset>
@@ -43,7 +52,6 @@
           <input type="reset" value="Reset" class="button">
         </fieldset>
       </form>
-    </main>
 
     <div class="datahandling">
     <?php
@@ -61,6 +69,30 @@
       }
     }
     ?>
+    </div>
+
+    <p class="bcv-header">Enrollmented</p>
+    <div style="margin: 2em;">
+      <table style="width: 100%;">
+            <tr>
+              <th>Course Name</th>
+              <th>Name</th>
+              <th>Enrollment Date</th>
+            </tr>
+            <?php
+              if ($resultCheck > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+            <tr>
+              <td><?php echo $row['course_name']; ?></td>
+              <td><?php echo $row['username']; ?></td>
+              <td><?php echo $row['enrollment_date']; ?></td>
+            </tr>
+            <?php
+                }
+              }
+            ?>
+      </table>
     </div>
 
   </body>
