@@ -73,7 +73,13 @@ form > input {
     align-self: center;
 }
 
-.form {
+form, .update_user_info {
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.w {
     margin-left: 200px;
 }
 
